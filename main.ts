@@ -1,4 +1,16 @@
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
+    game.showLongText("Floor NUM", DialogLayout.Bottom)
+    if (Floor == 0) {
+        Floor += 1
+        tiles.setCurrentTilemap(tilemap`level3`)
+    } else if (Floor == 1) {
+        Floor += -1
+        tiles.setCurrentTilemap(tilemap`level2`)
+    }
+})
+let Floor = 0
 tiles.setCurrentTilemap(tilemap`level2`)
+Floor = 1
 let mySprite = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
