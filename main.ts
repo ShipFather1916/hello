@@ -1,17 +1,19 @@
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
-    game.showLongText("Floor NUM", DialogLayout.Bottom)
-    if (Floor == 0) {
-        Floor += 1
+    if (Floor == 1) {
         tiles.setCurrentTilemap(tilemap`level3`)
-    } else if (Floor == 1) {
-        Floor += -1
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 8))
+        Floor += 1
+    } else if (Floor == 2) {
         tiles.setCurrentTilemap(tilemap`level2`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 77))
+        Floor += -1
     }
 })
+let mySprite: Sprite = null
 let Floor = 0
 tiles.setCurrentTilemap(tilemap`level2`)
 Floor = 1
-let mySprite = sprites.create(img`
+mySprite = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
     . . . f f f 2 2 2 2 f f f . . . 
@@ -31,3 +33,4 @@ let mySprite = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
+tiles.placeOnTile(mySprite, tiles.getTileLocation(50, 77))
