@@ -61,6 +61,7 @@ let keyNumber = 0
 let Floor = 0
 tiles.setCurrentTilemap(tilemap`level2`)
 Floor = 1
+let cutscene = 0
 keyNumber = 0
 mySprite = sprites.create(img`
     . . . . . . f f f f . . . . . . 
