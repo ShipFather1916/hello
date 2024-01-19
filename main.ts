@@ -1,10 +1,31 @@
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite, location) {
     if (controller.A.isPressed()) {
-        if ("" == "") {
+        if (location.column == 45 && location.row == 75) {
+            tiles.setCurrentTilemap(tilemap`level13`)
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
         	
         } else if (false) {
         	
         }
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile33`, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        game.splash("This Door is Locked from the inside...")
     }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
@@ -20,13 +41,27 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, l
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, location) {
     if (controller.A.isPressed()) {
-        game.splash("Door locked: NUM keys needed")
+        if (location.column == 45 && location.row == 75) {
+            if (keyNumber >= 0) {
+            	
+            } else {
+                game.splash("")
+            }
+        } else if (location.column == 45 && location.row == 75) {
+            if (keyNumber >= 0) {
+            	
+            } else {
+                game.splash("")
+            }
+        }
     }
 })
 let mySprite: Sprite = null
+let keyNumber = 0
 let Floor = 0
 tiles.setCurrentTilemap(tilemap`level2`)
 Floor = 1
+keyNumber = 0
 mySprite = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
