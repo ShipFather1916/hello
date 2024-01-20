@@ -1,3 +1,13 @@
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile38`, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        game.showLongText("This Door is Locked from the inside...", DialogLayout.Bottom)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile45`, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        game.showLongText("This Door is Locked from the inside...", DialogLayout.Bottom)
+    }
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite, location) {
     if (controller.A.isPressed()) {
         if (location.column == 45 && location.row == 75) {
@@ -23,23 +33,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite, 
         }
     }
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile33`, function (sprite, location) {
-    if (controller.A.isPressed()) {
-        game.splash("This Door is Locked from the inside...")
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
-    if (Floor == 1) {
-        tiles.setCurrentTilemap(tilemap`level3`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 8))
-        Floor += 1
-    } else if (Floor == 2) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 77))
-        Floor += -1
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile46`, function (sprite, location) {
     if (controller.A.isPressed()) {
         if (location.column == 45 && location.row == 75) {
             if (keyNumber >= 0) {
@@ -53,6 +47,52 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, 
             } else {
                 game.splash("")
             }
+        }
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile33`, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        game.showLongText("This Door is Locked from the inside...", DialogLayout.Bottom)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
+    if (Floor == 1) {
+        tiles.setCurrentTilemap(tilemap`level3`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 8))
+        Floor += 1
+    } else if (Floor == 2) {
+        tiles.setCurrentTilemap(tilemap`level2`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 77))
+        Floor += -1
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile37`, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        game.showLongText("This Door is Locked from the inside...", DialogLayout.Bottom)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        if (location.column == 45 && location.row == 75) {
+            tiles.setCurrentTilemap(tilemap`level13`)
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
+        } else if (false) {
+        	
         }
     }
 })
@@ -83,4 +123,5 @@ mySprite = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
-tiles.placeOnTile(mySprite, tiles.getTileLocation(50, 77))
+tiles.placeOnTile(mySprite, tiles.getTileLocation(6, 42))
+tiles.setCurrentTilemap(tilemap`level15`)
