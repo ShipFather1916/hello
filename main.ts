@@ -344,11 +344,44 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, l
             } else {
                 game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
             }
+        } else if (location.column == 19 && location.row == 1) {
+            tiles.setCurrentTilemap(tilemap`level44`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(18, 22))
+            Floor += -1
         }
     }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile42`, function (sprite, location) {
-	
+    if (Floor == 1) {
+        if (location.column == 11 && location.row == 59) {
+            tiles.setCurrentTilemap(tilemap`level15`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(25, 37))
+            Floor += 1
+        } else if (location.column == 13 && location.row == 59) {
+            tiles.setCurrentTilemap(tilemap`level15`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(27, 27))
+            Floor += 1
+        }
+    } else if (Floor == 2) {
+        if (location.column == 12 && location.row == 23) {
+            tiles.setCurrentTilemap(tilemap`level17`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(31, 68))
+            Floor += 1
+        } else if (location.column == 17 && location.row == 23) {
+            tiles.setCurrentTilemap(tilemap`level45`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(18, 1))
+            Floor += 1
+        } else if (location.column == 5 && location.row == 23) {
+            tiles.setCurrentTilemap(tilemap`level15`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(21, 96))
+        }
+    } else if (Floor == 3) {
+        if (location.column == 31 && location.row == 69) {
+            tiles.setCurrentTilemap(tilemap`level44`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(5, 22))
+            Floor += -1
+        }
+    }
 })
 controller.right.onEvent(ControllerButtonEvent.Released, function () {
     movement += -1
@@ -401,7 +434,8 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
     }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite, location) {
-	
+    tiles.setCurrentTilemap(tilemap`level44`)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(5, 22))
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile37`, function (sprite, location) {
     if (controller.A.isPressed()) {
@@ -538,7 +572,15 @@ controller.up.onEvent(ControllerButtonEvent.Released, function () {
     }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite, location) {
-	
+    if (location.column == 25 && location.row == 36) {
+        tiles.setCurrentTilemap(tilemap`level2`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(11, 58))
+        Floor += -1
+    } else if (location.column == 27 && location.row == 36) {
+        tiles.setCurrentTilemap(tilemap`level2`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(13, 58))
+        Floor += -1
+    }
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.stopAnimation(animation.AnimationTypes.All, mySprite)
@@ -649,8 +691,6 @@ mySprite = sprites.create(img`
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
 tiles.placeOnTile(mySprite, tiles.getTileLocation(6, 42))
-tiles.setCurrentTilemap(tilemap`level44`)
-tiles.setCurrentTilemap(tilemap`level45`)
 forever(function () {
     if (movement < 1) {
         movement = 0
