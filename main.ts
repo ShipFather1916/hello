@@ -359,13 +359,13 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile42`, function (sprite, 
             Floor += 1
         } else if (location.column == 13 && location.row == 59) {
             tiles.setCurrentTilemap(tilemap`level15`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(27, 27))
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(27, 37))
             Floor += 1
         }
     } else if (Floor == 2) {
         if (location.column == 12 && location.row == 23) {
             tiles.setCurrentTilemap(tilemap`level17`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(31, 68))
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(30, 68))
             Floor += 1
         } else if (location.column == 17 && location.row == 23) {
             tiles.setCurrentTilemap(tilemap`level45`)
@@ -378,7 +378,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile42`, function (sprite, 
     } else if (Floor == 3) {
         if (location.column == 31 && location.row == 69) {
             tiles.setCurrentTilemap(tilemap`level44`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(5, 22))
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(11, 22))
             Floor += -1
         }
     }
