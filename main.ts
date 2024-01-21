@@ -1,6 +1,6 @@
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile38`, function (sprite, location) {
     if (controller.A.isPressed()) {
-        game.showLongText("This Door is Locked from the inside...", DialogLayout.Bottom)
+        game.showLongText("This Door is Locked from the outside...", DialogLayout.Bottom)
     }
 })
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -347,6 +347,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, l
         }
     }
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile42`, function (sprite, location) {
+	
+})
 controller.right.onEvent(ControllerButtonEvent.Released, function () {
     movement += -1
     pause(150)
@@ -397,9 +400,12 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
             `)
     }
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite, location) {
+	
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile37`, function (sprite, location) {
     if (controller.A.isPressed()) {
-        game.showLongText("This Door is Locked from the inside...", DialogLayout.Bottom)
+        game.showLongText("This Door is Locked from the outside...", DialogLayout.Bottom)
     }
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -531,6 +537,9 @@ controller.up.onEvent(ControllerButtonEvent.Released, function () {
             `)
     }
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite, location) {
+	
+})
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.stopAnimation(animation.AnimationTypes.All, mySprite)
     animation.runImageAnimation(
@@ -640,6 +649,8 @@ mySprite = sprites.create(img`
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
 tiles.placeOnTile(mySprite, tiles.getTileLocation(6, 42))
+tiles.setCurrentTilemap(tilemap`level44`)
+tiles.setCurrentTilemap(tilemap`level45`)
 forever(function () {
     if (movement < 1) {
         movement = 0
