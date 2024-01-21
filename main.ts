@@ -239,7 +239,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
     if (Floor == 1) {
         if (location.column == 59 && location.row == 77) {
-            floorNum = game.askForNumber("Would you like to go to the 2nd, or 3rd floor?")
+            floorNum = game.askForNumber("Would you like to go to the 2nd or 3rd floor?")
             if (floorNum == 2) {
                 movement = 0
                 tiles.setCurrentTilemap(tilemap`level15`)
@@ -250,11 +250,13 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, l
                 tiles.setCurrentTilemap(tilemap`level17`)
                 tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 55))
                 Floor += 2
+            } else if (floorNum == 1) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
             } else {
                 game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
             }
         } else if (location.column == 59 && location.row == 13) {
-            floorNum = game.askForNumber("Would you like to go to the 2nd, or 3rd floor?")
+            floorNum = game.askForNumber("Would you like to go to the 2nd or 3rd floor?")
             if (floorNum == 2) {
                 movement = 0
                 tiles.setCurrentTilemap(tilemap`level15`)
@@ -265,14 +267,84 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, l
                 tiles.setCurrentTilemap(tilemap`level17`)
                 tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 6))
                 Floor += 2
+            } else if (floorNum == 1) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
             } else {
                 game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
             }
         }
     } else if (Floor == 2) {
-    	
+        if (location.column == 59 && location.row == 61) {
+            floorNum = game.askForNumber("Would you like to go to the 1st or 3rd floor?")
+            if (floorNum == 1) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level2`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 77))
+                Floor += -1
+            } else if (floorNum == 3) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level17`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 55))
+                Floor += 1
+            } else if (floorNum == 2) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        } else if (location.column == 59 && location.row == 5) {
+            floorNum = game.askForNumber("Would you like to go to the 1st or 3rd floor?")
+            if (floorNum == 1) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level2`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 13))
+                Floor += -1
+            } else if (floorNum == 3) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level17`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 6))
+                Floor += 1
+            } else if (floorNum == 2) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        }
     } else if (Floor == 3) {
-    	
+        if (location.column == 59 && location.row == 55) {
+            floorNum = game.askForNumber("Would you like to go to the 1st or 2nd floor?")
+            if (floorNum == 1) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level2`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 77))
+                Floor += -2
+            } else if (floorNum == 2) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level15`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 61))
+                Floor += -1
+            } else if (floorNum == 3) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        } else if (location.column == 59 && location.row == 6) {
+            floorNum = game.askForNumber("Would you like to go to the 1st or 2nd floor?")
+            if (floorNum == 1) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level2`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 13))
+                Floor += -2
+            } else if (floorNum == 2) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level15`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 5))
+                Floor += -1
+            } else if (floorNum == 3) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        }
     }
 })
 controller.right.onEvent(ControllerButtonEvent.Released, function () {
