@@ -88,7 +88,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile45`, function (sprite, 
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite, location) {
     if (controller.A.isPressed()) {
-        if (location.column == 45 && location.row == 75) {
+        if (true) {
             tiles.setCurrentTilemap(tilemap`level13`)
         } else if (false) {
         	
@@ -130,7 +130,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile46`, function (sprite, 
 })
 controller.down.onEvent(ControllerButtonEvent.Released, function () {
     movement += -1
-    pause(100)
+    pause(150)
     if (movement == 0) {
         animation.stopAnimation(animation.AnimationTypes.All, mySprite)
         mySprite.setImage(img`
@@ -238,18 +238,46 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
     if (Floor == 1) {
-        tiles.setCurrentTilemap(tilemap`level3`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 8))
-        Floor += 1
+        if (location.column == 59 && location.row == 77) {
+            floorNum = game.askForNumber("Would you like to go to the 2nd, or 3rd floor?")
+            if (floorNum == 2) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level15`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 61))
+                Floor += 1
+            } else if (floorNum == 3) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level17`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 55))
+                Floor += 2
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        } else if (location.column == 59 && location.row == 13) {
+            floorNum = game.askForNumber("Would you like to go to the 2nd, or 3rd floor?")
+            if (floorNum == 2) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level15`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 5))
+                Floor += 1
+            } else if (floorNum == 3) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level17`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 6))
+                Floor += 2
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        }
     } else if (Floor == 2) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 77))
-        Floor += -1
+    	
+    } else if (Floor == 3) {
+    	
     }
 })
 controller.right.onEvent(ControllerButtonEvent.Released, function () {
     movement += -1
-    pause(100)
+    pause(150)
     if (movement == 0) {
         animation.stopAnimation(animation.AnimationTypes.All, mySprite)
         mySprite.setImage(img`
@@ -274,7 +302,7 @@ controller.right.onEvent(ControllerButtonEvent.Released, function () {
 })
 controller.left.onEvent(ControllerButtonEvent.Released, function () {
     movement += -1
-    pause(100)
+    pause(150)
     if (movement == 0) {
         animation.stopAnimation(animation.AnimationTypes.All, mySprite)
         mySprite.setImage(img`
@@ -385,7 +413,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite, 
         if (location.column == 45 && location.row == 75) {
             tiles.setCurrentTilemap(tilemap`level13`)
         } else if (false) {
-        	
+            tiles.setCurrentTilemap(tilemap`level15`)
+            tiles.setCurrentTilemap(tilemap`level17`)
         } else if (false) {
         	
         } else if (false) {
@@ -407,7 +436,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite, 
 })
 controller.up.onEvent(ControllerButtonEvent.Released, function () {
     movement += -1
-    pause(100)
+    pause(150)
     if (movement == 0) {
         animation.stopAnimation(animation.AnimationTypes.All, mySprite)
         mySprite.setImage(img`
@@ -508,6 +537,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     )
     movement += 1
 })
+let floorNum = 0
 let mySprite: Sprite = null
 let movement = 0
 let keyNumber = 0
@@ -538,5 +568,10 @@ mySprite = sprites.create(img`
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
 tiles.placeOnTile(mySprite, tiles.getTileLocation(6, 42))
-tiles.setCurrentTilemap(tilemap`level15`)
-tiles.setCurrentTilemap(tilemap`level17`)
+forever(function () {
+    if (movement < 1) {
+        movement = 0
+    } else if (movement < 0) {
+        movement = 0
+    }
+})
