@@ -89,6 +89,41 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         movement += 1
     }
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile58`, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        if (cutscene == 0) {
+            game.showLongText("This door is locked, 9 keys needed.", DialogLayout.Bottom)
+            pause(500)
+            mySprite.setImage(img`
+                . . . . . . f f f f . . . . . . 
+                . . . . f f f 2 2 f f f . . . . 
+                . . . f f f 2 3 2 2 f f f . . . 
+                . . f f f 6 6 6 6 6 6 f f f . . 
+                . . f f 6 2 2 2 2 2 2 6 6 f . . 
+                . . f 6 2 f f f f f f 2 6 f . . 
+                . . f f f f 6 6 6 6 f f f f . . 
+                . f f 6 f 3 f 4 4 f 3 f 6 f f . 
+                . f 6 6 4 1 f 3 3 f 1 4 6 6 f . 
+                . . f 6 6 3 3 3 3 3 3 6 6 f . . 
+                . . . f 6 6 4 4 4 4 6 6 f . . . 
+                . . 6 4 f 2 2 2 2 2 2 f 4 6 . . 
+                . . 4 3 f 2 2 2 2 2 2 f 3 4 . . 
+                . . 4 4 f 4 4 5 5 4 4 f 4 4 . . 
+                . . . . . f f f f f f . . . . . 
+                . . . . . f f . . f f . . . . . 
+                `)
+            pause(500)
+            openingCutscene()
+            cutscene += 1
+        } else {
+            if (keyNumber < 9) {
+            	
+            } else {
+            	
+            }
+        }
+    }
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile45`, function (sprite, location) {
     if (controller.A.isPressed()) {
         if (cutscene == 0) {
@@ -719,6 +754,18 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         movement += 1
     }
 })
+function openingCutscene () {
+    game.setDialogTextColor(14)
+    game.showLongText("NO!", DialogLayout.Bottom)
+    if (controller.A.isPressed()) {
+        game.setDialogTextColor(2)
+        game.showLongText("I should see if I can find someone to help me...", DialogLayout.Bottom)
+        if (controller.A.isPressed()) {
+            game.setDialogTextColor(15)
+            game.showLongText("Red locks and Red Pads represent areas that are inaccessible. Yellow lock and pads represent locked doors.  ", DialogLayout.Full)
+        }
+    }
+}
 let floorNum = 0
 let movement = 0
 let keyNumber = 0
@@ -998,6 +1045,7 @@ cutscene = 0
 keyNumber = 0
 movement = 0
 pause(2000)
+game.setDialogTextColor(2)
 game.showLongText("Zzzzzzzzzzzzzzzzzzzz... ", DialogLayout.Bottom)
 if (controller.A.isPressed()) {
     pause(1000)
@@ -1019,15 +1067,16 @@ if (controller.A.isPressed()) {
         . . . . . f f f f f f . . . . . 
         . . . . . f f . . f f . . . . . 
         `)
-    pause(2000)
+    pause(1000)
     game.setDialogTextColor(14)
     game.showLongText("OH NO!", DialogLayout.Bottom)
     if (controller.A.isPressed()) {
-        game.setDialogTextColor(15)
+        game.setDialogTextColor(2)
         game.showLongText("How long have I been asleep?", DialogLayout.Bottom)
         if (controller.A.isPressed()) {
             game.showLongText("I better leave before they lock the doors...", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
+                game.setDialogTextColor(15)
                 game.showLongText("Move with the arrow keys or D pad if you are on controller. To interact with doors, press \"A\" over the Door Knob or Door Pad.", DialogLayout.Full)
                 textCutscene += 1
                 controller.moveSprite(mySprite)
