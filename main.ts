@@ -896,7 +896,6 @@ scene.setBackgroundImage(img`
     4444444444444444444444444444444444444444444433335555555555555555555555555555555555555555555555555555555555333366666666666666666666666666666666666666666666666666
     `)
 pauseUntil(() => controller.A.isPressed())
-tiles.setCurrentTilemap(tilemap`level2`)
 scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -1019,6 +1018,7 @@ scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     `)
+tiles.setCurrentTilemap(tilemap`level2`)
 mySprite = sprites.create(img`
     . . . . . f f f f . . . . . . . 
     . . . f f 6 6 6 6 f f . . . . . 
