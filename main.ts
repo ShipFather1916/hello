@@ -3,18 +3,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile46`, function (sprite4,
         if (cutscene == 0) {
             game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
         } else if (cutscene == 1) {
-            if (location4.column == 45 && location4.row == 75) {
-                if (keyNumber >= 0) {
-                	
-                } else {
-                    game.splash("")
-                }
-            } else if (location4.column == 45 && location4.row == 75) {
-                if (keyNumber >= 0) {
-                	
-                } else {
-                    game.splash("")
-                }
+            if (calKey == 0) {
+                game.showLongText("Pre-Calulus key needed to open this door... ", DialogLayout.Bottom)
+            } else {
+            	
             }
         }
     }
@@ -292,6 +284,15 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite8,
     tiles.setCurrentTilemap(tilemap`level44`)
     tiles.placeOnTile(mySprite, tiles.getTileLocation(5, 22))
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        if (chemKey == 0) {
+            game.showLongText("Chemistry Key required to open this door...", DialogLayout.Bottom)
+        } else {
+        	
+        }
+    }
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (textCutscene == 0) {
     	
@@ -378,6 +379,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile59`, function (sprite, 
     if (controller.A.isPressed()) {
         if (cutscene == 0) {
             openingCutscene()
+        } else if (cutscene + calKey < 9) {
+            game.showLongText("This door requires 9 keys to open...", DialogLayout.Bottom)
         } else {
         	
         }
@@ -702,26 +705,12 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite3,
         if (cutscene == 0) {
             game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
         } else if (cutscene == 1) {
-            if (true) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
+            if (Floor == 3) {
+                if (location3.column == 38 && location3.row == 53) {
+                	
+                } else if (location3.column == 47 && location3.row == 53) {
+                	
+                }
             }
         }
     }
@@ -731,26 +720,30 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10
         if (cutscene == 0) {
             game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
         } else if (cutscene == 1) {
-            if (location10.column == 45 && location10.row == 75) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
+            if (Floor == 1) {
+                if (location10.column == 32 && location10.row == 42) {
+                	
+                }
+            }
+            if (Floor == 2) {
+                if (location10.column == 34 && location10.row == 39) {
+                	
+                } else if (location10.column == 30 && location10.row == 84) {
+                	
+                }
+            }
+            if (Floor == 3) {
+                if (location10.column == 44 && location10.row == 26) {
+                	
+                } else if (location10.column == 37 && location10.row == 40) {
+                	
+                } else if (location10.column == 4 && location10.row == 5) {
+                	
+                } else if (location10.column == 4 && location10.row == 14) {
+                	
+                } else if (location10.column == 1 && location10.row == 19) {
+                	
+                }
             }
         }
     }
@@ -768,7 +761,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite11
 })
 let floorNum = 0
 let movement = 0
-let keyNumber = 0
+let calKey = 0
+let chemKey = 0
 let cutscene = 0
 let Floor = 0
 let textCutscene = 0
@@ -1042,7 +1036,9 @@ scene.cameraFollowSprite(mySprite)
 textCutscene = 0
 Floor = 1
 cutscene = 0
-keyNumber = 0
+let keyNumber = 0
+chemKey = 0
+calKey = 0
 movement = 0
 pause(1000)
 game.setDialogTextColor(2)
