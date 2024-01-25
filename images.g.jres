@@ -1,18 +1,8 @@
 {
-    "image3": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCRASg2gAAIEREpKqqqvokQkREqqqq+iQkRESqqqoAJC9kZqGqqgAkQkZkERER+iRERmaqqqr6JEJGZKDaAAAkJGRmAAAAACAvRAQAAAAAIAIAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "WalterThightyWhities0"
-    },
-    "image2": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACqqgrwjwAAoKqq+P///2+gqoqI////b6CqiIj///8AoIqPiB4R/wCgioiP7u7/b6CKiI8fEf9voIqIj/CPAACgiI+IAAAAAACAiAgAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Covefe"
-    },
     "image1": {
         "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
-        "displayName": "EpstienIsland"
+        "displayName": "myImage"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
