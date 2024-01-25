@@ -375,6 +375,9 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         movement += 1
     }
 })
+function Siminar () {
+    tiles.setCurrentTilemap(tilemap`level99`)
+}
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile59`, function (sprite, location) {
     if (controller.A.isPressed()) {
         if (cutscene == 0) {
@@ -722,7 +725,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10
         } else if (cutscene == 1) {
             if (Floor == 1) {
                 if (location10.column == 32 && location10.row == 42) {
-                	
+                    Siminar()
                 }
             }
             if (Floor == 2) {
