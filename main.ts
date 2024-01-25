@@ -1,3 +1,24 @@
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile46`, function (sprite4, location4) {
+    if (controller.A.isPressed()) {
+        if (cutscene == 0) {
+            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
+        } else if (cutscene == 1) {
+            if (location4.column == 45 && location4.row == 75) {
+                if (keyNumber >= 0) {
+                	
+                } else {
+                    game.splash("")
+                }
+            } else if (location4.column == 45 && location4.row == 75) {
+                if (keyNumber >= 0) {
+                	
+                } else {
+                    game.splash("")
+                }
+            }
+        }
+    }
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile38`, function (sprite, location) {
     if (controller.A.isPressed()) {
         if (cutscene == 0) {
@@ -89,65 +110,6 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         movement += 1
     }
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile45`, function (sprite, location) {
-    if (controller.A.isPressed()) {
-        if (cutscene == 0) {
-            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
-        } else if (cutscene == 1) {
-            game.showLongText("This Door is Locked from the inside...", DialogLayout.Bottom)
-        }
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite, location) {
-    if (controller.A.isPressed()) {
-        if (cutscene == 0) {
-            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
-        } else if (cutscene == 1) {
-            if (true) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            }
-        }
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile46`, function (sprite, location) {
-    if (controller.A.isPressed()) {
-        if (cutscene == 0) {
-            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
-        } else if (cutscene == 1) {
-            if (location.column == 45 && location.row == 75) {
-                if (keyNumber >= 0) {
-                	
-                } else {
-                    game.splash("")
-                }
-            } else if (location.column == 45 && location.row == 75) {
-                if (keyNumber >= 0) {
-                	
-                } else {
-                    game.splash("")
-                }
-            }
-        }
-    }
-})
 controller.down.onEvent(ControllerButtonEvent.Released, function () {
     if (textCutscene == 0) {
     	
@@ -174,15 +136,6 @@ controller.down.onEvent(ControllerButtonEvent.Released, function () {
                 . . . . . f f f f f f . . . . . 
                 . . . . . f f . . f f . . . . . 
                 `)
-        }
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile33`, function (sprite, location) {
-    if (controller.A.isPressed()) {
-        if (cutscene == 0) {
-            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
-        } else if (cutscene == 1) {
-            game.showLongText("This Door is Locked from the inside...", DialogLayout.Bottom)
         }
     }
 })
@@ -268,153 +221,6 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         movement += 1
     }
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
-    if (Floor == 1) {
-        if (location.column == 59 && location.row == 77) {
-            floorNum = game.askForNumber("Would you like to go to the 2nd or 3rd floor?")
-            if (floorNum == 2) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level15`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 61))
-                Floor += 1
-            } else if (floorNum == 3) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level17`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 55))
-                Floor += 2
-            } else if (floorNum == 1) {
-                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
-            } else {
-                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
-            }
-        } else if (location.column == 59 && location.row == 13) {
-            floorNum = game.askForNumber("Would you like to go to the 2nd or 3rd floor?")
-            if (floorNum == 2) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level15`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 5))
-                Floor += 1
-            } else if (floorNum == 3) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level17`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 6))
-                Floor += 2
-            } else if (floorNum == 1) {
-                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
-            } else {
-                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
-            }
-        }
-    } else if (Floor == 2) {
-        if (location.column == 59 && location.row == 61) {
-            floorNum = game.askForNumber("Would you like to go to the 1st or 3rd floor?")
-            if (floorNum == 1) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level2`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 77))
-                Floor += -1
-            } else if (floorNum == 3) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level17`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 55))
-                Floor += 1
-            } else if (floorNum == 2) {
-                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
-            } else {
-                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
-            }
-        } else if (location.column == 59 && location.row == 5) {
-            floorNum = game.askForNumber("Would you like to go to the 1st or 3rd floor?")
-            if (floorNum == 1) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level2`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 13))
-                Floor += -1
-            } else if (floorNum == 3) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level17`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 6))
-                Floor += 1
-            } else if (floorNum == 2) {
-                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
-            } else {
-                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
-            }
-        }
-    } else if (Floor == 3) {
-        if (location.column == 59 && location.row == 55) {
-            floorNum = game.askForNumber("Would you like to go to the 1st or 2nd floor?")
-            if (floorNum == 1) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level2`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 77))
-                Floor += -2
-            } else if (floorNum == 2) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level15`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 61))
-                Floor += -1
-            } else if (floorNum == 3) {
-                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
-            } else {
-                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
-            }
-        } else if (location.column == 59 && location.row == 6) {
-            floorNum = game.askForNumber("Would you like to go to the 1st or 2nd floor?")
-            if (floorNum == 1) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level2`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 13))
-                Floor += -2
-            } else if (floorNum == 2) {
-                movement = 0
-                tiles.setCurrentTilemap(tilemap`level15`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 5))
-                Floor += -1
-            } else if (floorNum == 3) {
-                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
-            } else {
-                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
-            }
-        } else if (location.column == 19 && location.row == 1) {
-            tiles.setCurrentTilemap(tilemap`level44`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(18, 22))
-            Floor += -1
-        }
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile42`, function (sprite, location) {
-    if (Floor == 1) {
-        if (location.column == 11 && location.row == 59) {
-            tiles.setCurrentTilemap(tilemap`level15`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(25, 37))
-            Floor += 1
-        } else if (location.column == 13 && location.row == 59) {
-            tiles.setCurrentTilemap(tilemap`level15`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(27, 37))
-            Floor += 1
-        }
-    } else if (Floor == 2) {
-        if (location.column == 12 && location.row == 23) {
-            tiles.setCurrentTilemap(tilemap`level17`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(30, 68))
-            Floor += 1
-        } else if (location.column == 17 && location.row == 23) {
-            tiles.setCurrentTilemap(tilemap`level45`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(18, 1))
-            Floor += 1
-        } else if (location.column == 5 && location.row == 23) {
-            tiles.setCurrentTilemap(tilemap`level15`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(21, 96))
-        }
-    } else if (Floor == 3) {
-        if (location.column == 31 && location.row == 69) {
-            tiles.setCurrentTilemap(tilemap`level44`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(11, 22))
-            Floor += -1
-        }
-    }
-})
 controller.right.onEvent(ControllerButtonEvent.Released, function () {
     if (textCutscene == 0) {
     	
@@ -441,6 +247,15 @@ controller.right.onEvent(ControllerButtonEvent.Released, function () {
                 . . . . . . f f f f f f . . . . 
                 . . . . . . . f f f . . . . . . 
                 `)
+        }
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile33`, function (sprite5, location5) {
+    if (controller.A.isPressed()) {
+        if (cutscene == 0) {
+            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
+        } else if (cutscene == 1) {
+            game.showLongText("This Door is Locked from the inside...", DialogLayout.Bottom)
         }
     }
 })
@@ -473,18 +288,9 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
         }
     }
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite8, location8) {
     tiles.setCurrentTilemap(tilemap`level44`)
     tiles.placeOnTile(mySprite, tiles.getTileLocation(5, 22))
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile37`, function (sprite, location) {
-    if (controller.A.isPressed()) {
-        if (cutscene == 0) {
-            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
-        } else if (cutscene == 1) {
-            game.showLongText("This Door is Locked from the outside...", DialogLayout.Bottom)
-        }
-    }
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (textCutscene == 0) {
@@ -568,32 +374,12 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         movement += 1
     }
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile59`, function (sprite, location) {
     if (controller.A.isPressed()) {
         if (cutscene == 0) {
-            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
-        } else if (cutscene == 1) {
-            if (location.column == 45 && location.row == 75) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            } else if (false) {
-            	
-            }
+            openingCutscene()
+        } else {
+        	
         }
     }
 })
@@ -626,15 +412,151 @@ controller.up.onEvent(ControllerButtonEvent.Released, function () {
         }
     }
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite, location) {
-    if (location.column == 25 && location.row == 36) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(11, 58))
-        Floor += -1
-    } else if (location.column == 27 && location.row == 36) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(13, 58))
-        Floor += -1
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile42`, function (sprite7, location7) {
+    if (Floor == 1) {
+        if (location7.column == 11 && location7.row == 59) {
+            tiles.setCurrentTilemap(tilemap`level15`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(25, 37))
+            Floor += 1
+        } else if (location7.column == 13 && location7.row == 59) {
+            tiles.setCurrentTilemap(tilemap`level15`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(27, 37))
+            Floor += 1
+        }
+    } else if (Floor == 2) {
+        if (location7.column == 12 && location7.row == 23) {
+            tiles.setCurrentTilemap(tilemap`level17`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(30, 68))
+            Floor += 1
+        } else if (location7.column == 17 && location7.row == 23) {
+            tiles.setCurrentTilemap(tilemap`level45`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(18, 1))
+            Floor += 1
+        } else if (location7.column == 5 && location7.row == 23) {
+            tiles.setCurrentTilemap(tilemap`level15`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(21, 96))
+        }
+    } else if (Floor == 3) {
+        if (location7.column == 31 && location7.row == 69) {
+            tiles.setCurrentTilemap(tilemap`level44`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(11, 22))
+            Floor += -1
+        }
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite6, location6) {
+    if (Floor == 1) {
+        if (location6.column == 59 && location6.row == 77) {
+            floorNum = game.askForNumber("Would you like to go to the 2nd or 3rd floor?")
+            if (floorNum == 2) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level15`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 61))
+                Floor += 1
+            } else if (floorNum == 3) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level17`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 55))
+                Floor += 2
+            } else if (floorNum == 1) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        } else if (location6.column == 59 && location6.row == 13) {
+            floorNum = game.askForNumber("Would you like to go to the 2nd or 3rd floor?")
+            if (floorNum == 2) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level15`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 5))
+                Floor += 1
+            } else if (floorNum == 3) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level17`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 6))
+                Floor += 2
+            } else if (floorNum == 1) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        }
+    } else if (Floor == 2) {
+        if (location6.column == 59 && location6.row == 61) {
+            floorNum = game.askForNumber("Would you like to go to the 1st or 3rd floor?")
+            if (floorNum == 1) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level2`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 77))
+                Floor += -1
+            } else if (floorNum == 3) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level17`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 55))
+                Floor += 1
+            } else if (floorNum == 2) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        } else if (location6.column == 59 && location6.row == 5) {
+            floorNum = game.askForNumber("Would you like to go to the 1st or 3rd floor?")
+            if (floorNum == 1) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level2`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 13))
+                Floor += -1
+            } else if (floorNum == 3) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level17`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 6))
+                Floor += 1
+            } else if (floorNum == 2) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        }
+    } else if (Floor == 3) {
+        if (location6.column == 59 && location6.row == 55) {
+            floorNum = game.askForNumber("Would you like to go to the 1st or 2nd floor?")
+            if (floorNum == 1) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level2`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 77))
+                Floor += -2
+            } else if (floorNum == 2) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level15`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 61))
+                Floor += -1
+            } else if (floorNum == 3) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        } else if (location6.column == 59 && location6.row == 6) {
+            floorNum = game.askForNumber("Would you like to go to the 1st or 2nd floor?")
+            if (floorNum == 1) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level2`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 13))
+                Floor += -2
+            } else if (floorNum == 2) {
+                movement = 0
+                tiles.setCurrentTilemap(tilemap`level15`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(58, 5))
+                Floor += -1
+            } else if (floorNum == 3) {
+                game.showLongText("You're already on this floor extra poopy stinky head...", DialogLayout.Full)
+            } else {
+                game.showLongText("That ain't a floor poopy head...", DialogLayout.Full)
+            }
+        } else if (location6.column == 19 && location6.row == 1) {
+            tiles.setCurrentTilemap(tilemap`level44`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(18, 22))
+            Floor += -1
+        }
     }
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -717,6 +639,131 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         true
         )
         movement += 1
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile45`, function (sprite2, location2) {
+    if (controller.A.isPressed()) {
+        if (cutscene == 0) {
+            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
+        } else if (cutscene == 1) {
+            game.showLongText("This Door is Locked from the inside...", DialogLayout.Bottom)
+        }
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile37`, function (sprite9, location9) {
+    if (controller.A.isPressed()) {
+        if (cutscene == 0) {
+            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
+        } else if (cutscene == 1) {
+            game.showLongText("This Door is Locked from the outside...", DialogLayout.Bottom)
+        }
+    }
+})
+function openingCutscene () {
+    game.setDialogTextColor(15)
+    game.showLongText("This door requires 9 keys to open...", DialogLayout.Bottom)
+    if (controller.A.isPressed()) {
+        pause(500)
+        mySprite.setImage(img`
+            . . . . . . f f f f . . . . . . 
+            . . . . f f f 2 2 f f f . . . . 
+            . . . f f f 2 3 2 2 f f f . . . 
+            . . f f f 6 6 6 6 6 6 f f f . . 
+            . . f f 6 2 2 2 2 2 2 6 6 f . . 
+            . . f 6 2 f f f f f f 2 6 f . . 
+            . . f f f f 6 6 6 6 f f f f . . 
+            . f f 6 f 3 f 4 4 f 3 f 6 f f . 
+            . f 6 6 4 1 f 3 3 f 1 4 6 6 f . 
+            . . f 6 6 3 3 3 3 3 3 6 6 f . . 
+            . . . f 6 6 4 4 4 4 6 6 f . . . 
+            . . 6 4 f 2 2 2 2 2 2 f 4 6 . . 
+            . . 4 3 f 2 2 2 2 2 2 f 3 4 . . 
+            . . 4 4 f 4 4 5 5 4 4 f 4 4 . . 
+            . . . . . f f f f f f . . . . . 
+            . . . . . f f . . f f . . . . . 
+            `)
+        pause(500)
+        game.setDialogTextColor(14)
+        game.showLongText("Crap!", DialogLayout.Bottom)
+        if (controller.A.isPressed()) {
+            game.setDialogTextColor(2)
+            game.showLongText("I should go find some help...", DialogLayout.Bottom)
+            game.setDialogTextColor(15)
+            if (controller.A.isPressed()) {
+                game.setDialogTextColor(15)
+                game.showLongText("Red Door locks or pads represent inaccessible areas. Yellow Door locks and pads represent locked areas that require 1 or more keys to access...", DialogLayout.Center)
+                cutscene += 1
+            }
+        }
+    }
+}
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite3, location3) {
+    if (controller.A.isPressed()) {
+        if (cutscene == 0) {
+            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
+        } else if (cutscene == 1) {
+            if (true) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            }
+        }
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10, location10) {
+    if (controller.A.isPressed()) {
+        if (cutscene == 0) {
+            game.showLongText("This area is not yet avalible.", DialogLayout.Bottom)
+        } else if (cutscene == 1) {
+            if (location10.column == 45 && location10.row == 75) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            }
+        }
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite11, location11) {
+    if (location11.column == 25 && location11.row == 36) {
+        tiles.setCurrentTilemap(tilemap`level2`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(11, 58))
+        Floor += -1
+    } else if (location11.column == 27 && location11.row == 36) {
+        tiles.setCurrentTilemap(tilemap`level2`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(13, 58))
+        Floor += -1
     }
 })
 let floorNum = 0
@@ -997,7 +1044,8 @@ Floor = 1
 cutscene = 0
 keyNumber = 0
 movement = 0
-pause(2000)
+pause(1000)
+game.setDialogTextColor(2)
 game.showLongText("Zzzzzzzzzzzzzzzzzzzz... ", DialogLayout.Bottom)
 if (controller.A.isPressed()) {
     pause(1000)
@@ -1019,13 +1067,14 @@ if (controller.A.isPressed()) {
         . . . . . f f f f f f . . . . . 
         . . . . . f f . . f f . . . . . 
         `)
-    pause(2000)
+    pause(1000)
     game.setDialogTextColor(14)
     game.showLongText("OH NO!", DialogLayout.Bottom)
     if (controller.A.isPressed()) {
-        game.setDialogTextColor(15)
+        game.setDialogTextColor(2)
         game.showLongText("How long have I been asleep?", DialogLayout.Bottom)
         if (controller.A.isPressed()) {
+            game.setDialogTextColor(15)
             game.showLongText("I better leave before they lock the doors...", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 game.showLongText("Move with the arrow keys or D pad if you are on controller. To interact with doors, press \"A\" over the Door Knob or Door Pad.", DialogLayout.Full)
