@@ -131,6 +131,9 @@ controller.down.onEvent(ControllerButtonEvent.Released, function () {
         }
     }
 })
+function Quiz () {
+	
+}
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     if (textCutscene == 0) {
     	
@@ -375,6 +378,16 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         movement += 1
     }
 })
+function Siminar () {
+    let Simnar: Sprite = null
+    tiles.setCurrentTilemap(tilemap`level101`)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(2, 13))
+    if (mySprite.overlapsWith(Simnar)) {
+        if (controller.A.isPressed()) {
+        	
+        }
+    }
+}
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile59`, function (sprite, location) {
     if (controller.A.isPressed()) {
         if (cutscene == 0) {
@@ -722,7 +735,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10
         } else if (cutscene == 1) {
             if (Floor == 1) {
                 if (location10.column == 32 && location10.row == 42) {
-                	
+                    Siminar()
                 }
             }
             if (Floor == 2) {
@@ -767,6 +780,7 @@ let cutscene = 0
 let Floor = 0
 let textCutscene = 0
 let mySprite: Sprite = null
+let keyNumber = 0
 scene.setBackgroundImage(img`
     6666666333355555555555555555555555555555555555555555555555555555333344444444444444444444444444444444444444444444444443333555555555555555555555555555555555555555
     6666666333355555555555555555555555555555555555555555555555555555333344444444444444444444444444444444444444444444444443333555555555555555555555555555555555555555
@@ -1036,7 +1050,6 @@ scene.cameraFollowSprite(mySprite)
 textCutscene = 0
 Floor = 1
 cutscene = 0
-let keyNumber = 0
 chemKey = 0
 calKey = 0
 movement = 0
