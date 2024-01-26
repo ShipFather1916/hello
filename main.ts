@@ -102,6 +102,11 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         movement += 1
     }
 })
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (quizlevel == 1) {
+    	
+    }
+})
 controller.down.onEvent(ControllerButtonEvent.Released, function () {
     if (textCutscene == 0) {
     	
@@ -379,12 +384,157 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 function Siminar () {
-    let Simnar: Sprite = null
     tiles.setCurrentTilemap(tilemap`level101`)
     tiles.placeOnTile(mySprite, tiles.getTileLocation(2, 13))
+    Simnar = sprites.create(img`
+        . . . . c c c b b b b b . . . . 
+        . . c c b 4 4 4 4 4 4 b b b . . 
+        . c c 4 4 4 4 4 5 4 4 4 4 b c . 
+        . e 4 4 4 4 4 4 4 4 4 5 4 4 e . 
+        e b 4 5 4 4 5 4 4 4 4 4 4 4 b c 
+        e b 4 4 4 4 4 4 4 4 4 4 5 4 4 e 
+        e b b 4 4 4 4 4 4 4 4 4 4 4 b e 
+        . e b 4 4 4 4 4 5 4 4 4 4 b e . 
+        8 7 e e b 4 4 4 4 4 4 b e e 6 8 
+        8 7 2 e e e e e e e e e e 2 7 8 
+        e 6 6 2 2 2 2 2 2 2 2 2 2 6 c e 
+        e c 6 7 6 6 7 7 7 6 6 7 6 c c e 
+        e b e 8 8 c c 8 8 c c c 8 e b e 
+        e e b e c c e e e e e c e b e e 
+        . e e b b 4 4 4 4 4 4 4 4 e e . 
+        . . . c c c c c e e e e e . . . 
+        `, SpriteKind.Player)
+    tiles.placeOnTile(Simnar, tiles.getTileLocation(7, 4))
     if (mySprite.overlapsWith(Simnar)) {
         if (controller.A.isPressed()) {
-        	
+            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            if (controller.A.isPressed()) {
+                scene.setBackgroundImage(img`
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999f99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff999fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff999f9f9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99ffff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f99ff999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f999f9f9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff999fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f999f999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f9ff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f999f999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f999f999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff999fff99f9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff999fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f999f999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f999f999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff999fff99f9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99ffff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f999f999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f999f999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f999f999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99f999f999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff99ffff99f9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    fff9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999fff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                    `)
+                Questions = ["a", "b", "c"]
+                answerChoices = ["a", "b", "c"]
+                Quiz()
+            }
         }
     }
 }
@@ -773,6 +923,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite11
     }
 })
 let floorNum = 0
+let answerChoices: string[] = []
+let Questions: string[] = []
+let Simnar: Sprite = null
+let quizlevel = 0
 let movement = 0
 let calKey = 0
 let chemKey = 0
@@ -1053,7 +1207,9 @@ cutscene = 0
 chemKey = 0
 calKey = 0
 movement = 0
-pause(1000)
+let Score = 0
+quizlevel = 0
+pause(500)
 game.setDialogTextColor(2)
 game.showLongText("Zzzzzzzzzzzzzzzzzzzz... ", DialogLayout.Bottom)
 if (controller.A.isPressed()) {
@@ -1093,223 +1249,6 @@ if (controller.A.isPressed()) {
         }
     }
 }
-let mySprite20240125T214816683Z = sprites.create(assets.image`Shawn`, SpriteKind.Player)
-let mySprite20240125T215146265Z = sprites.create(assets.image`Akarian`, SpriteKind.Player)
-let mySprite20240125T215740393Z = sprites.create(img`
-    ccffccfffcccdddbcfffffffcccffcfcccffffccccccfccccccffcffffcccccccccccccccccfccfcfccccccccccffcccccccffffccffccffcccffccccccfcfcccccccffffcccfccccccccccccccfffc
-    fffcfffffffcbdbcfffffffcffffffcccffffccccfcccfccfffcfffffffccccccccccccccfcfcfffffccccccccffcfffffccffffcffcccfccffffcffcfcffccccccccfffcfcfccccccccccfccccfccf
-    cfcfffccfcccdddccffcfffffffffcccfffcffccffccffffffffffffcccccccccccccccfccccfccccccccccfccccffffcccfccfcfcffffccffffcffffcccccccccccccccccccccccccccccccfccfffc
-    cfffffccccccdddecfffffcccffffcffffcfccffcfffcfffffffffcccccccccccfccccccccccccccccccccfcccccfcfccfccffcfffffccffffffcfcccccccccccccfccccccccccccccccccccfffcccc
-    ccfccccfffccdddbffcffffffffcfcffffccccccffffffffffccffcccccccccccccfcccccffccccccccccfccccccffcffccfffccffffcffffcffcfccccccccccccccccccccccccccccccccccfcccccc
-    fcfffcffccccbd1cffcfffffffffccfffccccffffffffffffcfffcccccccccccccccccccccccccccfffccccccccccccfccfcfcfffffcffccfcfcccccccccccfcccccccfcccccccccccccccffcfccccf
-    ccccffccfcccdd1bcffffffffffccfffcccccfcffffffffccfffffcccccccccccccccccccccccccccccccccccfffcccfcffcccfcffffcccffccccccccccccfccccccccccccccccccccfcffccccccccc
-    cffffcfccfccbddccfffffccffccfcffcccccffcffffffcfcfffffccfccfcccccccccccfccccccccccccccfcfcccccccfcfcfffffcffcffffcfccccfcffcccfcccccccccccccccccccffffccccccccc
-    ccccfcfcccccdddbcffffffffccfffccfcccfcffffffcffffffffccffccccccccccccccccccccccccfffffcfcfccccccccffffffffffcffffccffcfcfcccfcccfcccccccccccccccfffcccfcccccccc
-    cffcfccccffcbd1cffffffffccffffcccccfffffffccffffffffffffcccccccccccfcccccccccfcccccccffccccccfcfcfffcffccffccfffcccccccffcccfcccccccccccccccffccccccccccccccccc
-    ccccccccccccdddbfcffffcfcccfccccffccffffcccffffffffffcfccccccccccfcccbcccccccfccccffcfccccfffcccfffffccfffffffcfccccccccccccccccccccccccccccccfcccccccccccccccc
-    cffccfcffcccbd1effffcfffffffcccfffcfffcfcffffffffffffffccccccccccccccccccccccccccfcfcffcfccfccfffccfcfffcfcccccccccccccccccccfcccccccccfccccfcccccccccccccccccc
-    ccfccfcfccccbd1decffcfcfffcccfffcffffcffffffffcffffcffccfccccccfccccccccccccccccccccccccfffffffffcfccfcccfccccccccccccccccccccccccccccccccccccccccccccccccccccf
-    cfccccccfcccbd1dbfffffcffffcccfcffffffffffffcccffffffccfcccfccccccbcccccccccccccccfccffffcffffffffffffccfcccccccfccccccccffcccccccccccccccccccccccccccccccccfff
-    ccfcfcccccccdd1deffffffffffcfccfffffffffffffcfffffffffcfccccccccccccccccccccccccccccccffffffffccccfccccccffcccfcccfcccffccccccfccccccccccccccccccccccccfcccfffc
-    ccccccccccccbd1ddccfffffffcfcccfffffffffcfffffffcffffccfcccffcccccccbccccccccccccccccfffcccfffccccfcccffffccccccccfccfcccfcccccccccccccccccccccccffccffffccfffc
-    fccccfccccccdd1ddcccfffffffcffcfffffffccfffffffcccffccccccfcccccccccccccccccccccccccccccffcfccccffffcffcfccccccccfcccfccccccccccccccccccccccccccfcfffccfcffffcc
-    cfcccfccccccdd1ddcfffffffffffffffffffffccfffffffffccffccfcfccccccccccccccccccccccccfcfffcfcfccccffcfffccfccccfcfcfcccccfccccccccccccccccccccfcccfffccfffffffccc
-    ccccccfcccccbd1bbcffffffccffffffffffffffffffffffccccfcffffccccfcccccccccccccccffffffcfccccfcfffffcccccfcffcffffccfccfccccccccfcfccffcfcccfccccfcfcccffffcfccccf
-    ccccfcccccccddddcccfffffcfffffffffffffffffffffffcffcfffffcccccccccccccccccfccfcccfcccccfccfcffccccfcfcffffcfffcccccfcccccccccfccccfcccfccccccccccccfffcccfccccc
-    ccccccccccccddddbffffccfffccfffffffcffffffffffffcfffccccccccccccccccccccccccccccffcccccccffffffcccfcccfccffcffcccccccccccccccccccccccccccccccccccccccfccfccccfc
-    cfccccccccccddddcccfffffffcfffffffccffcffffffffffffffcccffffffffccccccccccccccccccccccccfcffffcccccccfffffcffcccccccffccccccccccccccccccccccccccccccfccfccccfcc
-    cfcccccccfccbdddcccfffffffffffffffcfffffffffffffffffffffffffffffcffccccccccccfcfcccccfffcffffcfcfcccccfcfffcfccccfcccccccccccccccccccccccccccccccccccccccccffcc
-    cfcccccccfccddddccfcffffffffffffffffffffffffffffffffffffcfcfcfcccccccccccccccccccccccffcffffccccccccfffcccffffccccccccccfcffccccccfccccccccccccccccccfcccccfccc
-    cccccfccccccbbdbbfffffffffffffffffffffffffffffffffffffcffccfcffcccccccccccccccccccccfcffffffccccccfcccccfccffcfffffffcfcccfccfcfccccccccccccccccccccfccccffcccc
-    ccccccccccccbbdbcfffffffcfffffffffffffffffcffffffffffffffccccffccccccfcccccfcccccccfffffffcccccccccffcccffffcffffffffffffffccfcccccccccccccccccccccccccccffcccc
-    cccccccfffccbbbbcffffffffffffffcffffffffffffffffffffffffccccccccccccccccccccccfcffcffffcccccccccfcccfffcfffcffffffffffffffcccccccccccccccccccccccccccccccffcccc
-    cccccccfcccccbbccccfffffffffffffffffffffffcfcffffffffffffffccfffcffccccccccccfffcffffcfcccccfccfccccccffffffffffffffffffccfccccccfccccccccccccccccccccccffccfcc
-    cccccccfcccccccccccffcfffffffffffffcffffcffcffffffffffffffffcfffccccccccfcffffffffffffcccccccccccccccffcfffffffcccffccfcffcfccfcfccccccccccccccccccfcccfccccccc
-    cfcccccccccccccccccfccfffffffffffffccfffffffffffffffffffffffffffccfffffffffcffffffffccccccffffccccccfcfcfffffffffffccccffffffcccfcfcccccccccccccccffcfffccfcccc
-    cccccccfccccccccccccfffcffffffffffffffffcffffffffffffffcffffffffffffffffffffffcffffccccccfffcccccccccccfffffffffffffffffcfcfccfffcccccccccccccffffccccfcccccccc
-    ccccccccccccccbccbbcfffccfffffffffffffffffffffffffffffffffffffffffffffffffffffcfcffcccccfccccccccccfccfcffcfffcccffcfccfffcfcffcccccccccccccfcccfccccfccfcccccc
-    fcccccccccccccbbbcbccfffcffffffffffcfffffffffffffffffffffffffffffffffffffffcfffccccfffccfccccccccccfcccfffccfccccffffcffccffcfffccccccccccccccccfccccfcffcccccc
-    cccccccccccccccbbbccccfcccffffffffffffffffffffffffffffffffffffcffffffffffffcfcfccffffffcfccccccccfffccffffccffcffffffffffffffccccccccccccccccccccccccffffcccccc
-    cccccccccccbcbbbbbbcbccfcfcffffcffffffffffffffffffffffffffffffffffffffcffcffffffccffffcfffffcccfffccfcccfffffffffffffcfffcccfcfcfcccccccccccfffcccccfffcccccccc
-    cccccccccbbccbbbbbbcbcfccffffffffffffccffcfffffffffffffffffffcfffffffffffcffffffcffffffffffccfffccccffffffffffffccfffccccfccccfcccccccccccffffccfccfffccccccccc
-    cccccccccccccbbbbbbbbbccccfcfffffffffcfffffffffffffffffffffffffffffffffffcffffccfcffffffffccffccccccffffffffffcfcccfcfcfcccccfffcfccccccffffffccccffffcccfccccc
-    ccfcccccccbbbbbbdbbbdbccccccfffcffcfffffffffffffffffffcfffffffffffffffccfcfccffffffffffffffccfcccfffffcffffcffcccccccccccccfcfcccccccccfcfccccfccffffccfcccfccc
-    ccccccccc7bcbbbbbbbcbbbccccccfcfcffffffffffffffffcfffffffcffffffffffffffcfccffffffffffffffffcffffffcfffcfccffcfcccfcccfccfcccccccccccfcccccccccccfcffccffcfccfc
-    ccccccccbbcbcbbbbbbbbbbcccccfccfffffffffffffffffffffffffffffffffffffffcffccfffffffffffffffffffffffcfffffffccccffcccfccfffcccccccfcfcffffcffcfcccffffcccfccffccc
-    ccccccccbbbccbbbbbbbbbbcccccfcfffffffffffffffffffffffffffffffffffffffcfcfffcffffffffffffffffffffffffffffcfcfffcffcfcccccccfcccccccfcfcccfccccfccffcfffcfccccccc
-    ccccccccbbccbbbbbbbbbbcccccfcccfcffffffffffffffffffffffffccfffcffffffffccccfffffffffffffffffffffffffffffffccfcccffccffcccccccccccccccccccccffffffffffffcccccccc
-    cccccccccbccbbbbbbbbbbbcccccccfcfcffffffffcffffffcfffffffffffffffffcfccffccffcfcffffffffffffffffffffffffffccccccccccfcfccccccfcccccccccccccfffffcffffcffccccccc
-    ccccccccc7bbbbbbbbbbbbccceccccccffcffcfcfffcfffffffcfcfcfcfffffffccccfcfcfffcffcffffffffffffffffffffcfffffcccccccccccfcfccccfccffccccccffcffffcfffffcffccccfcfc
-    bbbccbbbbbbbbbbbbbbbbccceeeeecccffcffccffcfffffccfccccfcccfffffffcfcfcccffffffcffffffffffffffffffffccffccffcccccccccfcfffcfcfffcffccfcfcffffcccffffffcfcccccccc
-    ddddddddddbbbbbbbbbbbecceeeeeeecccfffcffffffcccccccccccfccfcffffcccccccccccffcfffffffffcffffffffffccffcfcfccccccccccfcffcfffffccfcfccfcfffcccffffcccfccccfccfcc
-    11d11dd1ddddbbbbbbbbbcceebbbbbecccffcccfffcfccccccceccffcccfffffccceccceccccfffffffffffffffffffffffcffffcccfcfcccccfccffffcffffffccfcfffcfcfffffccfccccffcfcccc
-    1111111111ddbbbbbbbbbccbbbbbbbeecccfcfcccccccccfccccccfccccffffcccccccccccccccccfcfffffffffffffffcccccffccfccccccffcfffffcfffffffccfccccfcffffffffcfcffcccccccc
-    1111111111ddbbbbbbbbbbbebbbbbbeeecceccccccccccccecccccccccfffffccecceeeecccccccfffffffffffffffffccccccfcffcccccfcffcfffcfffccfcffffffffffffffffcfcccfffffccccff
-    1111111111dbbbbbbbbbbbbbbbbbeebeeeeeecccccccccccccfeccccccffffcccceeecceccefccccfcfffffffffffffcccccffcccccccfcffffffcfcfcccccffffffffffffcfccccccffffcfcfcfcfc
-    1111111111dbbbbbbbbbbcbbbbbbbbbeeeefccccccccceccceccccceccccffcceeceeceeccccccfccccccccffccccccccccffcfffcfcffffcfffffffcfffcfccffffffcfcfccccfccffffffccfffcff
-    111111111ddbbbbbbbbbbbbbbbbbbbeeeeeeecccccccccccccccccccccfcfcceceeeceecccccceccccccccccffcccccccccccccccffccfcfcfcfccffcfffffffccfcccccccccccfffffffffcfffffcf
-    111111111dbbbbbbbbbbbbbbbbbbbeeeeeeeeecccccccccceceeeeecccccccecceecccccccccccccccccccccccccccfccccccccccccccfffcfcfccccffffffffffffcfcccccfcfffcfffffffcffffcf
-    11111111dbbbbbbb7bbbbbbbbbbbbeeeeeeeeeccccecccceeceeeeeccccccceececccceccceccccccccccccceccccccccccccceecccccffccfcffcffcffccffffffffffffffcfffffffffcfcfffffff
-    11111111dbbbbbbbbbbbbbbbbbbeeeeeeeeeeeeeeccfceeeceeeeeeeeeecccecccecccccccccccceccccccccccccecccccceccccccccccccfcfccfcfcffccfcfffffffffffffffffffffffffffffffc
-    d111111ddbdbbbbbbbbbbbbbbbeeeeeeeeeeeeeeeecceeeeceeeeeeeeeeeccccceccccccccffcccfcfecccccccececccececcccccccccfcffcccffffffccffffffffffffffffffcffffffffffffffcc
-    ccbd1dbbdbbbdbddbbbdbddbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeccceccccccffcfffffcccccccccccccecccccececccccccccccccccccffffffcffffffffffffffffcfffffffffffffffffc
-    eefcccbbeeceeeeeeeeceeeebbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecccccfcccfcccffffcfccfcccccccccecccccecccccccccccccfffcccccffffcffffffffffffffffffffffffffffffffff
-    ccbccfccbbeeeceeeeceeeeebeeeeeeeeeeeeeeeceeeeeeeeeeeeeeeecceecccccccffccfccffccccffcccccccccccccccccccccccccecccccccfcccccfcfffffffffffffffffffffffffffffffffff
-    cccbcccfffcecbbbbbbb77eebeeeeeeeeeeeeeceeeeeeeeeeeeeeeeeeeececcccccccccffccfccccccffcfccfccccccccccceceeeeceeccccccccccccffcccfffffffffffffffffffffffffffffffff
-    cccbccccccccbbbbcbbcbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeececceccffccccccfffffccfffccfffcccccccccceeeeeeeeceeeeccccccccccccfcfcffffcffffffffffffffffffffffffff
-    ccccccccccccfcccbbbbbbbbbbeeeeeebbbbbeeeeeeeeeeeeeeeeeeeeeecccccccfccccccccccfccfccffcccfcfffccccccceeeeeeeeeeecceccccccccccfcfcfffffffffffffffffffffffffffffff
-    cccccccccccbbfccccbcbbcb7bbeeeebbbbbbbbeeeeeeceeeeeeeeeeeeeeeeeccccceeceefccccccfccffcccffcfffccccccceeeeeeeeeeccccccccccccffccffffffffffffffffffffffffffffffff
-    cccccccccccbbbcfcccbcbbccbeeeeebbbbbbbbeeeeeeeeeeeeeeeeeceeccccccceccceeeccccccffcffcfffccfffffcfccfeeeececeeeeeeeceeccccccfcffcfffffffffffffffffffffffffffffff
-    cccccccccccbbbbbefcccbcbcbbeeebbbbbbbbbbbeeeeeeeeeeeeeeeeeeceeceeccceeeefeccccccccffcccccfffcfcfcccceeeeeeeeeeeeeeeeecccfccfffffffffcffffffffffffffffffffffffff
-    ccccccccccccbbbbbbcfbfcbcbbeeedbbbbbbbbbeeeeeeeebeeeeeeeecceeecceeeeeeeeeeecccceccccccfcccccccfcccfccceeeceeeeeeeeeeccccccccfcccfcfffffffffffffffffffffffffffff
-    ccccccccbccbbbbbbbbbfcfcbbbeebdddbbdbbbbeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeceeeeeeecccffcccfccffcfcceeeeeeeeeeeeeeeeeccccccfcccfffffffffffffffffffffffffffffff
-    cccccccccccbbbbbbbbbbfcffcbeebdbbbdbbbbbeeeeeeeebbeeeeeeeeceeeeeeeeeeeeeeeeecccceeeeecccccccccccccfccceeeeeeeeeeeeeeeeccccccccccfffffffffffffffffffffffffffffff
-    cccccccccccbbbbbbbbbbbcccfbeebbbbbbbbbbbeeeeeeeebbeeeeeeeeeeeeeceeeeeeeceeceeceeeeeeeeeeccccceccccccfcfeeeeeeeeeeeeeeeccccccccccfffffffffffffffffffffffffffffff
-    cccccccbbbdbbbbbbbbbbbbfccfbbeebbebeebeebeeeeeebbbeeeeeeeeeeeeeeeeceeeeeeeeceeeeeeeeeeeeeeccccececccccceeeeeeeeeeeeeeeeccceccccccccffffffffffffffffffffffffffff
-    cccccccd111bbbbbbbbbbbbbfcffceeeeeeeeeeeeeeeeeebbbbbeeeeeeeeeeeceeecceeeeccccceeeeeeeeeeeeccccccecccccfceeceeeeeeeeeeeeecceccceccccffffffffffffffffffffffffffff
-    ccccccc1111bbbbbbbbbbbbbbfcffccccfffccccceeeeeebbbbbeeeeeeeeeceeeeeeeccccccccccccececeeeeeececcccccceeecfeeeeceeeeeeeeeceeeceeceeccffffffffffffffffffffffffffff
-    ccccccc1111bbbbbbcbbbbbbbbfffcfccffffffccccceebdbbbbeeeeeeeeeeececccccccccccccccccccceeeeeeeeeeeeeeccecccceeceeeeeeeeeeeeeeeeecceccccffffffffffffffffffffffffff
-    ccccccc111dbbbbbbccbbcbbbccfffcccffffcccceeeeebd33bbeeeeeeeeeeeeeccecceccecccccccecccceeeeeeeeeceeeeeeeeeeeeeeeeeeeeeeeeeceeeecceccccccffffffffffffffffffffffff
-    bbcccccddddbbbbcbcccbccbcbcfcfceeeffffffeeecebdddbbbbbeeeeeceececcccccccccccccccccccceceeeeeeeeeeeeeeeceeeceeeeeeeeeeeeeeeeeeeeececcccccfcfffffffffffffffffffff
-    bccccccccbbbbbccbcbccbbbbbbfccccebcccfcceeebebddbbeeccccceecccccecccccccccccccccccccccceceeeeeeeeeeeeeeceeeeceeeeeeeeeeeeeeeeeeeeeeccccccfcffffffffffffffffffff
-    bcccccccccbbbbcccbbccbbbbbbeccccccecffccbbbebbbbcfccfccfffcffccfcccccccccccccccccccccceeceeeeeeeeeeeeeecccceeeeceeeeeeeeeeeeeeeeeeeececcccfcfffffffffffffffffff
-    ccccccccccbbbbbcbccbbbbbbbbbcccbeeecccccbeebccfceeeeeeeeeeeeecfcffcececccccccccccccccccccceeceeeeeeeeeeeeeceeeeeeeeeeeeeeeeeeeeeeeeeeececccccccffffffffffffffff
-    ccccccccccbbbbcbccbcbbbdbbbbcceebeecceeceeeccfeebbbbbeeeeeeeeeeeeecccfccccefccccccccceeeccceceeeeeeeeeeeeeeeeeeeceeeeeeeeeeeeeeeeeeeeeeecccccccffffffffffffffff
-    ccccccccccbbcbbbbccbbbddbbbbfeceeccccbceecefcbbbbbbbbeeeeeeeeeeeeeeeecfcffcccecfcfcceeececcccceeeeeeeeeeeeeeeeceeeeeeeeeeeeeeeeeeeeeeeeceeccfcfcfffffffffffffff
-    cccccccccbbbcbccccbbdbddbdbbfeeeeecccbcbbefceb3bbbbbbbbeeeeeeeeeeecceeeecccccccfccceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeececcfccccccffffffffffff
-    cccccccccbbbbccccbbbdddddbbbceebebeccccbbcfcbdbbbbbbbbbeeeeeeeeeeecccccccbbccfcbfcceeeeeeeeeeeecceeeeeeeeeeeeeeeceeeceeeeeeeeeeeeeeeeceeeeeefccecccffffffffffff
-    cccccccccbbbbcccccbddddddddbcccbbeecccbecffebdbbbbbbbbbbbeeeeeeeeeecccccccccccfccbfeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceeeeeeeeeeeeeeeeeeeeeeeeeeeceeecccfffffffffff
-    cccccccccbbbbbbccbbdddddddbbbccbbbbeeebdbffbdbbbbbbbbbbbbeeeeeeeeeeeccccccccccceccccceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceeccccfccfcfff
-    cccccccccbbbbbbccbddddddddbbbeebbbbeebdbeeebbbbbbbbbbbebeeeeeeeeeeeecccccccccccceefccceeeeeeeeeeeeceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecceccccccfff
-    cbcccccccbbbbbbcbbddddddddbbeeebbeeebdbbccebbbbbbbbbbbebeeeeeeeeeeeccccccccccccceeeefcceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecccccccf
-    c66ccccccbbbbbbcbddddddddddbeebbbbbbbbbeceebbbbbbbbbbbebbeeeeeeeeeecceeeccccccccceebecffcceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecccccf
-    c96bcccccbbbbbbbdddddddddddbeebdbeebddddbeeebbbbbebbbbbbbbeeeeeeeeeeeeeecccffccccceeebefcfcbeeeeeeeececcceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeccccf
-    6966cccccbbbbbbbdddddddddddbeebbdeeddddddbeebbbbbbebbbbbbbbebebbeeeeeeecccccffccccceeeeefffccbeeeeeceeeceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecccc
-    9966bccccbbcccbbdddddddddbdbeebeeebdddddbbeebbbeeeebbbbbebbebbbbbeeeeeeecccccccccccceeeefffffcceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeecf
-    99669bbccbbcccbbdddddddbbddbeebebbdddddbbeebbbeeeebbbbbbbbbbbbbeeebeeeeeccfcccfccccccceeefffccccbeeeeeceecceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeececcf
-    99999bbecbbbbbbbddddbbbbbbbecbbeebdddddd3eebbe1eeebbbbbbbbbbbbbbebeeeeceecccccccccccccccccfcc11ddceeeeceeeeeeeeeeeeeeeeeeeeeeeebeebbeebeeeeeeeeeeeeeeeeeeeeeccc
-    99999bbbcbbbbbbddddbddbbbbbeccecb3dddd3bbbedeebeeeebbbbbbbbbbbbbbbbbeeeeeeccccccccccccccccfcd11ddbbdeeeecceeecceeeeeeeeeeeeeeeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeccc
-    bbd99bbbcbbbbbbbdbdbbbbbbbbecccbdddddbbbbeebeeebbbeebbbbbbbbbbbbbbbbbeeeeeeccccccccccccccccfddd1dbbddbeeeecbbcbecbeeeeeeebeeeebeebbbebbeeeebeeeeeeeeeeeeeeeeecc
-    cddd9bbbebbbbbbbddbdbbbbbbbeccbb3ddd333bbeebeeebdbeebbbbbbbbbbbbbbbbeeeeeeeeccccccccccccccffbdd1dbebdbbbbbbbbbbbbddbbbbbbbbbbebbbbbebebeeeeeebebeeeeeeeeeeeeecc
-    cbdbdbcbecbbbbbbdddbbbbdbbeccbbddddd33bbbeebeebcbbeebbbbbbbbbbbbbbbbebeeeeeeeccccccccccccccffccbbebdbbbbeebbbbbbebbbbbbbbdbbbbdddbbbebbbeeebeebebeeeeeeeeeeeecf
-    bcdbbbcbbcbbbbbbbbbbbbbbdbeccbddddd333bbbeebeeeeebdeebbbbbbbbbbbbbbbbbeebeeeeecccccccccccccfffffcccccccccceeeeeeececbccbbbbbbbbbbbbeeebbbbbbbbbbbbebbeeeebeeebb
-    bcbbbbcebcbbbbbbbbbbbbbbbbeebddddd333bbbeeebbeebbe1eeebbbbbbbbbbbbbbbbbbbbbbbeeeeccccccccccfffccccfffffffcccccecceeeeeeeeeeceeeeeeeeeeeeeebbbeebbebbbbeeebbbbbb
-    bccbbbbebcbbbbbbbbbbbbbbbeebddddddd33bbbeeeebeedebbbeebbbbbbbbbbbbbbbbbbbbbbbeeeeeeccccccccfffcbbffffcffcccccceeeeeeeeeeeeeeeeeebeeebbbebbebeeeeeeeeeeeebbbbbcb
-    bcccbbbbccbbbbbbbbbbbdbdbeebdddddd3333bbeeeeeeeebebbbebbbbbbbbbbbbbbbbbbeebbbbebeeeecccccccffccccffccfcceeceeeceeeeeeeeeeeeeeeeebbbbbbbbbbbbbbbbebbeeeeeeeeeeec
-    bccccccccccbbbbbbbbbbbbbbebddddddd3333bbeeeebeeeeebebebbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeecccccffcffcccccfccceeeeeeeeeeeeeeeeeeeeeeebbbbbbbbbbbbbbbbbbbbbbeeeeeeecf
-    bbcccccccccbbbbbbbbbbdddebddddddd333bbbbbbeebbebeeebeebbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeeceecffcccfececeeeeeeeeeeeeeeeeeeeeeeeebbeeebbebbbbbbbebbbbbbbbbeeeeeeecf
-    bbcccccccccbbbbbdbbdbbbbedddddddb3333bbebeeeeeebbbebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeeeecfcccceeeeeeeeeeebeeeeeeeeeeeeeeeeebbebbbbbbbbbbbbbbbbbbbebbeeeeeeccf
-    cbcccccccccbbbbbbbbbbbbbddddddd3333333bbbeebbeebbbbbeeebbbbbbbbbbbbbbbbbbbbbbbbbbbebeeeeeefffeeeeeeeeeeebeebbbebbeeeeeebbbeeebbeebbbbbbbbbbbbbbbbeeeeeeeeeecccf
-    dccccccccccbbbbbdbdbbbbbddddddd333333bbbbeeebebbbbbbeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeebbfcebeeeeeeeeebeebbbbbbbbbbbeebeeebebbebbbbbbbbbbbbbeeeeeeeeeeeeeeecff
-    bdbbccccccbbbbbbbbbdbbbddddddddd3333bbbbbeeebbbbbbbbbebebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbebebeceeeeeeeeebbbbbbbbbbbbbbbbbbbbebeebbebbbbbbbbbbbbeeeeeeeeeeeeeeeecfc
-    ccbdccccccbbbbbbbbdbbddddd3dddddd3333bbbbeeebbebbbbbbbbbebbbbbbbbbbbbbbbdbbbbbbbbbbbbebbebbeeebbbeebbbbbbbbbbbbbbbbbbbbbbbbbbbbebbbbbebbeeeeeeeeeeeeeeeeeeeeecc
-    cbccbcccccbbbbdbbbdbddddd33ddddd3333bb4bbbeebbbbeebbbbbbebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeebeebeeebbbbbbeeecc
-    bbbbecbbccbbbbbbbddddddd333ddddd3333333bbbeeebbbbbbbbbbbbeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebbbbebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebeeeebbbbbbbbbbbbbbbeeec
-    bbbdbbecbbbddddddbbddd33333ddddd3333333bbbeebbbbbbbbbbbbbeebebbbbbbbbbbbbbbbbbbdbbbbbbbbbbcebbbbbbbbbbbbbbbb3dbbdd3d3bbbbbbbbbbbbbeeebebebbebbbbbbbbbbbbbbbeeec
-    bbbbbbbbcccccbbbbebd33333333dddd33333333bbbebbbbbbbbbbbbeeebbebbbbbbbbbbbbbbbbbbbbbbbbbbbeeebbbbdbbbbbbbbd3dddd3d3dddddbbbbbbbbbbbbbebbbbbbbbbb4bbbbbbbbbbbbeee
-    bbbbbbbbbbbbbbbbbb3333333333d3dd33333333bbbeebbbbbbbbbbbbeeeeeebbbbbbbbbbbbbb3bbdbbbbbbbbecbbbbbbbdbbbbdddddddb4ddddddd33bbbbbbeebebbbbbbbb4bbb34bbbbbbbbbbbeee
-    bbbbbbbcbbbbbbbdbbd3333333333333333333333bbeeebbbbbbbbbbebeeeeebbbbbbbbbbbbb3bbbdbdbbbbbbeebbbbbbbdd34d4dddddddd3dddddddbbbbbbbbebbbbbbbbbbb4444444b4bbbbbbbeee
-    bbbbbb7ccbbbbbbbbb33333333333333333333333bbbebbbbbbbbbbeeeeeeeebbbbbbbbbbbb3bbdd3bdbbbbdbecbbdbbbddbdddddddddddddddddddbbbbbbbbbbbbbbbbb3b4334444b434bbbbbbbeee
-    bbbbbb7c7bbdbbbbbbb33b333333433b3333333333bbeebbbbbbbbbeeeeeeeebbbbbbbbbbbbbddddddd3dddbbecdddbddddddbdddddddddddddd444bbb4bbbbbbbebbb3bb3434444444344bbbbbbbee
-    bbbbbbbcbbdbbbbbbbb33b3b43333443333333b33bbbbebbbbbbbbbbbeeeeeebbbbbbbbbbbbd3bddddddd3dbecbbddddbd3ddddddddddddddd3344d3bbb3b3bbbbbddb4d43d3444434444b4bbbebbbe
-    bbbbbbbbbbbbbbbbbbbbbbbbb4b4444333bbb34333bbeeebbbbbbbbbbbeeeeeebbbbbbbbbdb33ddddddddddbecbdd3dddddddddddddddddddd3434b4b433dbb33bb3b43d33d43bb444443443bbbbbbe
-    bbbbbbbbbbbbbbbbbbbbbbb4b44b4b4bbbbbb3b33b3bbbebbbbbbbbbbbeeeeeeebbbbbbbd33bddd3ddd3dddbecdddddddddd4dddddddddddd33333b3db3d34444dd4dd3dd343344444444444bbbbbee
-    bbbbbbbbbbbbbbbbbbbbbbbbbe4bbbbb4bbbbb4bbbbbbbeebbbbbbbbbbeeeeeeeeebbbbbbb3d3dddddddddbbcedddddddddddddddddddd333333bd333dd3ddd4dddd3d4dddd433444444444444bbbee
-    bbbbbbbbbbbbbbbbbbbbbbbbebbbbbbbbbebbbbb4bbbbbbebbdbbbbbbbbbeeeeebbbbbbbbbbdddddddddddbbcbddddddddddddddddddddd334333dddddddddddd4dd334434d3b4444443444344bbbbb
-    bbbbbbbbbdbbbbbbbbbbbbbbbeebeeebeebbebbebbbbbbbeebbbbbbbbbeeeeeeeebbbbbbbbbb3dddd3dddbbecdddddddddddddddddd3433d3333d3ddddddddddd33d434d443b444444444444344bebb
-    bbbbbbbbbbbbbbbbbbbbeebbeeeeeeeeeeeeeeebbebbbbbbeebb3bbbbbebeeeeeebbbbbb3b3dd3dddddddbbee3ddddddddddddd3333333dd33dddddddddddddddd33ddd44d4344444444444444b4bbb
-    bbbbbbbbbbbbbbbbbbbbbebeeeeeeeeeeeeeeeeeeeebbbbbeebdbbbbbbbbeeeeeebbbbbebb3b333ddddddbbcb3dd3ddddddd33333333343333dddd3dddddddd3d3d3ddd33d3b444444b444444443bbb
-    bbbbbbbbbdbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeebbbbeeb1bbbbbbeeeeeeebbbbbbbb3d3dddddddbbeb33333ddd3333333333333d3333dddddddddddddd3d4d4d33d3b4444444444444b44bbbb
-    bbbbbbbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbebeeee1bbbbeeeeeeeeebbbb3bb33d33ddddbbbeb333333dd3333333db33d333333dddddd3dd3dddddddd33334b43b444444bb444444bbbb
-    bbbbbbbbbbbbbbbbbeeeeeeeeeeeeeeeeeceeeeeeeeeeeebeeeebeddbbbbeeeeeeebbbb33d3ddddddddbbebd3333333333333333d333db33d33dddddddddddddddd433334434b444444444444444bbb
-    bbbbbbbbbbbbbbbebeeeeeeeeeeeeeeeccccccccceeeeeeeeeeebbeebbbeeeeeebebbbbbbb3d33dddddbbebd333333333333b3333b33344dd34433ddddddd3d3dd433d33b4bbb44444444b4444b4bbb
-    bbbbbbbbbbbbbbbbeeeeeeeebbeeeeeccccccccccfceeeeeeeeeebbbeeebbeeeeebbbbbbbb333d3ddbbbbbddd33333333b3bbb33bbb333b33d3334d33ddddddd43d4333444444444444444444b4bbbb
-    bbbbbbcccbbbbbbeeeeeeeebbbbeeeeeccccccccccffeeeeeeeeeebbbeeeebbeebbbbbbbbbbdbd33bbbbbb33d33333b33bbb333b3bbbb3dd333333d343ddd3ddd4333334bb4444444bbbbbbbbbbbbbb
-    bbbbcccccbbbbbbeeeeeeeebbdbeeeececcccccccfccffeeeeeeeeeeeeeeeeebbebbbbbdbb3bdbdbdbbbd333d33333333bbbbbbb3bbbb33b333333333d4334d4dd333b334bb44444bbbbbbbbbbbbbbb
-    bbb7cccccbbbbbbbeeeeeebbdbbbeeececcccccccccccccceeeeeeeeeeeeeeeeeebbebbbbbbbbbbbbbbd3dd33333333bbbbbbb3bb3bb3333bbb333dd33d333333343b344bbb444bbbbbbbbbbbbbbbbb
-    bbccccccccbbbbbbbeeebbbbbdbbbeeccccccccccccccccceeeeeeeeeeeeeeeeeeeebbbbbbbbbbbb333333333333333333bbbbbbbbbb3bbbbbbbbb33d333333333333bbb3bbb44bbbbbbbbbbbbbbbbb
-    bccccccccbbbbbbbeeebbbddddbbeeeccccccccccecccccccceeeeeeeeeeeeeeeeebbbbbbbbbbbb333333333333333d333b33bbbbb3bbbbbbbbbb33333b333333b3bb4b3444b44bbbbbbbbbbbbbbbbb
-    cccccccccbbbbbeeeeebbbdddbbbbeecccccccccccccceccccceeeeeeeecceeeeebbebbbbbbb333333333333333333b3333333333b3bb33bb3bb3dd333333333bb33b4bb44434bbbbbbbbbbbbbbbbbb
-    cccccb7bbbbbbebbeeebbbdbbbbbbeecccccccccccccecccccceeeeeeceeceeeeebeebbbbbbbb33b333333333333bb34333b33b3bbb3b3bbb3bbb3bbbbbbbbbbbb3bbbbb3bb4bbbbbebbbbbbbbbbbbb
-    eeeecbbbbbbbbbeeeebbbddbbbbbbbeecccccccccccccccccccccccfcceeeeeeeebbbbbbbbbbbbbbd3b3333b333333333333333333bbbdbb33b3b4bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbebebbbbbbb
-    eeccbbbbbbbbbbeeebbbdddbbbbbbeeeecccccccccccccccccccccceeeeeeeeebbbbbbbbbbbbbbbb3bbb33333333333333333333333333d3b3bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbe
-    ecbbbbbbbbbbbbeebbbbbbbbbbbbbbeeeecccccccccccceeecceeeeeeeeeeeebbbbbbbbbbbbbbbbbb3bbb3b3b333333d3333dd333d33b333bbbbb33b3bbbbbbbbbbbbbbbbbbbbbbbbbebbeebbeeebbb
-    cbbbbbbdbbbbbbebbbebbbbbbbbbbbeeeecccccccccceeeeeeeeeeeeebeeebbbbbbbbbbbbbbbbbbbbbbbbbb3bbb3333333ddd33dd3bb3b3333bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeebbbb
-    bbbbbbbdbbbbbbbebbbbbbbbbbbbbebeeeceeccccceeeeeeeeeeeeeebbbeeebbbbbbbbbbbbbbbbbbbbbbbbbb3bbb3333333dd33ddd43b3b33bbb3bbbbbbbbbbbbbbbbbbbbbbbbbbebeeebebbeebbbbb
-    bbbbbbdbbbbbbbbbbbbdbbbbdbbbbbbbeeeeccceccceeeeeeeebebebbbbeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb3b3333bb33b33d4bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeebbbbbbeebbee
-    bbbbbbbbbbbbbbbbbbbddbbbbbbbbbbbeeeeeeeeeeeeeeeeebbbbbbbbbbbbbbbbbbbbbebbbbbbbbbbbbbbbbbbbbbbbb3333b333dd3dbbb333bbb3bbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeebbebbbbbe
-    bbbbbbbbbbbbbbbbbbdddbbbbbbbb3bbbbebeeeeeeeeeeebbbebbbbbbbbbbb3bbbbbbebbbbbbbbbbbbbbbbbbbbbbb3bbb3b3333333ddd3bbb3bbbbbbbbbbbbbbbbbbbbbbbbbbebeeeeeeeeeebbbbebe
-    bbbbbbbbbbbbbbbbbbdbbbbbbebbb3bbbbbebeeebeeeebbbbbbbbbbbbbbbbbbb3bbbbbebbbbbbbbbbbbbbbbbbbbbbbbbbbbbb333bbb333bbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebebeeeeeeebbeeebbe
-    bbbbbbbbbbbbbbbbbbbbbbbbbbbeebbbbbbbbbeeebeeebebbbbbbbbbbb3bb3333bbbbeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbb33333b3b3dbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeebbebbeeeee
-    bbbbbbbbdbbbbbbbbbbbbbbbbbbbbebbbebebbbebeeebbbbbbbbbbbbbbb3333333bbbbeeebbbbbbbbbbbbbbbbbbbbbbbbb3b3b3d3bbb3dbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebebeeeeeeebebee
-    bbbbbbddbbbbbbbbbebbbbbbbbbbbbebeeeeebbbbbbebebbbbbbbbbbbb33333333bbbbeeeeebbebbbbbbbbbbbbbbbbbbbbbbbbbbbb3bbbbbbbbbbbbbbbbbbbbbbbbbbebbbbbbbbbbebeebebbbeeebee
-    bbbbbdddbbbbbbbbbbbbbbbbbbbbbeeeeeeeebbbbbbbbbbbbbbbbbbbbbb33333333bbbeeeeebebeebbbbbbbbbbbbbbbbbbbbbb3bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeebeeee
-    bbbbbddbbdbbbbbbbbebbbbbbebebeeeeeeeeeebbbbbbbbbbbbbbbbbbbbb333433bbbbbeeeeeeeeeebebbbbebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebebebbbbeeeeeeeeee
-    bddddbdbbbbbbbbbbbebbebbbbbbeeeeeebeeeeebbbbbbbbbbbbbbbbbbbb3b33bbbbbbbeeeeeeeeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebbbbbbeebbeeeeee
-    dddddbbbdbbbbbbbbeebbebbebeeeeeeeeeeeeeeeebbbbbbbbbbbbbbbbbbbbb3dbbbbbbeeeeeebeeeeeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebebbeebebeeeee
-    dbbdbbbbdbbbbbbbbeebbeebbbbeeeeeebbbbbeeeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeeebeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebebbbbbeeeeeeeeeb
-    bdbbbbdddbbbbbbbbeebbeebeebbeeeeeebebebeeeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeeeeeeeeebbbbebbbbbbbbbebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbebebbbbbbbbebebbeee
-    ddbbdddbdbbbbbbbbebbbdbeeeebbbeebebbbbbebeeeeeebbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeebebeebeeeeeeebeebbeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbebebbbbbbbeebbbbbbbeeeebbbebbe
-    bbbddbbbbbbbbbbbbbbddd33eebeeeeeeeebbebbbbeeeeeeebbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeeeeeeebeebeeebeeebebeeebeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbebbbbeebbbbbbbe
-    bbbbddbbbbbbbbbbbedd1d344eeeeebeeeebbeeeeeeeeeeeebbbbebbbbbbbbbbbbbbbbbbbbbeeeeeeeeeeebeeeeeeeebeeeeeebebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbebbbbbbbbbebebbbbebbe
-    bbbbbbbbbbbbbbbbbbdd1db3344eeeeeeeebeeeebbbeeeeeebeebbbbbbebbbbbbbbbbbbbbbbbeeebbeeeeebbeeeeeeeeeeeeeeeeeebebebbeebebbbbbbbbbbbbbbbbbebbbbbbbbbbbbbbbbbbbbbbbee
-    bbbbbbbbbbbbbbbbbbdd1d3344443eeeeeeeebeeeeeeeeebeeeeebbbbebbbbbbbbbbbbebbbbbeeeeebbeeeeeeeeeeeeeeeeeeeeeeeebeeebbebbbbbbbbebbbbbbbbbbbbbbbbbbbbbbbbbbebbbbbeeee
-    bbbbbbbbbbbbbbbbbb333333333333beeeeeeeeeeeeeeeeeeeeeeeeebbbebebbebebbbbbbbbbbeeeeeeeeebbeeeeeeeeeeeeeeebeebeebbeebbbbbbbbbebbbbbebbbbbbbbbbbbbbbbbbbbebebebbebe
-    bbbbbbbbbbbbbbbbbbb3b33333dd33b3beeeeefeeeeeeeeeeeceeceeebbebebeeeeebbbbebbbbeeeeeebeebebeeeeeeeeeeeeeeeeeeebbbbebbebbbbebebbbbbbbbbbbbbbbbbbbbbbbbbbebbbbbeebe
-    bbbbbbbbbbbbbbbbbb33333333333333bb43eebeeeeeeeeeeeeceeeceeeeeebeeeeeebbbbbbbbbbeeeeeeeeeebeeeeeeeeeeeeeeeeeebbeebbbbbbbeeebebbbbbbbbbbbbbbbbbbbbbbebbbeebbbeebe
-    bbbbbbbbbbbbbbbbdbbb3b33b3333333333b43eebeffeeeeeeeeecfceeeeeeeeeeeeeebebbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebebebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebbbeeebe
-    bbbbbbbbbbbbbbbbbbbbbb4443b333333dd33b34ebeeeeceeeeeeeeccccceeeeeeeebebebbbbbbbeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeeebeebbbebeebbbbbbbbbbbbbbbbbbbbbbbebeeeebbbbbeee
-    bbbbbbbbbbbbbbbbbbbbbb44434b33333d3d33b344bbbbeeeeceeececcceeceeeeeeeeeebbbbbbbebeeebeebeeeeeeeeeeeeeeeeeeeeeeeebebbebbebbebbebbbbebbbbbbbbbbbbbbbbeeeebbbebbeb
-    bbbbbbbbbbbbbbbbdbbb3bbe444444433333333d333333bbeefceeeccccccceceeeeeeeeeebbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbebbbebebbbbbbbebbbbbbbbbbbbbbbbeeebbbbbebe
-    bbbbbbbbbbbbcebbdd3bbbbbe44444434bbbb333bbb33333bbbceecceeccfcfceeeeeeeeeebbbebbbeeeebbeeeeeeebeeeeeeeeeeeeeeeeeebeebbebbbbbbebbbbbbbbbbbbbbbbbbbeeeeebbeeeeeee
-    bbbbbbbbbbccccbbdbbbbbbbbb44e444444b4bbb333bbb33bbdbbecefcffccfffcceeeeeeebbbbbbeeeeebebeeeeeeeeeeeeeeeeeeeeeeeeebeebbeebbeebbbebbbbbbbbbbbbbbbbbebbebbbbeeeeee
-    bbbbbbbbbccccbbdddbbbbbebbbbbebbeeeeb43ee44bbbeeebbbebeeecccfcffffcceeeeeeebbbbbbeeebeeebeeebeeeeeeeeeeeeeeeeeeeebeeebbbeebbbbbbbbbbbbbbbbbbbbbbeeeeeeebebebeeb
-    bbbbbbbbbccccccbddbbbeebbbbeebbeeeeeeeeebeeeeeebeeeeeeeeeeccccfccffcceeeeeebbbbbbeeebeeeeeeeeeeeeeeeeeeeeeeeeeebeeeeeebbbeebbbebbbbbbbbbeebbbbebbeeebbbbeeeeeee
-    bbbbbbbbcccccccbdbbeeeeebbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefceceeeeebbbbbebeeeebeeebebeeeebeeeeeeeeeeeeeeeeeeeebebbbebebbbbbbbbbbbbbeeeeeeeeeebbeeeeeeeee
-    bbbbbcccfccccfbddbbbeeebebebbeeeeeeeeeeeeeeeeeeebeeebbbbeeeebeeeeeccccceebebbbbbeeeeeeebbeeeeeeeeeeeeeeeeeeeeeeeeeeebeeebbbbbbbbbbbbbbbbbbbebeeebbbeebbeeeeeeee
-    bbbbbccffcfccceddbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeebebbbbbbebbebbbeeeeeeeeeebbbbbbeeeeeeebbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbbbbbbbeebbbbbbbbbbbbebebbbbebeeeeeee
-    bbbbbffffcfffcbdddbbbeeeeeeeebeeeeeeeeeeeeeeeeeeebbbbbbbbbebbbbbeeeeeeeeebbbeebeeeeeeeeeebebebeeeeeeeeeeeeeeeeeeeeeeeebbbbbbbbbbbbbbebbbbbbebeebbebbbeeeeeeeeee
-    bbbbbffcfcfcfcbddbbbbbeeeceeeeeeeeeeeeeeeeeeeeebbbeebbbbbbbbbbebeeeeeeeeebbbbbeebeeeeebebeeeebeeeeeebeeeeeeeeeeeeeeeeeebebbbebbbbbbbbebbebbeebbebebbeeeebeeeeee
-    bbbbbcfcfcccfcbdddbbbbbeeeeeeeeeeeebeeeebeeebbbbbbbbbbbbbbbbbbbbbbbeeebeeebbbbbbebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbebbbbbbbbbbbebbbbbbbeeebeeeeeeeeeeee
-    bbbbbbcffcfcfcbbddbbbbbbeeeeeeeeeeeeeeeeeeeeebbbbbbbbbbbbbbbbbbbbbbeeeeeebbbbebbeebeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebebbbbbbbebeebbbbebbeeebbeeeeeeeeeeee
-    bbbbbbcffccfccbbdbbbbbbbbeeecceceeeeeeeeeeeeeeebebbbbbbbbbbbbbbbbbbeeeeeebbbbbbeebbeeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbebbbbbbbeebbbbebeeeebeeeeeeeeeeee
-    bbbbbbfcfcfcccbbddbbbbbbbbeeeeeeeeeeeeeeeeeeeeebeebbbbbbbbbbbbbbbbbbbebebebbbbbbeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebebbebbbebebebbeebbeeeeeeeeeeeeeeeee
-    bbbbbbffffcfccbdbbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeebeebbbebbbbbbbbbbeeeeebbbebbbbbebbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebeeeebbbbbebbebeeeeebebebebeeeeeeeeeeeee
-    bbbbbbfffcffccbdbbbdbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeebbbbbbbbbbbbbbbbeeeebbbebbebbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebeebebbebbeeeeeeebeebeeeeeeeeeeeeeeeee
-    77cbbbcffccfccddbbbdbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeebebebbbbbbbbbbbbbeeeebbebbeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebeeebebeeeeeeeebebeeeeeeeeeeeeeeeeee
-    cccccccfcccffebdbbbbbbbbbbbbbbebeeeeeeeeeeeeeeeeeeeebbbbbbbbbbbbbbebebbeeebebebbeeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbebeebbeeeeebeeeeeeeeeeeeeeeceeee
-    cccccccfcccfcebddbbbbbbbbbbbebbeebeeeeeeeeeeeeeeeebbbbbbbbbbbbbbbbbebbeeeebeeebbeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeee
-    ffffffcccccfcbdddbbbbbbbbdbbbbbbbbbbeeeeeeeeeeeeeebbebeebbbbbbbbbbbbbbeeeeebebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-    fffffffccffccbbddbbbbbbbbbbbbbbbbbbebeeeeeeeeeeeebeebeeebbbbbbbbbbbbbbeeeeebbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeee
-    ffffffcfccfffbdddddbbbbbbbbbbbbbbbbebbeeeeeeeeeeeeeeeebeeebbbbbbbbbbbbeeeeebeeeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceeeeeeeeeee
-    ffffffffccffcbddbbbbbbbbbbbbbbbbbbbebbbbeeeeeeeeeeeebebebbebbbbbbbbbeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-    fffffffcffccfbbbbbbbbbbbbbbbbbbbbbbbbbbbeebbeeeeeebbbeebbbbbbbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeececeeeeeeeeceee
-    fffffccfffcccbdbbbbdbbbbbbebbbbbbbbbbbebbeebeeeeebbbeeeeeebbbbbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceeecceeecceeee
-    fffffffccccccbbbbdbbbbbbbbbbbbbbbbbbebbbeeeeeeeebebeeeeeebbebbebbbbbbbeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecccccceeceeeee
-    cfcfffcccfcccbbdbbbbbbbbbbbebbbbbbbbbebebeeeeeeeebebeeebbbbebbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeccceccceeceeeee
-    cffccccccccfcbbbbbbbbbbbbbeebbbebbbbbebebebebeeeeeeeebbbbbbbbbbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeececeeeccccccccceeeeeeee
-    cffccccfffcccbbdbbbbbbbbebbebbbbbbbbbbeebeebeebbeebbbbbebbeebbebbbbbbbebbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecccececccccccccccceeeee
-    cfcccccccfccbbbbbbbbbbbbeeebbbbbbbebbbebbbbebeeebbeebebbebbbbbbbbebbbebbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecccecccccccccccceeeeee
-    cfcccfccccfcbbbbbbbbbbbbbeeebbeebbebbbbbbbbbbeebbbeeeebeebebbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeccccccccccccccccccccecee
-    cccccccfcffccbbbbbbbbbbbbeeeeebeebbebbbbbbbbbbebbbbeebbebbbbebbbbeebbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecccceeeeeccccccccccccccfcccccceeecee
-    cccffcccfccccbbbbbbbbbbbbbebeebbbbbbbbebbbbebbbbbbbbebbbbeeeeebbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecccececcccccccceeccccccccccceeeeeee
-    fcfffcfccfcccbbdbbbbbbbbbbbbbebbbbbbbbbbbbbbbbbbbbeebbbbbebbbbbebbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeececccccccccccccccccccccccccfccceceeeeee
-    ffcfffccfffccbbbbbbbbbbbbbbbeeeeebeeebbbbbbbbbbbbbbbbbbbbbbbbeebbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeccccccccccccccccccccccfcccccccceeeeee
-    fccfffcccffccbbbbbbbbbbbbbbbbbeeebebbebbbbbbbbbbbbbbbbbbbbbbbbebebbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceecccccccccccccccccccccfcfcfcccccccceeeee
-    fccccfcccffcccbbbbbbeebeeebbebbeeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceeecccccccccccccccccfcccffcfcccccccecceeee
-    cccfcccfffcfccbbbbbbbeeeebeebbeeeeebebbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecceecccccccccccccccccccfcffcccccccccccceeeeee
-    cfccffcccfccccbbbbbebeebbeebbeeeeeebbbbbbbbebbbbbbbbbbbbbbbbbbbeebbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeccccccccccccccccccccccccfffffcffccccccccceeeee
-    cffffcfcccccccbbbebeeebbeeeeeebbbbeebbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceecccccccccccccccffccfcccffcffffcccccccccceceeee
-    fcffcfffcffffccbeeeeeeeeeeeebbeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceeeeeeccccccccccccfcccccfcffffcfffffffcfccccccccccceeeee
-    ffffffcfcfcfcfceeeeeeeeeeeeeeebeeeeeeeebeebbbbbbebbbbbbbbebbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecceececccccccccfcccfcccccfffcfffffffffffffccccccccceeeeeee
-    fffffcffffccfcfeeeeeeeeeeeeeeeeeeeeeeeeeebbbbbbbbbbbbbebbbbeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeececeeccccccccccccccffcfffcfffffffffffffcfffccccccceeeeeeee
-    ffcffcffcccffcfceeeeeeeeeeeeeeeeeeeeeeebeeebbbbbbbbbbbbbbebbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeccececcccccccccccfcfcccfffffffffffffffffffccccccccceeeeeeee
-    fffffcffffcccccfceeeeeeeeeeeeeeeeeeeeeeebbbbeebbebbeebbbbebbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceeccccccccccccccccccffccfccfffffffffffffffffcffcccccccceeeeeeeee
-    fffffffffcffcfcffceeeeeeeeeeeeeeeeeeeeeeeeebbeeeeeeeeeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeceeecceccccccccccccccccccffccffffffffffffffffffffffcffccccccceeeeeeeee
-    ffcffffffffffcffffceeeeeeeeeeeeeeeeeeeeeebeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceeeeceeeceecccccccccccccccccfccffffffcfffffffffffffffffffffcccccceceeeeeeeeee
-    ffffffcffffffffcfccceeeeeeeeeeeeeeeeeeeeeeeeeeeeeebeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeccccccccccccccccccccccfcfcfffffffffffffffffffffffcccccccccceeeeeeeeeee
-    fffffffffffffffffffccceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeececeeeccceececcccccccccccccccffcfffcffffffffffffffffffffffffffcccccccccceceeeeeecf
-    `, SpriteKind.Player)
 forever(function () {
     if (movement < 1) {
         movement = 0
