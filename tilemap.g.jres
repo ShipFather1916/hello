@@ -580,6 +580,18 @@
         "tilemapTile": true,
         "displayName": "myTile91"
     },
+    "tile97": {
+        "data": "hwQQABAAAAD//////////29mZmZmZmb2bzMzY2YRZvZv091jFt1h9m/T3WMW3WH2b9PdY2YRZvZv091jZmZm9m/T3WNmZmb2bzMzY2ZmZvZvZmZmZhZm9m9mZmZmZmb2b2ZmZmFmZvZvZmYWHWZm9m9mYWZhZmb2b2ZmZmZmZvZvZmZmZmZm9g==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "ChemLab1"
+    },
+    "tile98": {
+        "data": "hwQQABAAAABvZmZmZmZm9m9mYWZmZmb2bxYdZmZmZvZvZmFmZmZm9m9mZmFmZmb2b2YWF2ZmZvZvZmZhZmZq9m9mZmZmZmb2b2ZmZmZmZvZvZmpmZmZm9m9mZmZmZmb2b2ZmZmZmZvZvZmZmZmZm9m9mZmZmamb2b2ZmZmZmZvb//////////w==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "ChemLab2"
+    },
     "level1": {
         "id": "level1",
         "mimeType": "application/mkcd-tilemap",
@@ -1641,33 +1653,6 @@
         "tileset": [],
         "displayName": "level99"
     },
-    "level101": {
-        "id": "level101",
-        "mimeType": "application/mkcd-tilemap",
-        "data": "MTAxMDAwMTAwMDAwMDAwMDAwMDMwMzAzMDMwMzAzMDMwMzAzMDMwMzAzMDAwMDAwMDQwMTAxMDgwYTBhMTEwMTAxMDEwZTBmMDEwMDAwMDAwNTAxMDEwNjA5MDkwNzAxMDEwMTEwMGMwMTAwMDAwNDAxMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMDAwMDA1MDEwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwMDA0MDEwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjAwMDQwMTBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMDAwNTAxMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwNDAxMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjA0MDEwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMDQwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwNDBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjA0MGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMDQwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwNDBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjAwMDIwZDBkMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA==",
-        "tileset": [
-            "myTiles.transparency16",
-            "myTiles.tile65",
-            "myTiles.tile66",
-            "myTiles.tile69",
-            "myTiles.tile70",
-            "myTiles.tile78",
-            "myTiles.tile91",
-            "myTiles.tile92",
-            "myTiles.tile93",
-            "myTiles.tile95",
-            "myTiles.tile96",
-            "myTiles.tile1",
-            "myTiles.tile35",
-            "myTiles.tile12",
-            "myTiles.tile18",
-            "myTiles.tile19",
-            "myTiles.tile16",
-            "myTiles.tile63",
-            "myTiles.tile94"
-        ],
-        "displayName": "level101"
-    },
     "level102": {
         "id": "level102",
         "mimeType": "application/mkcd-tilemap",
@@ -1704,6 +1689,96 @@
             "myTiles.transparency16"
         ],
         "displayName": "level106"
+    },
+    "level107": {
+        "id": "level107",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA==",
+        "tileset": [
+            "myTiles.transparency16"
+        ],
+        "displayName": "level108"
+    },
+    "level101": {
+        "id": "level101",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAwMDAwMDAwMDMwMzAzMDMwMzAzMDMwMzAzMDMwMzAzMDAwMDAwMDQwMTAxMDgwYTBhMTEwMTAxMDEwZTBmMDEwMDAwMDAwNTAxMDEwNjA5MDkwNzAxMDEwMTEwMGMwMTAwMDAwNDAxMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMDAwMDA1MDEwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwMDA0MDEwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjAwMDQwMTBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMDAwNTAxMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwNDAxMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjA0MDEwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMDQwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwNDBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjA0MGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMDQwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwNDBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjBiMGIwYjAwMDIwZDBkMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA==",
+        "tileset": [
+            "myTiles.transparency16",
+            "myTiles.tile65",
+            "myTiles.tile66",
+            "myTiles.tile69",
+            "myTiles.tile70",
+            "myTiles.tile78",
+            "myTiles.tile91",
+            "myTiles.tile92",
+            "myTiles.tile93",
+            "myTiles.tile95",
+            "myTiles.tile96",
+            "myTiles.tile1",
+            "myTiles.tile35",
+            "myTiles.tile12",
+            "myTiles.tile18",
+            "myTiles.tile19",
+            "myTiles.tile16",
+            "myTiles.tile63"
+        ],
+        "displayName": "level101"
+    },
+    "level109": {
+        "id": "level109",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAwMDMwMzAzMDMwMzAzMDMwMzAzMDMwMzAzMDMwMzAzMDQwMTAxMDEwMTAxMDcwOTA5MTAwMTAxMDEwZDBlMDEwNDAxMDEwMTAxMDEwNTA4MDgwNjAxMDEwMTBmMGIwMTA0MGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMDQwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwNDBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTA0MGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMDQwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwNDBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTA0MGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMDQwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwNDBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTA0MGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMDQwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwNDBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTAwMDIwYzBjMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA==",
+        "tileset": [
+            "myTiles.transparency16",
+            "myTiles.tile65",
+            "myTiles.tile66",
+            "myTiles.tile69",
+            "myTiles.tile70",
+            "myTiles.tile91",
+            "myTiles.tile92",
+            "myTiles.tile93",
+            "myTiles.tile95",
+            "myTiles.tile96",
+            "myTiles.tile1",
+            "myTiles.tile35",
+            "myTiles.tile12",
+            "myTiles.tile18",
+            "myTiles.tile19",
+            "myTiles.tile16",
+            "myTiles.tile63"
+        ],
+        "displayName": "ZsRoom"
+    },
+    "level110": {
+        "id": "level110",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA==",
+        "tileset": [
+            "myTiles.transparency16"
+        ],
+        "displayName": "level110"
+    },
+    "ZsRoom1": {
+        "id": "ZsRoom1",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAwMDMwMzAzMDMwMzAzMDMwMzAzMDMwMzAzMDMwMzAzMDQwMTAxMDEwMTAxMDEwMTAxMDEwMTA3MDkwOTBjMDEwNDAxMDEwMTAxMDEwMTAxMDEwMTAxMDUwODA4MDYwMTA0MGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMDQwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwNDBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTA0MGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMDQwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwNDBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTA0MGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMDQwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwNDBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTA0MGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMDQwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwNDBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTBhMGEwYTAwMDIwYjBiMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA==",
+        "tileset": [
+            "myTiles.transparency16",
+            "myTiles.tile65",
+            "myTiles.tile66",
+            "myTiles.tile69",
+            "myTiles.tile70",
+            "myTiles.tile91",
+            "myTiles.tile92",
+            "myTiles.tile93",
+            "myTiles.tile95",
+            "myTiles.tile96",
+            "myTiles.tile1",
+            "myTiles.tile12",
+            "myTiles.tile63"
+        ],
+        "displayName": "ChemRoom"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
