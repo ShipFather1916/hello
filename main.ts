@@ -231,19 +231,19 @@ controller.right.onEvent(ControllerButtonEvent.Released, function () {
             animation.stopAnimation(animation.AnimationTypes.All, mySprite)
             mySprite.setImage(img`
                 . . . . . . f f f f f f . . . . 
-                . . . . f f e e e e f 2 f . . . 
-                . . . f f e e e e f 2 2 2 f . . 
-                . . . f e e e f f e e e e f . . 
-                . . . f f f f e e 2 2 2 2 e f . 
-                . . . f e 2 2 2 f f f f e 2 f . 
-                . . f f f f f f f e e e f f f . 
-                . . f f e 4 4 e b f 4 4 e e f . 
-                . . f e e 4 d 4 1 f d d e f . . 
-                . . . f e e e 4 d d d d f . . . 
-                . . . . f f e e 4 4 4 e f . . . 
-                . . . . . 4 d d e 2 2 2 f . . . 
-                . . . . . e d d e 2 2 2 f . . . 
-                . . . . . f e e f 4 5 5 f . . . 
+                . . . . f f 6 6 6 6 f 2 f . . . 
+                . . . f f 6 6 6 6 f 2 2 2 f . . 
+                . . . f 6 6 6 f f 6 6 6 6 f . . 
+                . . . f f f f 6 6 2 2 2 2 6 f . 
+                . . . f 6 2 2 2 f f f f 6 2 f . 
+                . . f f f f f f f 6 6 6 f f f . 
+                . . f f 6 4 4 6 3 f 4 4 6 6 f . 
+                . . f 6 6 4 3 4 1 f 3 3 6 f . . 
+                . . . f 6 6 6 4 3 3 3 3 f . . . 
+                . . . . f f 6 6 4 4 4 6 f . . . 
+                . . . . . 4 3 3 6 2 2 2 f . . . 
+                . . . . . 6 3 3 6 2 2 2 f . . . 
+                . . . . . f 6 6 f 4 5 5 f . . . 
                 . . . . . . f f f f f f . . . . 
                 . . . . . . . f f f . . . . . . 
                 `)
