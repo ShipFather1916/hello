@@ -1088,8 +1088,35 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
         if (controller.A.isPressed()) {
             game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
-                Questions = ["a", "b", "c"]
-                answerChoices = ["a", "b", "c"]
+                Questions = [
+                "a",
+                "b",
+                "c",
+                "",
+                ""
+                ]
+                answerChoices = [
+                "a",
+                "b",
+                "c",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+                ]
                 Quiz()
             }
         }
