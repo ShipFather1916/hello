@@ -1217,6 +1217,7 @@ let cutscene = 0
 let Floor = 0
 let textCutscene = 0
 let mySprite: Sprite = null
+let Score = 0
 let keyNumber = 0
 scene.setBackgroundImage(img`
     6666666333355555555555555555555555555555555555555555555555555555333344444444444444444444444444444444444444444444444443333555555555555555555555555555555555555555
@@ -1490,7 +1491,6 @@ cutscene = 0
 chemKey = 0
 calKey = 0
 movement = 0
-let Score = 0
 quizlevel = 0
 pause(500)
 game.setDialogTextColor(2)
