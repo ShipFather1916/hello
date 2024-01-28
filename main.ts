@@ -111,11 +111,21 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 function Right_or_Wrong (num: number) {
     Correct_Answers = [
-    "The Twilight Series",
+    "What is a Woman?",
     "Shawn Guo",
-    "A 6th century medival torture device",
+    "A medival torture device",
     "The Daily Wire",
-    "Blatant lies"
+    "Blatant lies",
+    "Godd Howard",
+    "Gollum",
+    "Nothing, it is perfect",
+    "You can smash a gay vampire",
+    "Nothing, especially EA",
+    "",
+    "",
+    "",
+    "",
+    ""
     ]
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
         game.setDialogTextColor(14)
@@ -1568,12 +1578,12 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                 "John Wayne Gacy",
                 "JRR Tolkien",
                 "Shawn Guo",
-                "The blog writer for the babylon bee",
-                "A 6th century medival torture device",
+                "The blog writer",
+                "A medival torture device",
                 "To pracitce writing",
-                "For information and arguments",
-                "No one writes essay anymore, other than AI of course",
-                "A peer reviewed research article",
+                "For information/arguments",
+                "AI of course",
+                "A peer reviewed article",
                 "Wikipedia",
                 "The Daily Wire",
                 "Fox News",
@@ -1587,29 +1597,33 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
         }
     } else if (false) {
         if (controller.A.isPressed()) {
-            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            game.showLongText("Hey Student! My name is Godd Howard. I heard you needed a key to escape the school.", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText("Personally, I couldn't understand why you would want to leave when you could be enjoying STARFIELD instead, but I guess It might be hard to connect to the servers with such poor internet connection... ", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText("How about this? You take my quiz and I'll give you a free copy of Skyrim on top of that key you need!", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 answerChoices = [
-                "Mein Kampfy Chair",
-                "Romeo and Juliet",
-                "What is a Woman?",
-                "The Twilight Series",
-                "John Wayne Gacy",
-                "JRR Tolkien",
-                "Shawn Guo",
-                "The blog writer for the babylon bee",
-                "A 6th century medival torture device",
-                "To pracitce writing",
-                "For information and arguments",
-                "No one writes essay anymore, other than AI of course",
-                "A peer reviewed research article",
-                "Wikipedia",
-                "The Daily Wire",
-                "Fox News",
-                "Blatant lies",
-                "images",
-                "statistics",
-                "a good speaker"
+                "Godd Howard",
+                "Gabe Newell",
+                "Swen Vinkle",
+                "Ryder",
+                "Baldur’s Gate 3",
+                "Gollum",
+                "Spider Man 2",
+                "Skyrim In Space",
+                "THE WOKE PRONOUN AGENDA!",
+                "Existence",
+                "Nothing, it is perfect",
+                "The bugs",
+                "It was rigged",
+                "You can smash a gay vampire",
+                "Chance",
+                "Actually Spider Man 2 won",
+                "Microtransactions",
+                "Lazy games",
+                "No love for the player base",
+                "Nothing, especially EA"
                 ]
                 Quiz()
             }
