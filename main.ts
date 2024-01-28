@@ -118,8 +118,10 @@ function Right_or_Wrong (num: number) {
     "Blatant lies"
     ]
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
+        game.setDialogTextColor(14)
         game.showLongText("INCORRECT!!!", DialogLayout.Bottom)
     } else {
+        game.setDialogTextColor(10)
         game.showLongText("CORRECT!!!", DialogLayout.Bottom)
         pauseUntil(() => controller.A.isPressed())
         Score += 1
@@ -820,8 +822,12 @@ function Quiz () {
         `, SpriteKind.Player)
     controller.moveSprite(Cursor)
     Cursor.setStayInScreen(true)
-    game.showLongText("What is the greatest book of all time?", DialogLayout.Full)
     quiz_level += 1
+    if (quizSubject == 0) {
+        game.showLongText("What is the greatest book of all time?", DialogLayout.Center)
+    } else if (false) {
+    	
+    }
     pauseUntil(() => quizlevel == 5)
     sprites.destroy(Cursor)
     sprites.destroyAllSpritesOfKind(SpriteKind.hitbot)
@@ -972,6 +978,7 @@ function Quiz () {
         controller.moveSprite(mySprite)
         Simnar = sprites.create(assets.image`myImage0`, SpriteKind.Player)
         tiles.placeOnTile(Simnar, tiles.getTileLocation(7, 4))
+        game.setDialogTextColor(15)
         game.showLongText("CONGRADULATIONS!!! YOU AREN'T A WOKE LIBERAL!!! You've earned this...", DialogLayout.Bottom)
         pauseUntil(() => controller.A.isPressed())
         music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
