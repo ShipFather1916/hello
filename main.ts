@@ -130,11 +130,11 @@ function Right_or_Wrong (num: number) {
     "He’s already there",
     "Ryder drives off a bridge",
     "I am now on a killing spree",
-    "",
-    "",
-    "",
-    "",
-    ""
+    "All of the above",
+    "Zimbabwe",
+    "Kanye and Jay-Z",
+    "All of the Above",
+    "Queen Lizzie"
     ]
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
         game.setDialogTextColor(14)
@@ -1775,26 +1775,26 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
             game.showLongText("BUT HUUURY UP...BLEACH IS VERY IMPORTANT TO MY DIET AND I AM RATHER SHORT ON IT...", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 answerChoices = [
-                "Mein Kampfy Chair",
-                "Romeo and Juliet",
-                "What is a Woman?",
-                "The Twilight Series",
-                "John Wayne Gacy",
-                "JRR Tolkien",
-                "Shawn Guo",
-                "The blog writer for the babylon bee",
-                "A 6th century medival torture device",
-                "To pracitce writing",
-                "For information and arguments",
-                "No one writes essay anymore, other than AI of course",
-                "A peer reviewed research article",
-                "Wikipedia",
-                "The Daily Wire",
-                "Fox News",
-                "Blatant lies",
-                "images",
-                "statistics",
-                "a good speaker"
+                "r/AITAH",
+                "X",
+                "Mar-a-Lago’s restroom",
+                "All of the above",
+                "Africa",
+                "Murica pew pew",
+                "Zimbabwe",
+                "Tennessee",
+                "Otto",
+                "Charlemagne",
+                "Germany in 1945",
+                "Kanye and Jay-Z",
+                "School Shootings",
+                "Obesity",
+                "Serial Killers",
+                "All of the Above",
+                "Trump",
+                "Queen Lizzie",
+                "Ron DeSanctimonious",
+                "Not Trump"
                 ]
                 Quiz()
             }
