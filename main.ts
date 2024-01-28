@@ -110,16 +110,12 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Score >= 1) {
         if (Cursor.overlapsWith(s1)) {
             Right_or_Wrong(0)
-            quizlevel += 1
         } else if (Cursor.overlapsWith(s2)) {
             Right_or_Wrong(1)
-            quizlevel += 1
         } else if (Cursor.overlapsWith(s3)) {
             Right_or_Wrong(2)
-            quizlevel += 1
         } else if (Cursor.overlapsWith(s4)) {
             Right_or_Wrong(3)
-            quizlevel += 1
         }
     }
 })
@@ -153,7 +149,6 @@ controller.down.onEvent(ControllerButtonEvent.Released, function () {
     }
 })
 function Quiz () {
-    quizlevel += 1
     sprites.destroyAllSpritesOfKind(SpriteKind.Teacher)
     sprites.destroy(mySprite)
     scene.setBackgroundImage(img`
@@ -799,6 +794,7 @@ function Quiz () {
         `, SpriteKind.Player)
     controller.moveSprite(Cursor)
     Cursor.setStayInScreen(true)
+    game.showLongText("Greatest book of all time?", DialogLayout.Full)
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     if (textCutscene == 0) {
@@ -1341,11 +1337,16 @@ function Right_or_Wrong (num: number) {
     ]
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
         Score += 1
+        quizlevel += 1
+        quiz_level += 1
+        _questions()
+        a1.setText(answerChoices[4 * quizlevel])
+        a2.setText(answerChoices[4 * quizlevel + 1])
+        a3.setText(answerChoices[4 * quizlevel + 2])
+        a4.setText(answerChoices[4 * quizlevel + 3])
+    } else {
+        game.showLongText("INCORRECT!!!", DialogLayout.Bottom)
     }
-    a1.setText(answerChoices[4 * quizlevel])
-    a2.setText(answerChoices[4 * quizlevel + 1])
-    a3.setText(answerChoices[4 * quizlevel + 2])
-    a4.setText(answerChoices[4 * quizlevel + 3])
 }
 function openingCutscene () {
     game.setDialogTextColor(15)
@@ -1390,13 +1391,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
         if (controller.A.isPressed()) {
             game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
-                Questions = [
-                "Greatest book of all time?",
-                "Greatest author of all time?",
-                "What is the point of essays?",
-                "Best research source?",
-                "What is the best part of a presentation?"
-                ]
                 answerChoices = [
                 "Mein Kampfy Chair",
                 "Romeo and Juliet",
@@ -1442,14 +1436,14 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite3,
 function _questions () {
     let quizSubject = 0
     if (quizSubject == 0) {
-        if (quizlevel == 1) {
-        	
-        } else if (quizlevel == 2) {
-        	
-        } else if (quizlevel == 3) {
-        	
-        } else if (quizlevel == 4) {
-        	
+        if (quiz_level == 1) {
+            game.showLongText("Greatest author of all time?", DialogLayout.Full)
+        } else if (quiz_level == 2) {
+            game.showLongText("What is the point of essays?", DialogLayout.Full)
+        } else if (quiz_level == 3) {
+            game.showLongText("Best research source?", DialogLayout.Full)
+        } else if (quiz_level == 4) {
+            game.showLongText("What is the best part of a presentation?", DialogLayout.Full)
         }
     }
 }
@@ -1517,8 +1511,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite11
         Floor += -1
     }
 })
-let Questions: string[] = []
 let Simnar: Sprite = null
+let quiz_level = 0
 let Correct_Answers: string[] = []
 let floorNum = 0
 let a4: TextSprite = null
