@@ -107,7 +107,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (Score >= 1) {
+    if (quiz_level >= 1) {
         if (Cursor.overlapsWith(s1)) {
             Right_or_Wrong(0)
         } else if (Cursor.overlapsWith(s2)) {
@@ -794,7 +794,8 @@ function Quiz () {
         `, SpriteKind.Player)
     controller.moveSprite(Cursor)
     Cursor.setStayInScreen(true)
-    game.showLongText("Greatest book of all time?", DialogLayout.Full)
+    game.showLongText("What is the greatest book of all time?", DialogLayout.Full)
+    quiz_level += 1
     pauseUntil(() => true)
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -1337,16 +1338,16 @@ function Right_or_Wrong (num: number) {
     "Blatant lies"
     ]
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
+        game.showLongText("INCORRECT!!!", DialogLayout.Bottom)
+    } else {
         Score += 1
         quizlevel += 1
         quiz_level += 1
-        _questions()
         a1.setText(answerChoices[4 * quizlevel])
         a2.setText(answerChoices[4 * quizlevel + 1])
         a3.setText(answerChoices[4 * quizlevel + 2])
         a4.setText(answerChoices[4 * quizlevel + 3])
-    } else {
-        game.showLongText("INCORRECT!!!", DialogLayout.Bottom)
+        _questions()
     }
 }
 function openingCutscene () {
@@ -1378,10 +1379,9 @@ function openingCutscene () {
         if (controller.A.isPressed()) {
             game.setDialogTextColor(2)
             game.showLongText("I should go find some help...", DialogLayout.Bottom)
-            game.setDialogTextColor(15)
             if (controller.A.isPressed()) {
                 game.setDialogTextColor(15)
-                game.showLongText("Red Door locks or pads represent inaccessible areas. Yellow Door locks and pads represent locked areas that require 1 or more keys to access...", DialogLayout.Center)
+                game.showLongText("Red Door locks or pads represent inaccessible areas. Yellow Door locks and pads represent locked areas that require 1 or more keys to access...", DialogLayout.Full)
                 cutscene += 1
             }
         }
@@ -1438,13 +1438,13 @@ function _questions () {
     let quizSubject = 0
     if (quizSubject == 0) {
         if (quiz_level == 1) {
-            game.showLongText("Greatest author of all time?", DialogLayout.Full)
+            game.showLongText("Who is the greatest author of all time?", DialogLayout.Center)
         } else if (quiz_level == 2) {
-            game.showLongText("What is the point of essays?", DialogLayout.Full)
+            game.showLongText("What is the point of essays?", DialogLayout.Center)
         } else if (quiz_level == 3) {
-            game.showLongText("Best research source?", DialogLayout.Full)
+            game.showLongText("What is the best research source?", DialogLayout.Center)
         } else if (quiz_level == 4) {
-            game.showLongText("What is the best part of a presentation?", DialogLayout.Full)
+            game.showLongText("What is the best part of a presentation?", DialogLayout.Center)
         }
     }
 }
@@ -1513,7 +1513,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite11
     }
 })
 let Simnar: Sprite = null
-let quiz_level = 0
 let Correct_Answers: string[] = []
 let floorNum = 0
 let a4: TextSprite = null
@@ -1526,6 +1525,7 @@ let s3: Sprite = null
 let s2: Sprite = null
 let s1: Sprite = null
 let Cursor: Sprite = null
+let quiz_level = 0
 let quizlevel = 0
 let movement = 0
 let calKey = 0
@@ -1534,9 +1534,7 @@ let cutscene = 0
 let Floor = 0
 let textCutscene = 0
 let mySprite: Sprite = null
-let Score = 0
 let keyNumber = 0
-Score = 0
 scene.setBackgroundImage(img`
     6666666333355555555555555555555555555555555555555555555555555555333344444444444444444444444444444444444444444444444443333555555555555555555555555555555555555555
     6666666333355555555555555555555555555555555555555555555555555555333344444444444444444444444444444444444444444444444443333555555555555555555555555555555555555555
@@ -1810,7 +1808,7 @@ chemKey = 0
 calKey = 0
 movement = 0
 quizlevel = 0
-Score = 0
+let Score = 0
 pause(500)
 game.setDialogTextColor(2)
 game.showLongText("Zzzzzzzzzzzzzzzzzzzz... ", DialogLayout.Bottom)
@@ -1834,16 +1832,16 @@ if (controller.A.isPressed()) {
         . . . . . f f f f f f . . . . . 
         . . . . . f f . . f f . . . . . 
         `)
-    pause(1000)
+    pause(200)
     game.setDialogTextColor(14)
     game.showLongText("OH NO!", DialogLayout.Bottom)
     if (controller.A.isPressed()) {
         game.setDialogTextColor(2)
         game.showLongText("How long have I been asleep?", DialogLayout.Bottom)
         if (controller.A.isPressed()) {
-            game.setDialogTextColor(15)
             game.showLongText("I better leave before they lock the doors...", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
+                game.setDialogTextColor(15)
                 game.showLongText("Move with the arrow keys or D pad if you are on controller. To interact with doors, press \"A\" over the Door Knob or Door Pad.", DialogLayout.Full)
                 textCutscene += 1
                 controller.moveSprite(mySprite)
