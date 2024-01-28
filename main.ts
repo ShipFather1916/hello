@@ -121,11 +121,11 @@ function Right_or_Wrong (num: number) {
     "Nothing, it is perfect",
     "You can smash a gay vampire",
     "Nothing, especially EA",
-    "",
-    "",
-    "",
-    "",
-    ""
+    "C17 H21 NO4",
+    "All of the above",
+    "Botulinum toxin",
+    "C10 H26 N4",
+    "Waltuh2"
     ]
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
         game.setDialogTextColor(14)
@@ -1640,26 +1640,26 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
             game.showLongText("Here, I have this key! Take it and leave...but first you need to take this quiz...", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 answerChoices = [
-                "Mein Kampfy Chair",
-                "Romeo and Juliet",
-                "What is a Woman?",
-                "The Twilight Series",
-                "John Wayne Gacy",
-                "JRR Tolkien",
-                "Shawn Guo",
-                "The blog writer for the babylon bee",
-                "A 6th century medival torture device",
-                "To pracitce writing",
-                "For information and arguments",
-                "No one writes essay anymore, other than AI of course",
-                "A peer reviewed research article",
-                "Wikipedia",
+                "C17 H21 NO4",
+                "C10 H15 N",
+                "C6 H12 O6",
+                "C10 H26 N4",
+                "Bleach",
+                "Estrogen",
+                "Beta-carotene",
+                "All of the above",
                 "The Daily Wire",
-                "Fox News",
-                "Blatant lies",
-                "images",
-                "statistics",
-                "a good speaker"
+                "Twitter",
+                "Ricin",
+                "Botulinum toxin",
+                "C17 H21 NO4",
+                "C10 H15 N",
+                "C10 H26 N4",
+                "C6 H12 O6",
+                "Waltuh1",
+                "Waltuh2",
+                "Waltuh3",
+                "Waltuh4"
                 ]
                 Quiz()
             }
