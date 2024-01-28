@@ -865,11 +865,11 @@ function Quiz () {
     } else if (quizSubject == 5) {
         game.showLongText("What is the airspeed velocity of an European unladen sparrow?", DialogLayout.Center)
     } else if (quizSubject == 6) {
-    	
+        game.showLongText("What is the most disgusting place on Earth?", DialogLayout.Center)
     } else if (quizSubject == 7) {
-    	
+        game.showLongText("Who is the greatest painter?", DialogLayout.Center)
     } else if (quizSubject == 8) {
-    	
+        game.showLongText(" Who is the greatest Spanish speaker ever?", DialogLayout.Center)
     }
     pauseUntil(() => quizlevel == 5)
     sprites.destroy(Cursor)
@@ -1963,14 +1963,38 @@ function _questions () {
         } else if (quiz_level == 3) {
             game.showLongText(" If the voices in my head tell me to jump off a bridge, which is 100 meters above ground, how long until I hit the ground if I hit the ground at a velocity of 25 m/s?", DialogLayout.Center)
         } else if (quiz_level == 4) {
-            game.showLongText("Waltuh", DialogLayout.Center)
+            game.showLongText("", DialogLayout.Center)
         }
     } else if (quizSubject == 6) {
-    	
+        if (quiz_level == 1) {
+            game.showLongText("What is the greatest country ever?", DialogLayout.Center)
+        } else if (quiz_level == 2) {
+            game.showLongText("Who’s in Paris?", DialogLayout.Center)
+        } else if (quiz_level == 3) {
+            game.showLongText("What is ‘Murcia’s greatest industry", DialogLayout.Center)
+        } else if (quiz_level == 4) {
+            game.showLongText("Who was America’s greatest president?", DialogLayout.Center)
+        }
     } else if (quizSubject == 7) {
-    	
+        if (quiz_level == 1) {
+            game.showLongText("Who is the greatest poet?", DialogLayout.Center)
+        } else if (quiz_level == 2) {
+            game.showLongText("Who is the greatest actor of all time?", DialogLayout.Center)
+        } else if (quiz_level == 3) {
+            game.showLongText("Greatest musical lyricists of all time?", DialogLayout.Center)
+        } else if (quiz_level == 4) {
+            game.showLongText("Greatest piece of music of all time?", DialogLayout.Center)
+        }
     } else if (quizSubject == 8) {
-    	
+        if (quiz_level == 1) {
+            game.showLongText("Who is the greatest French speaker ever?", DialogLayout.Center)
+        } else if (quiz_level == 2) {
+            game.showLongText("Who invented the first language?", DialogLayout.Center)
+        } else if (quiz_level == 3) {
+            game.showLongText(" Who is the greatest English speaker ever?", DialogLayout.Center)
+        } else if (quiz_level == 4) {
+            game.showLongText(" Greatest language ever?", DialogLayout.Center)
+        }
     }
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10, location10) {
