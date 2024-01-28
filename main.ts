@@ -130,6 +130,10 @@ function Right_or_Wrong (num: number) {
     "He’s already there",
     "Ryder drives off a bridge",
     "I am now on a killing spree",
+    "",
+    "",
+    "",
+    "",
     ""
     ]
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
@@ -1762,7 +1766,13 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
         }
     } else if (false) {
         if (controller.A.isPressed()) {
-            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            game.showLongText("HELLO STUDENT OF AMERICA...I SEE YOU ARE ONE OF A PURE WHITE, STRAIT, AND NOT MEXICAN KIND...", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText("IT HAS COME TO MY ATTENTION THAT YOU ARE IN NEED OF A KEY OF SOME SORT...", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText("TAKE MY QUIZ ABOUT OUR GREAT COUNTRIES HISTORY AND I MIGHT GIVE IT TO YOU...", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText("BUT HUUURY UP...BLEACH IS VERY IMPORTANT TO MY DIET AND I AM RATHER SHORT ON IT...", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 answerChoices = [
                 "Mein Kampfy Chair",
