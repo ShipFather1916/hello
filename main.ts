@@ -795,6 +795,7 @@ function Quiz () {
     controller.moveSprite(Cursor)
     Cursor.setStayInScreen(true)
     game.showLongText("Greatest book of all time?", DialogLayout.Full)
+    pauseUntil(() => true)
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     if (textCutscene == 0) {
@@ -1850,10 +1851,3 @@ if (controller.A.isPressed()) {
         }
     }
 }
-forever(function () {
-    if (movement < 1) {
-        movement = 0
-    } else if (movement < 0) {
-        movement = 0
-    }
-})
