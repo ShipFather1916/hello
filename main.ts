@@ -993,6 +993,7 @@ function Quiz () {
         pauseUntil(() => controller.A.isPressed())
         music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
         game.showLongText("Siminar Key earned...", DialogLayout.Center)
+        keyNumber += 1
     } else if (false) {
     	
     }
@@ -1630,7 +1631,13 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
         }
     } else if (false) {
         if (controller.A.isPressed()) {
-            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            game.showLongText("WHO'S THERE!", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText(" Oh crap You've seen my operation!", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText("Whatever you do don't tell anyone about this please!", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText("Here, I have this key! Take it and leave...but first you need to take this quiz...", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 answerChoices = [
                 "Mein Kampfy Chair",
