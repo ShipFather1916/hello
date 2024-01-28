@@ -1851,3 +1851,10 @@ if (controller.A.isPressed()) {
         }
     }
 }
+forever(function () {
+    if (movement < 1) {
+        movement = 0
+    } else if (movement < 0) {
+        movement = 0
+    }
+})
