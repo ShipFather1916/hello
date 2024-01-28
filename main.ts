@@ -139,7 +139,12 @@ function Right_or_Wrong (num: number) {
     "Zhang Zongchang",
     "Jared Leto",
     "Jared Leto",
-    ""
+    "Red Sun in the Sky - Tu Honggang",
+    "Ryder",
+    "The British",
+    "Homo (make me) erectus",
+    "Literally any non-English speaker",
+    "Homosexual"
     ]
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
         game.setDialogTextColor(14)
@@ -1842,26 +1847,26 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
             game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 answerChoices = [
-                "Mein Kampfy Chair",
-                "Romeo and Juliet",
-                "What is a Woman?",
-                "The Twilight Series",
-                "John Wayne Gacy",
-                "JRR Tolkien",
-                "Shawn Guo",
-                "The blog writer for the babylon bee",
-                "A 6th century medival torture device",
-                "To pracitce writing",
-                "For information and arguments",
-                "No one writes essay anymore, other than AI of course",
-                "A peer reviewed research article",
-                "Wikipedia",
-                "The Daily Wire",
-                "Fox News",
-                "Blatant lies",
-                "images",
-                "statistics",
-                "a good speaker"
+                "Donald Trump",
+                "My grandfather after one too many beers",
+                "Greg Abott",
+                "Ryder",
+                "Otto",
+                "The British",
+                "Le hon hon hon man",
+                "Marquis De Sade",
+                "Homo sexualis",
+                "Homo habilis",
+                "Homo (make me) erectus",
+                "Jesus",
+                "Alex Jones",
+                "Donald Trump",
+                "Jordan Peterson",
+                "Literally any non-English speaker",
+                "Clingon",
+                "British",
+                "Swedish",
+                "Homosexual"
                 ]
                 Quiz()
             }
