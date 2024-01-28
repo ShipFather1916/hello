@@ -134,7 +134,12 @@ function Right_or_Wrong (num: number) {
     "Zimbabwe",
     "Kanye and Jay-Z",
     "All of the Above",
-    "Queen Lizzie"
+    "Queen Lizzie",
+    "Me as a three year old",
+    "Zhang Zongchang",
+    "Jared Leto",
+    "Jared Leto",
+    ""
     ]
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
         game.setDialogTextColor(14)
@@ -1801,29 +1806,33 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
         }
     } else if (false) {
         if (controller.A.isPressed()) {
-            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            game.showLongText("Heil Hi---I mean hello student! My name is Ye and nothing else. If you call me anything else I will send you to the \"showers\"...", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText("Here's the thing, i'm tryna wash america of greedy, money hungry Je----I mean \"Zionist\" influence.", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText("The only way I can prove that you aren't one of these is with a quiz. If you pass I'll give you your key...", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 answerChoices = [
-                "Mein Kampfy Chair",
-                "Romeo and Juliet",
-                "What is a Woman?",
-                "The Twilight Series",
-                "John Wayne Gacy",
-                "JRR Tolkien",
-                "Shawn Guo",
-                "The blog writer for the babylon bee",
-                "A 6th century medival torture device",
-                "To pracitce writing",
-                "For information and arguments",
-                "No one writes essay anymore, other than AI of course",
-                "A peer reviewed research article",
-                "Wikipedia",
-                "The Daily Wire",
-                "Fox News",
-                "Blatant lies",
-                "images",
-                "statistics",
-                "a good speaker"
+                "That dumb Austrian man",
+                "Pablo Picasso",
+                "Me as a three year old",
+                "The other austrian painter",
+                "Zhang Zongchang",
+                "2Pac",
+                "e e cummings",
+                "Catallus",
+                "Keanu Reeves",
+                "Jared Leto",
+                "Bill Cosby",
+                "Danny Devito",
+                "Nickelback",
+                "Jared Leto",
+                "2Pac",
+                "Ron Weasly (Ed Sheeran)",
+                "Justin Bieber - Bizarre",
+                "Hit ‘Em Up - 2Pac",
+                "Erica - Herms Neil",
+                "Red Sun in the Sky - Tu Honggang"
                 ]
                 Quiz()
             }
