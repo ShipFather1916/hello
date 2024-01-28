@@ -854,7 +854,21 @@ function Quiz () {
     quiz_level += 1
     if (quizSubject == 0) {
         game.showLongText("What is the greatest book of all time?", DialogLayout.Center)
-    } else if (false) {
+    } else if (quizSubject == 1) {
+        game.showLongText("Who is th greatest game dev of all time?", DialogLayout.Center)
+    } else if (quizSubject == 2) {
+        game.showLongText("What is the most addictive chemical substance?", DialogLayout.Center)
+    } else if (quizSubject == 3) {
+    	
+    } else if (quizSubject == 4) {
+    	
+    } else if (quizSubject == 5) {
+        game.showLongText("What is the airspeed velocity of an European unladen sparrow?", DialogLayout.Center)
+    } else if (quizSubject == 6) {
+    	
+    } else if (quizSubject == 7) {
+    	
+    } else if (quizSubject == 8) {
     	
     }
     pauseUntil(() => quizlevel == 5)
@@ -1013,7 +1027,22 @@ function Quiz () {
         music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
         game.showLongText("Siminar Key earned...", DialogLayout.Center)
         keyNumber += 1
-    } else if (false) {
+        quiz_level = 0
+    } else if (quizSubject == 1) {
+    	
+    } else if (quizSubject == 2) {
+    	
+    } else if (quizSubject == 3) {
+    	
+    } else if (quizSubject == 4) {
+    	
+    } else if (quizSubject == 5) {
+    	
+    } else if (quizSubject == 6) {
+    	
+    } else if (quizSubject == 7) {
+    	
+    } else if (quizSubject == 8) {
     	
     }
 }
@@ -1902,6 +1931,46 @@ function _questions () {
         } else if (quiz_level == 4) {
             game.showLongText("What is the best part of a presentation?", DialogLayout.Center)
         }
+    } else if (quizSubject == 1) {
+        if (quiz_level == 1) {
+            game.showLongText("What was the real 2023 game of the year?", DialogLayout.Center)
+        } else if (quiz_level == 2) {
+            game.showLongText("What ruined Starfield?", DialogLayout.Center)
+        } else if (quiz_level == 3) {
+            game.showLongText("Why did Bolders Gate 3 win Game of the year??", DialogLayout.Center)
+        } else if (quiz_level == 4) {
+            game.showLongText("What is wrong with many AAA games?", DialogLayout.Center)
+        }
+    } else if (quizSubject == 2) {
+        if (quiz_level == 1) {
+            game.showLongText("What chemical does Trump inject himself with?", DialogLayout.Center)
+        } else if (quiz_level == 2) {
+            game.showLongText("What is the deadliest poison?", DialogLayout.Center)
+        } else if (quiz_level == 3) {
+            game.showLongText("What does Ryder inject himself with?", DialogLayout.Center)
+        } else if (quiz_level == 4) {
+            game.showLongText("Waltuh", DialogLayout.Center)
+        }
+    } else if (quizSubject == 3) {
+    	
+    } else if (quizSubject == 4) {
+    	
+    } else if (quizSubject == 5) {
+        if (quiz_level == 1) {
+            game.showLongText(" If Stephen Hawking’s airplane is flying to Epstein’s Island, which is 1000 miles away and the plane is going at 125 miles per hour, how long until he arrives at the island?", DialogLayout.Center)
+        } else if (quiz_level == 2) {
+            game.showLongText("If Ryder is driving his White 2023 Ford E-Transit-350 Cargo Van at 75 miles per hour away from a pre-school, how long until the police car which is 5 miles away and going at 80 miles per hour, how long until the pre-schoolers are saved? ", DialogLayout.Center)
+        } else if (quiz_level == 3) {
+            game.showLongText(" If the voices in my head tell me to jump off a bridge, which is 100 meters above ground, how long until I hit the ground if I hit the ground at a velocity of 25 m/s?", DialogLayout.Center)
+        } else if (quiz_level == 4) {
+            game.showLongText("Waltuh", DialogLayout.Center)
+        }
+    } else if (quizSubject == 6) {
+    	
+    } else if (quizSubject == 7) {
+    	
+    } else if (quizSubject == 8) {
+    	
     }
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10, location10) {
