@@ -1585,6 +1585,240 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                 Quiz()
             }
         }
+    } else if (false) {
+        if (controller.A.isPressed()) {
+            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            if (controller.A.isPressed()) {
+                answerChoices = [
+                "Mein Kampfy Chair",
+                "Romeo and Juliet",
+                "What is a Woman?",
+                "The Twilight Series",
+                "John Wayne Gacy",
+                "JRR Tolkien",
+                "Shawn Guo",
+                "The blog writer for the babylon bee",
+                "A 6th century medival torture device",
+                "To pracitce writing",
+                "For information and arguments",
+                "No one writes essay anymore, other than AI of course",
+                "A peer reviewed research article",
+                "Wikipedia",
+                "The Daily Wire",
+                "Fox News",
+                "Blatant lies",
+                "images",
+                "statistics",
+                "a good speaker"
+                ]
+                Quiz()
+            }
+        }
+    } else if (false) {
+        if (controller.A.isPressed()) {
+            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            if (controller.A.isPressed()) {
+                answerChoices = [
+                "Mein Kampfy Chair",
+                "Romeo and Juliet",
+                "What is a Woman?",
+                "The Twilight Series",
+                "John Wayne Gacy",
+                "JRR Tolkien",
+                "Shawn Guo",
+                "The blog writer for the babylon bee",
+                "A 6th century medival torture device",
+                "To pracitce writing",
+                "For information and arguments",
+                "No one writes essay anymore, other than AI of course",
+                "A peer reviewed research article",
+                "Wikipedia",
+                "The Daily Wire",
+                "Fox News",
+                "Blatant lies",
+                "images",
+                "statistics",
+                "a good speaker"
+                ]
+                Quiz()
+            }
+        }
+    } else if (false) {
+        if (controller.A.isPressed()) {
+            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            if (controller.A.isPressed()) {
+                answerChoices = [
+                "Mein Kampfy Chair",
+                "Romeo and Juliet",
+                "What is a Woman?",
+                "The Twilight Series",
+                "John Wayne Gacy",
+                "JRR Tolkien",
+                "Shawn Guo",
+                "The blog writer for the babylon bee",
+                "A 6th century medival torture device",
+                "To pracitce writing",
+                "For information and arguments",
+                "No one writes essay anymore, other than AI of course",
+                "A peer reviewed research article",
+                "Wikipedia",
+                "The Daily Wire",
+                "Fox News",
+                "Blatant lies",
+                "images",
+                "statistics",
+                "a good speaker"
+                ]
+                Quiz()
+            }
+        }
+    } else if (false) {
+        if (controller.A.isPressed()) {
+            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            if (controller.A.isPressed()) {
+                answerChoices = [
+                "Mein Kampfy Chair",
+                "Romeo and Juliet",
+                "What is a Woman?",
+                "The Twilight Series",
+                "John Wayne Gacy",
+                "JRR Tolkien",
+                "Shawn Guo",
+                "The blog writer for the babylon bee",
+                "A 6th century medival torture device",
+                "To pracitce writing",
+                "For information and arguments",
+                "No one writes essay anymore, other than AI of course",
+                "A peer reviewed research article",
+                "Wikipedia",
+                "The Daily Wire",
+                "Fox News",
+                "Blatant lies",
+                "images",
+                "statistics",
+                "a good speaker"
+                ]
+                Quiz()
+            }
+        }
+    } else if (false) {
+        if (controller.A.isPressed()) {
+            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            if (controller.A.isPressed()) {
+                answerChoices = [
+                "Mein Kampfy Chair",
+                "Romeo and Juliet",
+                "What is a Woman?",
+                "The Twilight Series",
+                "John Wayne Gacy",
+                "JRR Tolkien",
+                "Shawn Guo",
+                "The blog writer for the babylon bee",
+                "A 6th century medival torture device",
+                "To pracitce writing",
+                "For information and arguments",
+                "No one writes essay anymore, other than AI of course",
+                "A peer reviewed research article",
+                "Wikipedia",
+                "The Daily Wire",
+                "Fox News",
+                "Blatant lies",
+                "images",
+                "statistics",
+                "a good speaker"
+                ]
+                Quiz()
+            }
+        }
+    } else if (false) {
+        if (controller.A.isPressed()) {
+            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            if (controller.A.isPressed()) {
+                answerChoices = [
+                "Mein Kampfy Chair",
+                "Romeo and Juliet",
+                "What is a Woman?",
+                "The Twilight Series",
+                "John Wayne Gacy",
+                "JRR Tolkien",
+                "Shawn Guo",
+                "The blog writer for the babylon bee",
+                "A 6th century medival torture device",
+                "To pracitce writing",
+                "For information and arguments",
+                "No one writes essay anymore, other than AI of course",
+                "A peer reviewed research article",
+                "Wikipedia",
+                "The Daily Wire",
+                "Fox News",
+                "Blatant lies",
+                "images",
+                "statistics",
+                "a good speaker"
+                ]
+                Quiz()
+            }
+        }
+    } else if (false) {
+        if (controller.A.isPressed()) {
+            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            if (controller.A.isPressed()) {
+                answerChoices = [
+                "Mein Kampfy Chair",
+                "Romeo and Juliet",
+                "What is a Woman?",
+                "The Twilight Series",
+                "John Wayne Gacy",
+                "JRR Tolkien",
+                "Shawn Guo",
+                "The blog writer for the babylon bee",
+                "A 6th century medival torture device",
+                "To pracitce writing",
+                "For information and arguments",
+                "No one writes essay anymore, other than AI of course",
+                "A peer reviewed research article",
+                "Wikipedia",
+                "The Daily Wire",
+                "Fox News",
+                "Blatant lies",
+                "images",
+                "statistics",
+                "a good speaker"
+                ]
+                Quiz()
+            }
+        }
+    } else if (false) {
+        if (controller.A.isPressed()) {
+            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            if (controller.A.isPressed()) {
+                answerChoices = [
+                "Mein Kampfy Chair",
+                "Romeo and Juliet",
+                "What is a Woman?",
+                "The Twilight Series",
+                "John Wayne Gacy",
+                "JRR Tolkien",
+                "Shawn Guo",
+                "The blog writer for the babylon bee",
+                "A 6th century medival torture device",
+                "To pracitce writing",
+                "For information and arguments",
+                "No one writes essay anymore, other than AI of course",
+                "A peer reviewed research article",
+                "Wikipedia",
+                "The Daily Wire",
+                "Fox News",
+                "Blatant lies",
+                "images",
+                "statistics",
+                "a good speaker"
+                ]
+                Quiz()
+            }
+        }
+    } else if (false) {
+    	
     }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite3, location3) {
