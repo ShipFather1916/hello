@@ -109,17 +109,17 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Score >= 1) {
         if (Cursor.overlapsWith(s1)) {
-            quizlevel += 1
             Right_or_Wrong(0)
+            quizlevel += 1
         } else if (Cursor.overlapsWith(s2)) {
-            quizlevel += 1
             Right_or_Wrong(1)
+            quizlevel += 1
         } else if (Cursor.overlapsWith(s3)) {
-            quizlevel += 1
             Right_or_Wrong(2)
-        } else if (Cursor.overlapsWith(s4)) {
             quizlevel += 1
+        } else if (Cursor.overlapsWith(s4)) {
             Right_or_Wrong(3)
+            quizlevel += 1
         }
     }
 })
@@ -153,7 +153,7 @@ controller.down.onEvent(ControllerButtonEvent.Released, function () {
     }
 })
 function Quiz () {
-    Score += 1
+    quizlevel += 1
     sprites.destroyAllSpritesOfKind(SpriteKind.Teacher)
     sprites.destroy(mySprite)
     scene.setBackgroundImage(img`
@@ -1440,10 +1440,17 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite3,
     }
 })
 function _questions () {
-    if (true) {
-    	
-    } else {
-    	
+    let quizSubject = 0
+    if (quizSubject == 0) {
+        if (quizlevel == 1) {
+        	
+        } else if (quizlevel == 2) {
+        	
+        } else if (quizlevel == 3) {
+        	
+        } else if (quizlevel == 4) {
+        	
+        }
     }
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10, location10) {
