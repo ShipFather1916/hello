@@ -117,6 +117,8 @@ function Right_or_Wrong (num: number) {
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
         game.showLongText("INCORRECT!!!", DialogLayout.Bottom)
     } else {
+        game.showLongText("CORRECT!!!", DialogLayout.Bottom)
+        pauseUntil(() => controller.A.isPressed())
         Score += 1
         quizlevel += 1
         quiz_level += 1
