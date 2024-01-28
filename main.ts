@@ -125,7 +125,12 @@ function Right_or_Wrong (num: number) {
     "All of the above",
     "Botulinum toxin",
     "C10 H26 N4",
-    "Waltuh2"
+    "Waltuh2",
+    "24 miles per hour",
+    "He’s already there",
+    "Ryder drives off a bridge",
+    "I am now on a killing spree",
+    ""
     ]
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
         game.setDialogTextColor(14)
@@ -1724,29 +1729,33 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
         }
     } else if (false) {
         if (controller.A.isPressed()) {
-            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            game.showLongText("H E L L O  S T U D E N T. . .", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText("I T  I S  T I M E  F O R  Y O U  T O  T A K E  Y O U R  P H Y S I C S  Q U I Z. . .", DialogLayout.Bottom)
+            pauseUntil(() => controller.A.isPressed())
+            game.showLongText("E I T H E R  T H A T  O R  Y O U  M U S T  D R A W  O N  T H E  W H I T E  B O A R D. . .", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 answerChoices = [
-                "Mein Kampfy Chair",
-                "Romeo and Juliet",
-                "What is a Woman?",
-                "The Twilight Series",
-                "John Wayne Gacy",
-                "JRR Tolkien",
-                "Shawn Guo",
-                "The blog writer for the babylon bee",
-                "A 6th century medival torture device",
-                "To pracitce writing",
-                "For information and arguments",
-                "No one writes essay anymore, other than AI of course",
-                "A peer reviewed research article",
-                "Wikipedia",
-                "The Daily Wire",
-                "Fox News",
-                "Blatant lies",
-                "images",
-                "statistics",
-                "a good speaker"
+                "13 miles per hour",
+                "24 miles per hour",
+                "69 miles per hour",
+                "impossible to tell",
+                "8 hours",
+                "He’s already there",
+                "He’s not going",
+                "September 11th",
+                "1 hour",
+                "Ryder drives off a bridge",
+                "Ryder would never commit a crime",
+                "Ryder is used to outrunning police",
+                "I am now on a killing spree",
+                "a little less than 4 seconds",
+                "exactly 4 seconds",
+                "a little more than 4 seconds",
+                "",
+                "",
+                "",
+                ""
                 ]
                 Quiz()
             }
