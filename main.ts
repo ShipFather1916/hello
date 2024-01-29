@@ -127,7 +127,7 @@ function Right_or_Wrong (num: number) {
     "C10 H26 N4",
     "Waltuh2",
     "24 miles per hour",
-    "He’s already there",
+    "He's already there",
     "Ryder drives off a bridge",
     "I am now on a killing spree",
     "All of the above",
@@ -1656,7 +1656,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                 "Gabe Newell",
                 "Swen Vinkle",
                 "Ryder",
-                "Baldur’s Gate 3",
+                "Baldur's Gate 3",
                 "Gollum",
                 "Spider Man 2",
                 "Skyrim In Space",
@@ -1783,8 +1783,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                 "69 miles per hour",
                 "impossible to tell",
                 "8 hours",
-                "He’s already there",
-                "He’s not going",
+                "He's already there",
+                "He's not going",
                 "September 11th",
                 "1 hour",
                 "Ryder drives off a bridge",
@@ -1815,7 +1815,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                 answerChoices = [
                 "r/AITAH",
                 "X",
-                "Mar-a-Lago’s restroom",
+                "Mar-a-Lago's restroom",
                 "All of the above",
                 "Africa",
                 "Murica pew pew",
@@ -1863,7 +1863,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                 "2Pac",
                 "Ron Weasly (Ed Sheeran)",
                 "Justin Bieber - Bizarre",
-                "Hit ‘Em Up - 2Pac",
+                "Hit 'Em Up - 2Pac",
                 "Erica - Herms Neil",
                 "Red Sun in the Sky - Tu Honggang"
                 ]
@@ -1956,7 +1956,7 @@ function _questions () {
     	
     } else if (quizSubject == 5) {
         if (quiz_level == 2) {
-            game.showLongText(" If Stephen Hawking’s airplane is flying to Epstein’s Island, which is 1000 miles away and the plane is going at 125 miles per hour, how long until he arrives at the island?", DialogLayout.Center)
+            game.showLongText(" If Stephen Hawking's airplane is flying to Epstein's Island, which is 1000 miles away and the plane is going at 125 miles per hour, how long until he arrives at the island?", DialogLayout.Center)
         } else if (quiz_level == 3) {
             game.showLongText("If Ryder is driving his White 2023 Ford E-Transit-350 Cargo Van at 75 miles per hour away from a pre-school, how long until the police car which is 5 miles away and going at 80 miles per hour, how long until the pre-schoolers are saved? ", DialogLayout.Center)
         } else if (quiz_level == 4) {
@@ -1968,11 +1968,11 @@ function _questions () {
         if (quiz_level == 2) {
             game.showLongText("What is the greatest country ever?", DialogLayout.Center)
         } else if (quiz_level == 3) {
-            game.showLongText("Who’s in Paris?", DialogLayout.Center)
+            game.showLongText("Who's in Paris?", DialogLayout.Center)
         } else if (quiz_level == 4) {
-            game.showLongText("What is ‘Murcia’s greatest industry", DialogLayout.Center)
+            game.showLongText("What is 'Murcia's greatest industry", DialogLayout.Center)
         } else if (quiz_level == 5) {
-            game.showLongText("Who was America’s greatest president?", DialogLayout.Center)
+            game.showLongText("Who was America's greatest president?", DialogLayout.Center)
         }
     } else if (quizSubject == 7) {
         if (quiz_level == 2) {
@@ -2049,6 +2049,7 @@ function spritedump () {
 }
 let mySprite2: Sprite = null
 let floorNum = 0
+let keyNumber = 0
 let Simnar: Sprite = null
 let quizSubject = 0
 let s4: Sprite = null
@@ -2072,7 +2073,6 @@ let cutscene = 0
 let Floor = 0
 let textCutscene = 0
 let mySprite: Sprite = null
-let keyNumber = 0
 scene.setBackgroundImage(img`
     3333666666662666f666666663333666666662666f6666666663333666666662666f6666666663333666666662666f6666666663333666666662666f6666666663333666666662666f66666666633336
     333366f66266666666666f666333366f66266666666666f6666333366f66266666666666f6666333366f66266666666666f6666333366f66266666666666f6666333366f66266666666666f666633336
