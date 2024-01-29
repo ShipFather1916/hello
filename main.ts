@@ -2044,6 +2044,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite11
         Floor += -1
     }
 })
+function spritedump () {
+    let sprite_dump: Sprite = null
+    sprite_dump.setImage(assets.image`myImage3`)
+}
 let floorNum = 0
 let Simnar: Sprite = null
 let quizSubject = 0

@@ -315,49 +315,6 @@ f . 3 . 3 . 3 . f . . f 2 . f .
 . f . . 3 . . f . . . f . . f . 
 . . f f f f f . . . . . f f . . 
 `;
-            case "image8":
-            case "myImage3":return img`
-....................
-..ffffffffffffffff..
-.f3333333322222f22f.
-f332222222222222f22f
-f322fffffffffff2f22f
-f32f...........ff22f
-f32f.f.f....f..ff22f
-f32f.fff...ff..ff22f
-f32f...f....f..ff22f
-f32f...f....f..ff22f
-f32f...f...fff.ff22f
-f32f...........ff22f
-f322fffffffffff2f22f
-f322222222222222f22f
-f322222222222222f22f
-f322222222222222f22f
-f332222222222222f22f
-f332222222222222f22f
-f332222222222222f22f
-f332222222222222f22f
-f332222222222222f22f
-f332222222222222f22f
-f332222222222222f22f
-f332222222222222f22f
-f332222222222222f22f
-f332222222222222f22f
-f332222222222222f22f
-f322222222222222f22f
-f322222222222222f22f
-f322222222222222f22f
-f322222222222222f22f
-f322222222222222f22f
-.f2222222222222f22f.
-..ffffffffffffffff..
-....................
-....................
-....................
-....................
-....................
-....................
-`;
             case "image2":
             case "Shawn":return img`
 ffffffffffffffffffffffffffffffffffffffeeeeeeeeebbbeeeee5555555555555555555555555555555555555555555555555555555f555f5ff5f55ffffffffffffffffffffcfffffff5555555555fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -546,6 +503,49 @@ fffffffffffffffffffffffffffffffffffffffffffffffffffff555555555555555555555555555
 ffffffffffffffffffffffffffffffffffffffffffffffffffffff5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555ffdddffffffffffffffffffffffffffffff
 fffffffffffffffffffffffffffffffffffffffffffffffffffffff5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555fdddddddddddddddddddddffffffffffff
 fffffffffffffffffffffffffffffffffffffffffffffffffffffff5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555ffdddddddddddddddddddddddfffffffff
+`;
+            case "image8":
+            case "myImage3":return img`
+....................
+..ffffffffffffffff..
+.f3333333322222f22f.
+f332222222222222f22f
+f322fffffffffff2f22f
+f32f...........ff22f
+f32f.f.f....f..ff22f
+f32f.fff...ff..ff22f
+f32f...f....f..ff22f
+f32f...f....f..ff22f
+f32f...f...fff.ff22f
+f32f...........ff22f
+f322fffffffffff2f22f
+f322222222222222f22f
+f322222222222222f22f
+f322222222222222f22f
+f332222222222222f22f
+f332222222222222f22f
+f332222222222222f22f
+f332222222222222f22f
+f332222222222222f22f
+f332222222222222f22f
+f332222222222222f22f
+f332222222222222f22f
+f332222222222222f22f
+f332222222222222f22f
+f332222222222222f22f
+f322222222222222f22f
+f322222222222222f22f
+f322222222222222f22f
+f322222222222222f22f
+f322222222222222f22f
+.f2222222222222f22f.
+..ffffffffffffffff..
+....................
+....................
+....................
+....................
+....................
+....................
 `;
         }
         return null;
