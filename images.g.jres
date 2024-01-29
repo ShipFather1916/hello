@@ -34,6 +34,16 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "myImage2"
     },
+    "image8": {
+        "data": "hwQUACgAAAAA8P//////////////////AAAAAAA/MzMzMzMzMzMzMzMzMzMPAAAA8DMiIiIiIiIiIiIiIiIiIvIAAADwI/L///8i3RIhERIhEeIu8gAAAPAjHxERES/dEiEREiER4i7yAAAA8CMf/xERL90SIRESIRHiLvIAAADwIx/xEREvIiIiIiIiIiIi8gAAAPAjH///Hy93EiEREiEREiHyAAAA8CMfERERL3cSIRESIRESIfIAAADwIx8REREvdxIhERIhERIh8gAAAPAiHxERES8iIiIiIiIiIiLyAAAA8CIf8REfLxESIRESIRESIfIAAADwIh///x8vERIhERIhERIh8gAAAPAiHxERHy8REiEREiEREiHyAAAA8CIfERERLyIiIiIiIiIiIvIAAADwL/L///8iIiIiIiIiIiIi/wAAAPDy///////////////////yAAAA8CIiIiIiIiIiIiIiIiIiIvIAAAAALyIiIiIiIiIiIiIiIiIiDwAAAADw//////////////////8AAAAA",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage3"
+    },
+    "image9": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage4"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
