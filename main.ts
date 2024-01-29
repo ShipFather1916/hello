@@ -2183,25 +2183,27 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10
                 } else if (location10.column == 30 && location10.row == 84) {
                     tiles.setCurrentTilemap(tilemap`level149`)
                     tiles.placeOnTile(mySprite, tiles.getTileLocation(7, 13))
-                    key_sprite = sprites.create(img`
-                        . . . . . . . . . . . . . . . . 
-                        . . . . . f f f f f . . . . . . 
-                        . . . . f a a a a a f . . . . . 
-                        . . . f a f f f f f a f . . . . 
-                        . . . f a f . . . f a f . . . . 
-                        . . . f a f . . . f a f . . . . 
-                        . . . f a f . . . f a f . . . . 
-                        . . . f a f f f f f a f . . . . 
-                        . . . . f a a a a a f . . . . . 
-                        . . . . . f f a f f . . . . . . 
-                        . . . . . . f a f . . . . . . . 
-                        . . . . . . f a f f . . . . . . 
-                        . . . . . . f a a a f . . . . . 
-                        . . . . . . f a f f . . . . . . 
-                        . . . . . . f a a a f . . . . . 
-                        . . . . . . . f f f . . . . . . 
-                        `, SpriteKind.Food)
-                    tiles.placeOnTile(key_sprite, tiles.getTileLocation(8, 11))
+                    if (chemKey == 0) {
+                        key_sprite = sprites.create(img`
+                            . . . . . . . . . . . . . . . . 
+                            . . . . . f f f f f . . . . . . 
+                            . . . . f a a a a a f . . . . . 
+                            . . . f a f f f f f a f . . . . 
+                            . . . f a f . . . f a f . . . . 
+                            . . . f a f . . . f a f . . . . 
+                            . . . f a f . . . f a f . . . . 
+                            . . . f a f f f f f a f . . . . 
+                            . . . . f a a a a a f . . . . . 
+                            . . . . . f f a f f . . . . . . 
+                            . . . . . . f a f . . . . . . . 
+                            . . . . . . f a f f . . . . . . 
+                            . . . . . . f a a a f . . . . . 
+                            . . . . . . f a f f . . . . . . 
+                            . . . . . . f a a a f . . . . . 
+                            . . . . . . . f f f . . . . . . 
+                            `, SpriteKind.Food)
+                        tiles.placeOnTile(key_sprite, tiles.getTileLocation(8, 11))
+                    }
                 } else if (location10.column == 8 && location10.row == 14) {
                     tiles.setCurrentTilemap(tilemap`level15`)
                     tiles.placeOnTile(mySprite, tiles.getTileLocation(29, 83))
