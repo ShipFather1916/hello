@@ -2045,9 +2045,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite11
     }
 })
 function spritedump () {
-    let sprite_dump: Sprite = null
-    sprite_dump.setImage(assets.image`myImage3`)
+    mySprite2 = sprites.create(assets.image`myImage3`, SpriteKind.Player)
+    tiles.setCurrentTilemap(tilemap`level52`)
 }
+let mySprite2: Sprite = null
 let floorNum = 0
 let Simnar: Sprite = null
 let quizSubject = 0
