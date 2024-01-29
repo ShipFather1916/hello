@@ -1768,6 +1768,13 @@ function openingCutscene () {
         }
     }
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    sprites.destroy(key_sprite, effects.confetti, 500)
+    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
+    pause(500)
+    game.showLongText("Chemistry Key found!", DialogLayout.Bottom)
+    chemKey += 1
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, otherSprite) {
     if (otherSprite == Simnar) {
         if (controller.A.isPressed()) {
@@ -2162,15 +2169,45 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10
                     tiles.placeOnTile(mySprite, tiles.getTileLocation(2, 13))
                     Simnar = sprites.create(assets.image`myImage0`, SpriteKind.Teacher)
                     tiles.placeOnTile(Simnar, tiles.getTileLocation(7, 4))
+                } else if (location10.column == 3 && location10.row == 14) {
+                    tiles.setCurrentTilemap(tilemap`level2`)
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(31, 42))
                 }
             }
             if (Floor == 2) {
                 if (location10.column == 34 && location10.row == 39) {
-                    tiles.setCurrentTilemap(tilemap`level149`)
+                    tiles.setCurrentTilemap(tilemap`level151`)
                     tiles.placeOnTile(mySprite, tiles.getTileLocation(3, 13))
                     APCOMPSCI = sprites.create(assets.image`myImage0`, SpriteKind.Teacher)
                     tiles.placeOnTile(APCOMPSCI, tiles.getTileLocation(4, 6))
                 } else if (location10.column == 30 && location10.row == 84) {
+                    tiles.setCurrentTilemap(tilemap`level149`)
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(7, 13))
+                    key_sprite = sprites.create(img`
+                        . . . . . . . . . . . . . . . . 
+                        . . . . . f f f f f . . . . . . 
+                        . . . . f a a a a a f . . . . . 
+                        . . . f a f f f f f a f . . . . 
+                        . . . f a f . . . f a f . . . . 
+                        . . . f a f . . . f a f . . . . 
+                        . . . f a f . . . f a f . . . . 
+                        . . . f a f f f f f a f . . . . 
+                        . . . . f a a a a a f . . . . . 
+                        . . . . . f f a f f . . . . . . 
+                        . . . . . . f a f . . . . . . . 
+                        . . . . . . f a f f . . . . . . 
+                        . . . . . . f a a a f . . . . . 
+                        . . . . . . f a f f . . . . . . 
+                        . . . . . . f a a a f . . . . . 
+                        . . . . . . . f f f . . . . . . 
+                        `, SpriteKind.Food)
+                    tiles.placeOnTile(key_sprite, tiles.getTileLocation(8, 11))
+                } else if (location10.column == 8 && location10.row == 14) {
+                    tiles.setCurrentTilemap(tilemap`level15`)
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(29, 83))
+                } else if (location10.column == 8 && location10.row == 14) {
+                	
+                } else if (false) {
                 	
                 }
             }
@@ -2206,6 +2243,7 @@ function spritedump () {
     tiles.setCurrentTilemap(tilemap`level52`)
 }
 let mySprite2: Sprite = null
+let key_sprite: Sprite = null
 let floorNum = 0
 let Chemistry: Sprite = null
 let APCOMPSCI: Sprite = null
