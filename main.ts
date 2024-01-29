@@ -109,6 +109,15 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     	
     }
 })
+function tilemap2 () {
+    tiles.setCurrentTilemap(tilemap`level140`)
+    tiles.setCurrentTilemap(tilemap`level142`)
+    tiles.setCurrentTilemap(tilemap`level144`)
+    tiles.setCurrentTilemap(tilemap`level146`)
+    tiles.setCurrentTilemap(tilemap`Zsroom`)
+    tiles.setCurrentTilemap(tilemap`level149`)
+    tiles.setCurrentTilemap(tilemap`ArtRoom`)
+}
 function Right_or_Wrong (num: number) {
     Correct_Answers = [
     "What is a Woman?",
