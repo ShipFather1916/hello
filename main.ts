@@ -152,7 +152,6 @@ function Right_or_Wrong (num: number) {
     } else {
         game.setDialogTextColor(15)
         game.showLongText("CORRECT!!!", DialogLayout.Bottom)
-        pauseUntil(() => controller.A.isPressed())
         Score += 1
         quizlevel += 1
         quiz_level += 1
@@ -1920,35 +1919,35 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite3,
     }
 })
 function _questions () {
-    game.setDialogTextColor(15)
+    game.splash(quiz_level)
     if (quizSubject == 0) {
-        if (quiz_level == 1) {
+        if (quiz_level == 2) {
             game.showLongText("Who is the greatest author of all time?", DialogLayout.Center)
-        } else if (quiz_level == 2) {
-            game.showLongText("What is the point of essays?", DialogLayout.Center)
         } else if (quiz_level == 3) {
-            game.showLongText("What is the best research source?", DialogLayout.Center)
+            game.showLongText("What is the point of essays?", DialogLayout.Center)
         } else if (quiz_level == 4) {
+            game.showLongText("What is the best research source?", DialogLayout.Center)
+        } else if (quiz_level == 5) {
             game.showLongText("What is the best part of a presentation?", DialogLayout.Center)
         }
     } else if (quizSubject == 1) {
-        if (quiz_level == 1) {
+        if (quiz_level == 2) {
             game.showLongText("What was the real 2023 game of the year?", DialogLayout.Center)
-        } else if (quiz_level == 2) {
-            game.showLongText("What ruined Starfield?", DialogLayout.Center)
         } else if (quiz_level == 3) {
-            game.showLongText("Why did Bolders Gate 3 win Game of the year??", DialogLayout.Center)
+            game.showLongText("What ruined Starfield?", DialogLayout.Center)
         } else if (quiz_level == 4) {
+            game.showLongText("Why did Bolders Gate 3 win Game of the year??", DialogLayout.Center)
+        } else if (quiz_level == 5) {
             game.showLongText("What is wrong with many AAA games?", DialogLayout.Center)
         }
     } else if (quizSubject == 2) {
-        if (quiz_level == 1) {
+        if (quiz_level == 2) {
             game.showLongText("What chemical does Trump inject himself with?", DialogLayout.Center)
-        } else if (quiz_level == 2) {
-            game.showLongText("What is the deadliest poison?", DialogLayout.Center)
         } else if (quiz_level == 3) {
-            game.showLongText("What does Ryder inject himself with?", DialogLayout.Center)
+            game.showLongText("What is the deadliest poison?", DialogLayout.Center)
         } else if (quiz_level == 4) {
+            game.showLongText("What does Ryder inject himself with?", DialogLayout.Center)
+        } else if (quiz_level == 5) {
             game.showLongText("Waltuh", DialogLayout.Center)
         }
     } else if (quizSubject == 3) {
@@ -1956,43 +1955,43 @@ function _questions () {
     } else if (quizSubject == 4) {
     	
     } else if (quizSubject == 5) {
-        if (quiz_level == 1) {
+        if (quiz_level == 2) {
             game.showLongText(" If Stephen Hawking’s airplane is flying to Epstein’s Island, which is 1000 miles away and the plane is going at 125 miles per hour, how long until he arrives at the island?", DialogLayout.Center)
-        } else if (quiz_level == 2) {
-            game.showLongText("If Ryder is driving his White 2023 Ford E-Transit-350 Cargo Van at 75 miles per hour away from a pre-school, how long until the police car which is 5 miles away and going at 80 miles per hour, how long until the pre-schoolers are saved? ", DialogLayout.Center)
         } else if (quiz_level == 3) {
-            game.showLongText(" If the voices in my head tell me to jump off a bridge, which is 100 meters above ground, how long until I hit the ground if I hit the ground at a velocity of 25 m/s?", DialogLayout.Center)
+            game.showLongText("If Ryder is driving his White 2023 Ford E-Transit-350 Cargo Van at 75 miles per hour away from a pre-school, how long until the police car which is 5 miles away and going at 80 miles per hour, how long until the pre-schoolers are saved? ", DialogLayout.Center)
         } else if (quiz_level == 4) {
+            game.showLongText(" If the voices in my head tell me to jump off a bridge, which is 100 meters above ground, how long until I hit the ground if I hit the ground at a velocity of 25 m/s?", DialogLayout.Center)
+        } else if (quiz_level == 5) {
             game.showLongText("", DialogLayout.Center)
         }
     } else if (quizSubject == 6) {
-        if (quiz_level == 1) {
+        if (quiz_level == 2) {
             game.showLongText("What is the greatest country ever?", DialogLayout.Center)
-        } else if (quiz_level == 2) {
-            game.showLongText("Who’s in Paris?", DialogLayout.Center)
         } else if (quiz_level == 3) {
-            game.showLongText("What is ‘Murcia’s greatest industry", DialogLayout.Center)
+            game.showLongText("Who’s in Paris?", DialogLayout.Center)
         } else if (quiz_level == 4) {
+            game.showLongText("What is ‘Murcia’s greatest industry", DialogLayout.Center)
+        } else if (quiz_level == 5) {
             game.showLongText("Who was America’s greatest president?", DialogLayout.Center)
         }
     } else if (quizSubject == 7) {
-        if (quiz_level == 1) {
+        if (quiz_level == 2) {
             game.showLongText("Who is the greatest poet?", DialogLayout.Center)
-        } else if (quiz_level == 2) {
-            game.showLongText("Who is the greatest actor of all time?", DialogLayout.Center)
         } else if (quiz_level == 3) {
-            game.showLongText("Greatest musical lyricists of all time?", DialogLayout.Center)
+            game.showLongText("Who is the greatest actor of all time?", DialogLayout.Center)
         } else if (quiz_level == 4) {
+            game.showLongText("Greatest musical lyricists of all time?", DialogLayout.Center)
+        } else if (quiz_level == 5) {
             game.showLongText("Greatest piece of music of all time?", DialogLayout.Center)
         }
     } else if (quizSubject == 8) {
-        if (quiz_level == 1) {
+        if (quiz_level == 2) {
             game.showLongText("Who is the greatest French speaker ever?", DialogLayout.Center)
-        } else if (quiz_level == 2) {
-            game.showLongText("Who invented the first language?", DialogLayout.Center)
         } else if (quiz_level == 3) {
-            game.showLongText(" Who is the greatest English speaker ever?", DialogLayout.Center)
+            game.showLongText("Who invented the first language?", DialogLayout.Center)
         } else if (quiz_level == 4) {
+            game.showLongText(" Who is the greatest English speaker ever?", DialogLayout.Center)
+        } else if (quiz_level == 5) {
             game.showLongText(" Greatest language ever?", DialogLayout.Center)
         }
     }
