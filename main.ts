@@ -109,15 +109,6 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     	
     }
 })
-function tilemap2 () {
-    tiles.setCurrentTilemap(tilemap`level140`)
-    tiles.setCurrentTilemap(tilemap`level142`)
-    tiles.setCurrentTilemap(tilemap`level144`)
-    tiles.setCurrentTilemap(tilemap`level146`)
-    tiles.setCurrentTilemap(tilemap`Zsroom`)
-    tiles.setCurrentTilemap(tilemap`level149`)
-    tiles.setCurrentTilemap(tilemap`ArtRoom`)
-}
 function Right_or_Wrong (num: number) {
     Correct_Answers = [
     "What is a Woman?",
@@ -1203,6 +1194,42 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
         }
     }
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile112`, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        if (Floor == 1) {
+            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+            if (controller.A.isPressed()) {
+                answerChoices = [
+                "Mein Kampfy Chair",
+                "Romeo and Juliet",
+                "What is a Woman?",
+                "The Twilight Series",
+                "John Wayne Gacy",
+                "JRR Tolkien",
+                "Shawn Guo",
+                "The blog writer",
+                "A medival torture device",
+                "To pracitce writing",
+                "For information/arguments",
+                "AI of course",
+                "A peer reviewed article",
+                "Wikipedia",
+                "The Daily Wire",
+                "Fox News",
+                "Blatant lies",
+                "images",
+                "statistics",
+                "a good speaker"
+                ]
+                Quiz()
+            }
+        } else if (Floor == 2) {
+        	
+        } else if (Floor == 3) {
+        	
+        }
+    }
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite8, location8) {
     tiles.setCurrentTilemap(tilemap`level44`)
     tiles.placeOnTile(mySprite, tiles.getTileLocation(5, 22))
@@ -1625,34 +1652,9 @@ function openingCutscene () {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, otherSprite) {
     if (otherSprite == Simnar) {
         if (controller.A.isPressed()) {
-            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
-            if (controller.A.isPressed()) {
-                answerChoices = [
-                "Mein Kampfy Chair",
-                "Romeo and Juliet",
-                "What is a Woman?",
-                "The Twilight Series",
-                "John Wayne Gacy",
-                "JRR Tolkien",
-                "Shawn Guo",
-                "The blog writer",
-                "A medival torture device",
-                "To pracitce writing",
-                "For information/arguments",
-                "AI of course",
-                "A peer reviewed article",
-                "Wikipedia",
-                "The Daily Wire",
-                "Fox News",
-                "Blatant lies",
-                "images",
-                "statistics",
-                "a good speaker"
-                ]
-                Quiz()
-            }
+        	
         }
-    } else if (false) {
+    } else if (otherSprite == APCOMPSCI) {
         if (controller.A.isPressed()) {
             game.showLongText("Hey Student! My name is Godd Howard. I heard you needed a key to escape the school.", DialogLayout.Bottom)
             pauseUntil(() => controller.A.isPressed())
@@ -1660,6 +1662,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
             pauseUntil(() => controller.A.isPressed())
             game.showLongText("How about this? You take my quiz and I'll give you a free copy of Skyrim on top of that key you need!", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
+                quizSubject += 1
                 answerChoices = [
                 "Godd Howard",
                 "Gabe Newell",
@@ -1928,7 +1931,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite3,
     }
 })
 function _questions () {
-    game.splash(quiz_level)
     if (quizSubject == 0) {
         if (quiz_level == 2) {
             game.showLongText("Who is the greatest author of all time?", DialogLayout.Center)
@@ -2020,7 +2022,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10
             }
             if (Floor == 2) {
                 if (location10.column == 34 && location10.row == 39) {
-                	
+                    tiles.setCurrentTilemap(tilemap`level149`)
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(3, 13))
+                    APCOMPSCI = sprites.create(assets.image`myImage0`, SpriteKind.Teacher)
+                    tiles.placeOnTile(APCOMPSCI, tiles.getTileLocation(4, 6))
                 } else if (location10.column == 30 && location10.row == 84) {
                 	
                 }
@@ -2057,6 +2062,7 @@ function spritedump () {
     tiles.setCurrentTilemap(tilemap`level52`)
 }
 let mySprite2: Sprite = null
+let APCOMPSCI: Sprite = null
 let floorNum = 0
 let keyNumber = 0
 let Simnar: Sprite = null
