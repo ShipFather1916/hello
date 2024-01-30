@@ -3,25 +3,6 @@ namespace myImages {
 
     helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "image3":
-            case "ye2024":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . 6 6 6 6 6 6 6 6 . . . 
-. . . . 6 6 6 f 6 6 6 f 6 . . . 
-. . . . 6 6 6 6 6 6 6 6 6 6 . . 
-. . . . 6 6 6 6 6 f f f 6 6 . . 
-. . . . 6 6 6 6 f 6 6 6 f 6 . . 
-. . . . 6 6 6 6 f 6 f 6 f 6 . . 
-. . . . . 6 6 6 f f f f f . . . 
-. . . . . 1 1 1 1 1 1 . . . . . 
-. . . . f f f 1 1 f f . . . . . 
-. . . . e f f f f f f f f f 6 . 
-. . . . f f a f f a f . . . . . 
-. . . . 6 f f f f f f . . . . . 
-. . . . . f a f f a f . . . . . 
-. . . . . f f . . f f . . . . . 
-. . . . . 9 9 . . 9 9 . . . . . 
-`;
             case "image2":
             case "Shawn":return img`
 ffffffffffffffffffffffffffffffffffffffeeeeeeeeebbbeeeee5555555555555555555555555555555555555555555555555555555f555f5ff5f55ffffffffffffffffffffcfffffff5555555555fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -546,6 +527,25 @@ f . 3 . 3 . 3 . f . . f 2 . f .
 . . . . . f f f f f f . . . . . 
 . . . . . f f . . f f . . . . . 
 . . . . . 6 6 . . 6 6 . . . . . 
+`;
+            case "image3":
+            case "ye2024":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . 6 6 6 6 6 6 6 6 . . . 
+. . . . 6 6 6 f 6 6 6 f 6 . . . 
+. . . . 6 6 6 6 6 6 6 6 6 6 . . 
+. . . . 6 6 6 6 6 f f f 6 6 . . 
+. . . . 6 6 6 6 f 6 6 6 f 6 . . 
+. . . . 6 6 6 6 f 6 f 6 f 6 . . 
+. . . . . 6 6 6 f f f f f . . . 
+. . . . . 1 1 1 1 1 1 . . . . . 
+. . . . f f f 1 1 f f . . . . . 
+. . . . e f f f f f f f f f 6 . 
+. . . . f f a f f a f . . . . . 
+. . . . 6 f f f f f f . . . . . 
+. . . . . f a f f a f . . . . . 
+. . . . . f f . . f f . . . . . 
+. . . . . 9 9 . . 9 9 . . . . . 
 `;
         }
         return null;
