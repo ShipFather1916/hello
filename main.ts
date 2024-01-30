@@ -875,6 +875,7 @@ function Quiz () {
         game.showLongText(" Who is the greatest Spanish speaker ever?", DialogLayout.Center)
     }
     pauseUntil(() => quizlevel == 5)
+    quizlevel = 0
     sprites.destroy(Cursor)
     sprites.destroyAllSpritesOfKind(SpriteKind.hitbot)
     if (quizSubject == 0) {
