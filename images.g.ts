@@ -41,26 +41,6 @@ namespace myImages {
 . . . . . f f . . f f . . . . . 
 . . . . . 6 6 . . 6 6 . . . . . 
 `;
-            case "image7":
-            case "myImage2":return img`
-. . . . . a a a a . . . . . . . 
-. . . . . a a a f . . . . . . . 
-. . . . e a a 4 4 . . . . . . . 
-. . . . e a 4 4 4 . . . . . . . 
-. . . . e 6 6 6 6 . . . . . . . 
-. . . . e 6 6 6 6 6 6 6 4 . . . 
-. . . . e e e e e e e 6 4 . . . 
-. . . . e 6 6 6 6 . . e . . . . 
-. . f f f f f 6 6 . . . e . . . 
-. f . . 3 6 6 f 6 . . . e . . . 
-f . 3 . 3 6 3 6 f 8 8 8 e 8 8 f 
-f . . 3 3 3 6 6 f 8 8 8 e 8 8 f 
-f 3 3 3 2 3 3 3 f e e e e e e . 
-f . . 3 3 3 . . f . . . f f . e 
-f . 3 . 3 . 3 . f . . f 2 . f . 
-. f . . 3 . . f . . . f . . f . 
-. . f f f f f . . . . . f f . . 
-`;
             case "image2":
             case "Shawn":return img`
 ffffffffffffffffffffffffffffffffffffffeeeeeeeeebbbeeeee5555555555555555555555555555555555555555555555555555555f555f5ff5f55ffffffffffffffffffffcfffffff5555555555fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -546,6 +526,26 @@ ccccccccccccccccccccccccccffffffffffffffffffffffffffffffffffffffffffffffffffffff
 . . . . . a a a a 1 a . . . . . 
 . . . . . a a . . a a . . . . . 
 . . . . . f f . . f f . . . . . 
+`;
+            case "image7":
+            case "myImage2":return img`
+. . . . . a a a a . . . . . . . 
+. . . . . a a a f . . . . . . . 
+. . . . e a a 4 4 . . . . . . . 
+. . . . e a 4 4 4 . . . . . . . 
+. . . . e 6 6 6 6 . . . . . . . 
+. . . . e 6 6 6 6 6 6 6 4 . . . 
+. . . . e e e e e e e 6 4 . . . 
+. . . . e 6 6 6 6 . . e . . . . 
+. . f f f f f 6 6 . . . e . . . 
+. f . . 3 6 6 f 6 . . . e . . . 
+f . 3 . 3 6 3 6 f 8 8 8 e 8 8 f 
+f . . 3 3 3 6 6 f 8 8 8 e 8 8 f 
+f 3 3 3 2 3 3 3 f e e e e e e . 
+f . . 3 3 3 . . f . . . f f . e 
+f . 3 . 3 . 3 . f . . f 2 . f . 
+. f . . 3 . . f . . . f . . f . 
+. . f f f f f . . . . . f f . . 
 `;
         }
         return null;
