@@ -12,9 +12,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile46`, function (sprite4,
                 game.showLongText("Pre-Calulus key needed to open this door... ", DialogLayout.Bottom)
             } else {
                 tiles.setCurrentTilemap(tilemap`Zsroom`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(13, 4))
                 CalcAB = sprites.create(assets.image`myImage3`, SpriteKind.Teacher)
                 tiles.placeOnTile(CalcAB, tiles.getTileLocation(4, 4))
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(13, 4))
             }
         }
     }
@@ -1773,7 +1773,7 @@ function Quiz () {
             ................................................................................................................................................................
             ................................................................................................................................................................
             `)
-        tiles.setCurrentTilemap(tilemap`level153`)
+        tiles.setCurrentTilemap(tilemap`level156`)
         mySprite = sprites.create(img`
             . . . . . f f f f . . . . . . . 
             . . . f f 6 6 6 6 f f . . . . . 
@@ -2582,10 +2582,61 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite8,
     tiles.placeOnTile(mySprite, tiles.getTileLocation(5, 22))
 })
 function randsprites () {
-    mySprite2 = sprites.create(assets.image`myImage4`, SpriteKind.Player)
-    mySprite2 = sprites.create(assets.image`myImage5`, SpriteKind.Player)
+    mySprite2 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
+    mySprite2 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
     mySprite2 = sprites.create(assets.image`myImage3`, SpriteKind.Player)
-    mySprite2 = sprites.create(assets.image`myImage6`, SpriteKind.Player)
+    mySprite2 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
     tiles.setCurrentTilemap(tilemap`level149`)
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, location) {
@@ -2594,9 +2645,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, 
             game.showLongText("Chemistry Key required to open this door...", DialogLayout.Bottom)
         } else {
             tiles.setCurrentTilemap(tilemap`level140`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 14))
             Chemistry = sprites.create(assets.image`myImage1`, SpriteKind.Teacher)
             tiles.placeOnTile(Chemistry, tiles.getTileLocation(7, 4))
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 14))
         }
     }
 })
@@ -3016,287 +3067,315 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, otherSprite) {
     if (otherSprite == Simnar) {
         if (controller.A.isPressed()) {
-            game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
-            if (controller.A.isPressed()) {
-                answerChoices = [
-                "Mein Kampfy Chair",
-                "Romeo and Juliet",
-                "What is a Woman?",
-                "The Twilight Series",
-                "John Wayne Gacy",
-                "JRR Tolkien",
-                "Shawn Guo",
-                "The blog writer",
-                "A medival torture device",
-                "To pracitce writing",
-                "For information/arguments",
-                "AI of course",
-                "A peer reviewed article",
-                "Wikipedia",
-                "The Daily Wire",
-                "Fox News",
-                "Blatant lies",
-                "images",
-                "statistics",
-                "a good speaker"
-                ]
-                Quiz()
+            if (SimnarLock == 0) {
+                game.showLongText("Hello Student! My name is Dennis Prager! Thank goodness you aren't one of them dirty homosexuals! How about we take a quiz to prove it!", DialogLayout.Bottom)
+                if (controller.A.isPressed()) {
+                    quizSubject = 0
+                    answerChoices = [
+                    "Mein Kampfy Chair",
+                    "Romeo and Juliet",
+                    "What is a Woman?",
+                    "The Twilight Series",
+                    "John Wayne Gacy",
+                    "JRR Tolkien",
+                    "Shawn Guo",
+                    "The blog writer",
+                    "A medival torture device",
+                    "To pracitce writing",
+                    "For information/arguments",
+                    "AI of course",
+                    "A peer reviewed article",
+                    "Wikipedia",
+                    "The Daily Wire",
+                    "Fox News",
+                    "Blatant lies",
+                    "images",
+                    "statistics",
+                    "a good speaker"
+                    ]
+                    Quiz()
+                    SimnarLock += 1
+                }
             }
         }
     } else if (otherSprite == APCOMPSCI) {
         if (controller.A.isPressed()) {
-            game.showLongText("Hey Student! My name is Godd Howard. I heard you needed a key to escape the school.", DialogLayout.Bottom)
-            game.showLongText("Personally, I couldn't understand why you would want to leave when you could be enjoying STARFIELD instead, but I guess It might be hard to connect to the servers with such poor internet connection... ", DialogLayout.Bottom)
-            game.showLongText("How about this? You take my quiz and I'll give you a free copy of Skyrim on top of that key you need!", DialogLayout.Bottom)
-            if (controller.A.isPressed()) {
-                quizSubject += 1
-                answerChoices = [
-                "Godd Howard",
-                "Gabe Newell",
-                "Swen Vinkle",
-                "Ryder",
-                "Baldur's Gate 3",
-                "Gollum",
-                "Spider Man 2",
-                "Skyrim In Space",
-                "THE WOKE PRONOUN AGENDA!",
-                "Existence",
-                "Nothing, it is perfect",
-                "The bugs",
-                "It was rigged",
-                "Smashable gay vampire",
-                "Chance",
-                "Actually Spider Man 2 won",
-                "Microtransactions",
-                "Lazy games",
-                "No love for player base",
-                "Nothing, especially EA"
-                ]
-                Quiz()
+            if (CompSciLock == 0) {
+                game.showLongText("Hey Student! My name is Godd Howard. I heard you needed a key to escape the school.", DialogLayout.Bottom)
+                game.showLongText("Personally, I couldn't understand why you would want to leave when you could be enjoying STARFIELD instead, but I guess It might be hard to connect to the servers with such poor internet connection... ", DialogLayout.Bottom)
+                game.showLongText("How about this? You take my quiz and I'll give you a free copy of Skyrim on top of that key you need!", DialogLayout.Bottom)
+                if (controller.A.isPressed()) {
+                    quizSubject = 1
+                    answerChoices = [
+                    "Godd Howard",
+                    "Gabe Newell",
+                    "Swen Vinkle",
+                    "Ryder",
+                    "Baldur's Gate 3",
+                    "Gollum",
+                    "Spider Man 2",
+                    "Skyrim In Space",
+                    "THE WOKE PRONOUN AGENDA!",
+                    "Existence",
+                    "Nothing, it is perfect",
+                    "The bugs",
+                    "It was rigged",
+                    "Smashable gay vampire",
+                    "Chance",
+                    "Actually Spider Man 2 won",
+                    "Microtransactions",
+                    "Lazy games",
+                    "No love for player base",
+                    "Nothing, especially EA"
+                    ]
+                    Quiz()
+                    CompSciLock += 1
+                }
             }
         }
     } else if (otherSprite == Chemistry) {
         if (controller.A.isPressed()) {
-            game.showLongText("WHO'S THERE!", DialogLayout.Bottom)
-            game.showLongText(" Oh crap You've seen my operation!", DialogLayout.Bottom)
-            game.showLongText("Whatever you do don't tell anyone about this please!", DialogLayout.Bottom)
-            game.showLongText("Here, I have this key! Take it and leave...but first you need to take this quiz...", DialogLayout.Bottom)
-            if (controller.A.isPressed()) {
-                quizSubject = 2
-                answerChoices = [
-                "C17 H21 NO4",
-                "C10 H15 N",
-                "C6 H12 O6",
-                "C10 H26 N4",
-                "Bleach",
-                "Estrogen",
-                "Beta-carotene",
-                "All of the above",
-                "The Daily Wire",
-                "Twitter",
-                "Ricin",
-                "Botulinum toxin",
-                "C17 H21 NO4",
-                "C10 H15 N",
-                "C10 H26 N4",
-                "C6 H12 O6",
-                "Waltuh1",
-                "Waltuh2",
-                "Waltuh3",
-                "Waltuh4"
-                ]
-                Quiz()
+            if (ChemLock == 0) {
+                game.showLongText("WHO'S THERE!", DialogLayout.Bottom)
+                game.showLongText(" Oh crap You've seen my operation!", DialogLayout.Bottom)
+                game.showLongText("Whatever you do don't tell anyone about this please!", DialogLayout.Bottom)
+                game.showLongText("Here, I have this key! Take it and leave...but first you need to take this quiz...", DialogLayout.Bottom)
+                if (controller.A.isPressed()) {
+                    quizSubject = 2
+                    answerChoices = [
+                    "C17 H21 NO4",
+                    "C10 H15 N",
+                    "C6 H12 O6",
+                    "C10 H26 N4",
+                    "Bleach",
+                    "Estrogen",
+                    "Beta-carotene",
+                    "All of the above",
+                    "The Daily Wire",
+                    "Twitter",
+                    "Ricin",
+                    "Botulinum toxin",
+                    "C17 H21 NO4",
+                    "C10 H15 N",
+                    "C10 H26 N4",
+                    "C6 H12 O6",
+                    "Waltuh1",
+                    "Waltuh2",
+                    "Waltuh3",
+                    "Waltuh4"
+                    ]
+                    Quiz()
+                    ChemLock += 1
+                }
             }
         }
     } else if (otherSprite == CalcAB) {
         if (controller.A.isPressed()) {
-            game.showLongText("H E L L O  S T U D E N T. . .", DialogLayout.Bottom)
-            game.showLongText("I  H A V E  P R E P A R E D  A  Q U I Z  J U S T  F O R  Y O U. . .", DialogLayout.Bottom)
-            if (controller.A.isPressed()) {
-                quizSubject = 3
-                answerChoices = [
-                "FTC",
-                "Find the code",
-                "Federation of True Canada",
-                "Fack this class",
-                "Instantaneous Rate of Change",
-                "Average Rate of Change",
-                "Find angles of a triangle",
-                "CIA psychological torture",
-                "24 hours a day",
-                "0 hours a day",
-                "69 hours a day",
-                "1 hour a day",
-                "5 mph",
-                "100000 mph",
-                "Ryder's an upstanding citizen",
-                "He's stuck inside a preschool",
-                "The Middle East",
-                "Fortnite",
-                "New Calculustan",
-                "Greece"
-                ]
-                Quiz()
+            if (CalcABLock == 0) {
+                game.showLongText("H E L L O  S T U D E N T. . .", DialogLayout.Bottom)
+                game.showLongText("I  H A V E  P R E P A R E D  A  Q U I Z  J U S T  F O R  Y O U. . .", DialogLayout.Bottom)
+                if (controller.A.isPressed()) {
+                    quizSubject = 3
+                    answerChoices = [
+                    "FTC",
+                    "Find the code",
+                    "Federation of True Canada",
+                    "Fack this class",
+                    "Instantaneous Rate of Change",
+                    "Average Rate of Change",
+                    "Find angles of a triangle",
+                    "CIA psychological torture",
+                    "24 hours a day",
+                    "0 hours a day",
+                    "69 hours a day",
+                    "1 hour a day",
+                    "5 mph",
+                    "100000 mph",
+                    "Ryder's an upstanding citizen",
+                    "He's stuck inside a preschool",
+                    "The Middle East",
+                    "Fortnite",
+                    "New Calculustan",
+                    "Greece"
+                    ]
+                    Quiz()
+                    CalcABLock += 1
+                }
             }
         }
     } else if (otherSprite == Precalc) {
         if (controller.A.isPressed()) {
-            game.showLongText("H E L L O  S T U D E N T. . .", DialogLayout.Bottom)
-            game.showLongText("I  H A V E  P R E P A R E D  A  Q U I Z  J U S T  F O R  Y O U. . .", DialogLayout.Bottom)
-            if (controller.A.isPressed()) {
-                quizSubject = 4
-                answerChoices = [
-                "f(x)=|x|^2",
-                "f(x)=-x",
-                "f(x)=1",
-                "f(x)=log(x)",
-                "2",
-                "4",
-                "5",
-                "10",
-                "FF0000",
-                "0000FF",
-                "008000",
-                "FFFF00",
-                "triangle",
-                "figuring out angles",
-                "idfk that stuff boring af",
-                "rectangle",
-                "figuring out gas",
-                "Find good child organs",
-                "architecture",
-                "Calculus"
-                ]
-                Quiz()
+            if (PreLock == 0) {
+                game.showLongText("H E L L O  S T U D E N T. . .", DialogLayout.Bottom)
+                game.showLongText("I  H A V E  P R E P A R E D  A  Q U I Z  J U S T  F O R  Y O U. . .", DialogLayout.Bottom)
+                if (controller.A.isPressed()) {
+                    quizSubject = 4
+                    answerChoices = [
+                    "f(x)=|x|^2",
+                    "f(x)=-x",
+                    "f(x)=1",
+                    "f(x)=log(x)",
+                    "2",
+                    "4",
+                    "5",
+                    "10",
+                    "FF0000",
+                    "0000FF",
+                    "008000",
+                    "FFFF00",
+                    "triangle",
+                    "figuring out angles",
+                    "idfk that stuff boring af",
+                    "rectangle",
+                    "figuring out gas",
+                    "Find good child organs",
+                    "architecture",
+                    "Calculus"
+                    ]
+                    Quiz()
+                    PreLock += 1
+                }
             }
         }
     } else if (otherSprite == Physics) {
         if (controller.A.isPressed()) {
-            game.showLongText("H E L L O  S T U D E N T. . .", DialogLayout.Bottom)
-            game.showLongText("I T  I S  T I M E  F O R  Y O U  T O  T A K E  Y O U R  P H Y S I C S  Q U I Z. . .", DialogLayout.Bottom)
-            game.showLongText("E I T H E R  T H A T  O R  Y O U  M U S T  D R A W  O N  T H E  W H I T E  B O A R D. . .", DialogLayout.Bottom)
-            if (controller.A.isPressed()) {
-                quizSubject = 5
-                answerChoices = [
-                "13 miles per hour",
-                "24 miles per hour",
-                "69 miles per hour",
-                "impossible to tell",
-                "8 hours",
-                "He's already there",
-                "He's not going",
-                "September 11th",
-                "1 hour",
-                "Ryder drives off bridge",
-                "Ryder would never",
-                "Ryder is used it it...",
-                "Im now on a killing spree",
-                "Less than 4 seconds",
-                "exactly 4 seconds",
-                "More than 4 seconds",
-                "They won't get hurt",
-                "Just a minor brain injury",
-                "internal bleeding",
-                "Pulverized on the spot"
-                ]
-                Quiz()
+            if (Shylock == 0) {
+                game.showLongText("H E L L O  S T U D E N T. . .", DialogLayout.Bottom)
+                game.showLongText("I T  I S  T I M E  F O R  Y O U  T O  T A K E  Y O U R  P H Y S I C S  Q U I Z. . .", DialogLayout.Bottom)
+                game.showLongText("E I T H E R  T H A T  O R  Y O U  M U S T  D R A W  O N  T H E  W H I T E  B O A R D. . .", DialogLayout.Bottom)
+                if (controller.A.isPressed()) {
+                    quizSubject = 5
+                    answerChoices = [
+                    "13 miles per hour",
+                    "24 miles per hour",
+                    "69 miles per hour",
+                    "impossible to tell",
+                    "8 hours",
+                    "He's already there",
+                    "He's not going",
+                    "September 11th",
+                    "1 hour",
+                    "Ryder drives off bridge",
+                    "Ryder would never",
+                    "Ryder is used it it...",
+                    "Im now on a killing spree",
+                    "Less than 4 seconds",
+                    "exactly 4 seconds",
+                    "More than 4 seconds",
+                    "They won't get hurt",
+                    "Just a minor brain injury",
+                    "internal bleeding",
+                    "Pulverized on the spot"
+                    ]
+                    Quiz()
+                    Shylock += 1
+                }
             }
         }
     } else if (otherSprite == World_History) {
         if (controller.A.isPressed()) {
-            game.showLongText("HELLO STUDENT OF AMERICA...I SEE YOU ARE ONE OF A PURE WHITE, STRAIT, AND NOT MEXICAN KIND...", DialogLayout.Bottom)
-            game.showLongText("IT HAS COME TO MY ATTENTION THAT YOU ARE IN NEED OF A KEY OF SOME SORT...", DialogLayout.Bottom)
-            game.showLongText("TAKE MY QUIZ ABOUT OUR GREAT COUNTRIES HISTORY AND I MIGHT GIVE IT TO YOU...", DialogLayout.Bottom)
-            game.showLongText("BUT HUUURY UP...BLEACH IS VERY IMPORTANT TO MY DIET AND I AM RATHER SHORT ON IT...", DialogLayout.Bottom)
-            if (controller.A.isPressed()) {
-                quizSubject = 6
-                answerChoices = [
-                "r/AITAH",
-                "X",
-                "Mar-a-Lago's restroom",
-                "All of the above",
-                "Africa",
-                "Murica pew pew",
-                "Zimbabwe",
-                "Tennessee",
-                "Otto",
-                "Charlemagne",
-                "Germany in 1945",
-                "Kanye and Jay-Z",
-                "School Shootings",
-                "Obesity",
-                "Serial Killers",
-                "All of the Above",
-                "Trump",
-                "Queen Lizzie",
-                "Ron DeSanctimonious",
-                "Not Trump"
-                ]
-                Quiz()
+            if (HistLock == 0) {
+                game.showLongText("HELLO STUDENT OF AMERICA...I SEE YOU ARE ONE OF A PURE WHITE, STRAIT, AND NOT MEXICAN KIND...", DialogLayout.Bottom)
+                game.showLongText("IT HAS COME TO MY ATTENTION THAT YOU ARE IN NEED OF A KEY OF SOME SORT...", DialogLayout.Bottom)
+                game.showLongText("TAKE MY QUIZ ABOUT OUR GREAT COUNTRIES HISTORY AND I MIGHT GIVE IT TO YOU...", DialogLayout.Bottom)
+                game.showLongText("BUT HUUURY UP...BLEACH IS VERY IMPORTANT TO MY DIET AND I AM RATHER SHORT ON IT...", DialogLayout.Bottom)
+                if (controller.A.isPressed()) {
+                    quizSubject = 6
+                    answerChoices = [
+                    "r/AITAH",
+                    "X",
+                    "Mar-a-Lago's restroom",
+                    "All of the above",
+                    "Africa",
+                    "Murica pew pew",
+                    "Zimbabwe",
+                    "Tennessee",
+                    "Otto",
+                    "Charlemagne",
+                    "Germany in 1945",
+                    "Kanye and Jay-Z",
+                    "School Shootings",
+                    "Obesity",
+                    "Serial Killers",
+                    "All of the Above",
+                    "Trump",
+                    "Queen Lizzie",
+                    "Ron DeSanctimonious",
+                    "Not Trump"
+                    ]
+                    Quiz()
+                    HistLock += 1
+                }
             }
         }
     } else if (otherSprite == Art) {
         if (controller.A.isPressed()) {
-            game.showLongText("Heil Hi---I mean hello student! My name is Ye and nothing else. If you call me anything else I will send you to the \"showers\"...", DialogLayout.Bottom)
-            game.showLongText("Here's the thing, i'm tryna wash america of greedy, money hungry Je----I mean \"Zionist\" influence.", DialogLayout.Bottom)
-            game.showLongText("The only way I can prove that you aren't one of these is with a quiz. If you pass I'll give you your key...", DialogLayout.Bottom)
-            if (controller.A.isPressed()) {
-                quizSubject = 7
-                answerChoices = [
-                "That dumb Austrian man",
-                "Pablo Picasso",
-                "Me as a three year old",
-                "The other austrian painter",
-                "Zhang Zongchang",
-                "2Pac",
-                "e e cummings",
-                "Catallus",
-                "Keanu Reeves",
-                "Jared Leto",
-                "Bill Cosby",
-                "Danny Devito",
-                "Nickelback",
-                "Jared Leto",
-                "2Pac",
-                "Ron Weasly (Ed Sheeran)",
-                "Justin Bieber - Bizarre",
-                "Hit 'Em Up - 2Pac",
-                "Erica - Herms Neil",
-                "Red Sun in the Sky - Tu Honggang"
-                ]
-                Quiz()
+            if (ArtLock == 0) {
+                game.showLongText("Heil Hi---I mean hello student! My name is Ye and nothing else. If you call me anything else I will send you to the \"showers\"...", DialogLayout.Bottom)
+                game.showLongText("Here's the thing, i'm tryna wash america of greedy, money hungry Je----I mean \"Zionist\" influence.", DialogLayout.Bottom)
+                game.showLongText("The only way I can prove that you aren't one of these is with a quiz. If you pass I'll give you your key...", DialogLayout.Bottom)
+                if (controller.A.isPressed()) {
+                    quizSubject = 7
+                    answerChoices = [
+                    "That dumb Austrian man",
+                    "Pablo Picasso",
+                    "Me as a three year old",
+                    "The other austrian painter",
+                    "Zhang Zongchang",
+                    "2Pac",
+                    "e e cummings",
+                    "Catallus",
+                    "Keanu Reeves",
+                    "Jared Leto",
+                    "Bill Cosby",
+                    "Danny Devito",
+                    "Nickelback",
+                    "Jared Leto",
+                    "2Pac",
+                    "Ron Weasly (Ed Sheeran)",
+                    "Justin Bieber - Bizarre",
+                    "Hit 'Em Up - 2Pac",
+                    "Erica - Herms Neil",
+                    "Red Sun in the Sky - Tu Honggang"
+                    ]
+                    Quiz()
+                    ArtLock += 1
+                }
             }
         }
-    } else if (false) {
+    } else if (otherSprite == Language) {
         if (controller.A.isPressed()) {
-            game.showLongText("HELLLO THERRE STUDENT OF BRITAIN!!!", DialogLayout.Bottom)
-            game.showLongText("I HAPENDED TO HEAR YOUR LITTLE CONVO EARLIER AND MIGHT JUST BE ABLE TO ASSIST IN SUCH OSTENTATIOUS INDEVERS...", DialogLayout.Bottom)
-            game.showLongText("UNFORTUNARTY, YOU WILL NEED TO PROVE YOURSELF IF YOU WANT MY ASSISTANCE...", DialogLayout.Bottom)
-            if (controller.A.isPressed()) {
-                quizSubject = 8
-                answerChoices = [
-                "Donald Trump",
-                "My Grandfather 15 beers in",
-                "Greg Abott",
-                "Ryder",
-                "Otto",
-                "The British",
-                "Le hon hon hon man",
-                "Marquis De Sade",
-                "Homo sexualis",
-                "Homo habilis",
-                "Homo (make me) erectus",
-                "Jesus",
-                "Alex Jones",
-                "Donald Trump",
-                "Jordan Peterson",
-                "Literally any non-English speaker",
-                "Clingon",
-                "British",
-                "Swedish",
-                "Homosexual"
-                ]
-                Quiz()
+            if (LangLock == 0) {
+                game.showLongText("HELLLO THERRE STUDENT OF BRITAIN!!!", DialogLayout.Bottom)
+                game.showLongText("I HAPENDED TO HEAR YOUR LITTLE CONVO EARLIER AND MIGHT JUST BE ABLE TO ASSIST IN SUCH OSTENTATIOUS INDEVERS...", DialogLayout.Bottom)
+                game.showLongText("UNFORTUNARTY, YOU WILL NEED TO PROVE YOURSELF IF YOU WANT MY ASSISTANCE...", DialogLayout.Bottom)
+                if (controller.A.isPressed()) {
+                    quizSubject = 8
+                    answerChoices = [
+                    "Donald Trump",
+                    "My Grandfather 15 beers in",
+                    "Greg Abott",
+                    "Ryder",
+                    "Otto",
+                    "The British",
+                    "Le hon hon hon man",
+                    "Marquis De Sade",
+                    "Homo sexualis",
+                    "Homo habilis",
+                    "Homo (make me) erectus",
+                    "Jesus",
+                    "Alex Jones",
+                    "Donald Trump",
+                    "Jordan Peterson",
+                    "Literally any non-English speaker",
+                    "Clingon",
+                    "British",
+                    "Swedish",
+                    "Homosexual"
+                    ]
+                    Quiz()
+                    LangLock += 1
+                }
             }
         }
     }
@@ -3310,9 +3389,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite3,
             if (Floor == 3) {
                 if (location3.column == 38 && location3.row == 53) {
                     tiles.setCurrentTilemap(tilemap`level144`)
-                    tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 14))
                     Physics = sprites.create(assets.image`myImage2`, SpriteKind.Teacher)
                     tiles.placeOnTile(Physics, tiles.getTileLocation(5, 4))
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 14))
                 } else if (location3.column == 14 && location3.row == 2) {
                     tiles.setCurrentTilemap(tilemap`level45`)
                     tiles.placeOnTile(mySprite, tiles.getTileLocation(3, 5))
@@ -3423,9 +3502,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10
             if (Floor == 1) {
                 if (location10.column == 32 && location10.row == 42) {
                     tiles.setCurrentTilemap(tilemap`level101`)
-                    tiles.placeOnTile(mySprite, tiles.getTileLocation(2, 13))
                     Simnar = sprites.create(assets.image`myImage0`, SpriteKind.Teacher)
                     tiles.placeOnTile(Simnar, tiles.getTileLocation(7, 4))
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(2, 13))
                 } else if (location10.column == 3 && location10.row == 14) {
                     tiles.setCurrentTilemap(tilemap`level2`)
                     tiles.placeOnTile(mySprite, tiles.getTileLocation(31, 42))
@@ -3434,12 +3513,11 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10
             if (Floor == 2) {
                 if (location10.column == 34 && location10.row == 39) {
                     tiles.setCurrentTilemap(tilemap`level151`)
-                    tiles.placeOnTile(mySprite, tiles.getTileLocation(3, 13))
                     APCOMPSCI = sprites.create(assets.image`myImage0`, SpriteKind.Teacher)
                     tiles.placeOnTile(APCOMPSCI, tiles.getTileLocation(3, 7))
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(3, 13))
                 } else if (location10.column == 30 && location10.row == 84) {
                     tiles.setCurrentTilemap(tilemap`level149`)
-                    tiles.placeOnTile(mySprite, tiles.getTileLocation(7, 13))
                     if (chemKey == 0) {
                         key_sprite = sprites.create(img`
                             . . . . . . . . . . . . . . . . 
@@ -3461,6 +3539,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10
                             `, SpriteKind.Food)
                         tiles.placeOnTile(key_sprite, tiles.getTileLocation(8, 11))
                     }
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(7, 13))
                 } else if (location10.column == 8 && location10.row == 14) {
                     tiles.setCurrentTilemap(tilemap`level15`)
                     tiles.placeOnTile(mySprite, tiles.getTileLocation(29, 83))
@@ -3470,33 +3549,36 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10
                 } else if (location10.column == 3 && location10.row == 14) {
                     tiles.setCurrentTilemap(tilemap`level15`)
                     tiles.placeOnTile(mySprite, tiles.getTileLocation(55, 60))
+                } else if (location10.column == 14 && location10.row == 4) {
+                    tiles.setCurrentTilemap(tilemap`level15`)
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(25, 79))
                 }
             }
             if (Floor == 3) {
                 if (location10.column == 37 && location10.row == 40) {
-                    tiles.setCurrentTilemap(tilemap`level152`)
-                    tiles.placeOnTile(mySprite, tiles.getTileLocation(14, 13))
+                    tiles.setCurrentTilemap(tilemap`level156`)
                     Precalc = sprites.create(assets.image`myImage3`, SpriteKind.Teacher)
                     tiles.placeOnTile(Precalc, tiles.getTileLocation(12, 3))
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(14, 13))
                 } else if (location10.column == 4 && location10.row == 5) {
                     tiles.setCurrentTilemap(tilemap`level146`)
-                    tiles.placeOnTile(mySprite, tiles.getTileLocation(14, 3))
                     World_History = sprites.create(assets.image`myImage`, SpriteKind.Teacher)
                     tiles.placeOnTile(World_History, tiles.getTileLocation(5, 4))
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(14, 3))
                 } else if (location10.column == 4 && location10.row == 14) {
                     tiles.setCurrentTilemap(tilemap`ArtRoom`)
-                    tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 14))
                     Art = sprites.create(assets.image`ye2024`, SpriteKind.Teacher)
                     tiles.placeOnTile(Art, tiles.getTileLocation(7, 4))
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 14))
                 } else if (location10.column == 1 && location10.row == 19) {
                     tiles.setCurrentTilemap(tilemap`level142`)
-                    tiles.placeOnTile(mySprite, tiles.getTileLocation(3, 13))
                     Language = sprites.create(assets.image`myImage0`, SpriteKind.Teacher)
                     tiles.placeOnTile(Language, tiles.getTileLocation(7, 4))
+                    tiles.placeOnTile(mySprite, tiles.getTileLocation(3, 13))
                 } else if (location10.column == 13 && location10.row == 14) {
                     tiles.setCurrentTilemap(tilemap`level17`)
                     tiles.placeOnTile(mySprite, tiles.getTileLocation(36, 39))
-                } else if (location10.column == 3 && location10.row == 14) {
+                } else if (location10.column == 7 && location10.row == 14) {
                     tiles.setCurrentTilemap(tilemap`level17`)
                     tiles.placeOnTile(mySprite, tiles.getTileLocation(38, 54))
                 } else if (location10.column == 2 && location10.row == 14) {
@@ -3521,6 +3603,15 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite11
         Floor += -1
     }
 })
+let LangLock = 0
+let ArtLock = 0
+let HistLock = 0
+let Shylock = 0
+let PreLock = 0
+let CalcABLock = 0
+let ChemLock = 0
+let CompSciLock = 0
+let SimnarLock = 0
 let key_sprite: Sprite = null
 let floorNum = 0
 let mySprite2: Sprite = null
@@ -3825,7 +3916,7 @@ tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 37))
 scene.cameraFollowSprite(mySprite)
 textCutscene = 0
 Floor = 1
-cutscene = 0
+cutscene = 1
 chemKey = 0
 keyNumber = 0
 calKey = 0
