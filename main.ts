@@ -250,6 +250,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     	
     }
 })
+// This function checks weather the answer choice selected is on the "correct answers" list. If it isn't, the message "incorect" will be displayed. Else, the message "Correct" will be displayed and the text sprites will update to the next quiestion. 
 function Right_or_Wrong (num: number) {
     Correct_Answers = [
     "What is a Woman?",
@@ -315,6 +316,7 @@ function Right_or_Wrong (num: number) {
         _questions()
     }
 }
+// For the quiz, if the players cursor overlaps with one of the answer choices, if and only if the A button is pressed, then depending on which sprte the players cursor overlaps with, the funtion "Right or Wrong" will be called
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (quiz_level >= 1) {
         if (Cursor.overlapsWith(s1)) {
