@@ -154,6 +154,7 @@ function EndingCutscene () {
             ................................................................................................................................................................
             ................................................................................................................................................................
             `)
+        tiles.setCurrentTilemap(tilemap`level343`)
         pause(2000)
         game.setDialogTextColor(2)
         game.showLongText("Where am I?", DialogLayout.Bottom)
@@ -285,7 +286,7 @@ function Right_or_Wrong (num: number) {
     "Ryder",
     "The British",
     "Homo (make me) erectus",
-    "Literally any non-English speaker",
+    "Any non-English speaker",
     "Homosexual",
     "Pulverized on the spot",
     "Fack this class",
@@ -3357,7 +3358,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                     quizSubject = 8
                     answerChoices = [
                     "Donald Trump",
-                    "My Grandfather 15 beers in",
+                    "My Father 15 beers in",
                     "Greg Abott",
                     "Ryder",
                     "Otto",
