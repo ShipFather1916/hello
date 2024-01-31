@@ -291,7 +291,7 @@ function Right_or_Wrong (num: number) {
     "Fack this class",
     "CIA psychological torture",
     "69 hours a day",
-    "Ryder's an upstanding citizen",
+    "He's an upstanding citizen",
     "Fortnite",
     "f(x)=|x|^2",
     "2",
