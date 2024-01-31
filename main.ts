@@ -280,7 +280,7 @@ function Right_or_Wrong (num: number) {
     "Zhang Zongchang",
     "Jared Leto",
     "Jared Leto",
-    "Red Sun in the Sky - Tu Honggang",
+    "Red Sun in the Sky",
     "Ryder",
     "The British",
     "Homo (make me) erectus",
@@ -1028,6 +1028,7 @@ function Quiz () {
         game.showLongText(" Who is the greatest Spanish speaker ever?", DialogLayout.Center)
     }
     pauseUntil(() => quizlevel == 5)
+    info.changeScoreBy(1)
     quizlevel = 0
     movement = 0
     sprites.destroy(Cursor)
@@ -3053,6 +3054,7 @@ function openingCutscene () {
                 game.setDialogTextColor(15)
                 game.showLongText("Red Door locks or pads represent inaccessible areas. Yellow Door locks and pads represent locked areas that require 1 or more keys to access...", DialogLayout.Full)
                 cutscene += 1
+                info.setScore(0)
             }
         }
     }
