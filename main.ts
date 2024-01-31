@@ -123,7 +123,7 @@ function Right_or_Wrong (num: number) {
     "Godd Howard",
     "Gollum",
     "Nothing, it is perfect",
-    "You can smash a gay vampire",
+    "Smashable gay vampire",
     "Nothing, especially EA",
     "C17 H21 NO4",
     "All of the above",
@@ -148,7 +148,18 @@ function Right_or_Wrong (num: number) {
     "The British",
     "Homo (make me) erectus",
     "Literally any non-English speaker",
-    "Homosexual"
+    "Homosexual",
+    "Pulverized on the spot",
+    "Fack this class",
+    "CIA psychological torture",
+    "69 hours a day",
+    "Ryder's an upstanding citizen",
+    "Fortnite",
+    "f(x)=|x|^2",
+    "2",
+    "0000FF",
+    "idfk that stuff boring af",
+    "Find good child organs"
     ]
     if (Correct_Answers.indexOf(answerChoices[quizlevel * 4 + num]) == -1) {
         game.setDialogTextColor(14)
@@ -584,7 +595,7 @@ function Quiz () {
         `, SpriteKind.hitbot)
     a2 = textsprite.create(answerChoices[4 * quizlevel + 1])
     a2.left = 8
-    a2.y = 49
+    a2.y = 48
     a2.setOutline(1, 15)
     s3 = sprites.create(img`
         ................................................................................................................................................................
@@ -709,8 +720,8 @@ function Quiz () {
         ................................................................................................................................................................
         `, SpriteKind.hitbot)
     a3 = textsprite.create(answerChoices[4 * quizlevel + 2])
-    a2.left = 8
-    a2.y = 76
+    a3.left = 8
+    a3.y = 76
     a3.setOutline(1, 15)
     s4 = sprites.create(img`
         ................................................................................................................................................................
@@ -835,8 +846,9 @@ function Quiz () {
         ................................................................................................................................................................
         `, SpriteKind.hitbot)
     a4 = textsprite.create(answerChoices[4 * quizlevel + 3])
+    a4.left = 8
+    a4.y = 107
     a4.setOutline(1, 15)
-    a4.setPosition(64, 107)
     Cursor = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -865,9 +877,9 @@ function Quiz () {
     } else if (quizSubject == 2) {
         game.showLongText("What is the most addictive chemical substance?", DialogLayout.Center)
     } else if (quizSubject == 3) {
-    	
+        game.showLongText("What does FTC stand for?", DialogLayout.Center)
     } else if (quizSubject == 4) {
-    	
+        game.showLongText("What does the graph of Gollum sales look like?", DialogLayout.Center)
     } else if (quizSubject == 5) {
         game.showLongText("What is the airspeed velocity of an European unladen sparrow?", DialogLayout.Center)
     } else if (quizSubject == 6) {
@@ -2735,9 +2747,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
     } else if (otherSprite == APCOMPSCI) {
         if (controller.A.isPressed()) {
             game.showLongText("Hey Student! My name is Godd Howard. I heard you needed a key to escape the school.", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText("Personally, I couldn't understand why you would want to leave when you could be enjoying STARFIELD instead, but I guess It might be hard to connect to the servers with such poor internet connection... ", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText("How about this? You take my quiz and I'll give you a free copy of Skyrim on top of that key you need!", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 quizSubject += 1
@@ -2755,12 +2765,12 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                 "Nothing, it is perfect",
                 "The bugs",
                 "It was rigged",
-                "You can smash a gay vampire",
+                "Smashable gay vampire",
                 "Chance",
                 "Actually Spider Man 2 won",
                 "Microtransactions",
                 "Lazy games",
-                "No love for the player base",
+                "No love for player base",
                 "Nothing, especially EA"
                 ]
                 Quiz()
@@ -2769,11 +2779,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
     } else if (otherSprite == Chemistry) {
         if (controller.A.isPressed()) {
             game.showLongText("WHO'S THERE!", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText(" Oh crap You've seen my operation!", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText("Whatever you do don't tell anyone about this please!", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText("Here, I have this key! Take it and leave...but first you need to take this quiz...", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 quizSubject = 2
@@ -2809,26 +2816,26 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
             if (controller.A.isPressed()) {
                 quizSubject = 3
                 answerChoices = [
-                "Mein Kampfy Chair",
-                "Romeo and Juliet",
-                "What is a Woman?",
-                "The Twilight Series",
-                "John Wayne Gacy",
-                "JRR Tolkien",
-                "Shawn Guo",
-                "The blog writer for the babylon bee",
-                "A 6th century medival torture device",
-                "To pracitce writing",
-                "For information and arguments",
-                "No one writes essay anymore, other than AI of course",
-                "A peer reviewed research article",
-                "Wikipedia",
-                "The Daily Wire",
-                "Fox News",
-                "Blatant lies",
-                "images",
-                "statistics",
-                "a good speaker"
+                "FTC",
+                "Find the code",
+                "Federation of True Canada",
+                "Fack this class",
+                "Instantaneous Rate of Change",
+                "Average Rate of Change",
+                "Find angles of a triangle",
+                "CIA psychological torture",
+                "24 hours a day",
+                "0 hours a day",
+                "69 hours a day",
+                "1 hour a day",
+                "5 mph",
+                "100000 mph",
+                "Ryder's an upstanding citizen",
+                "He's stuck inside a preschool",
+                "The Middle East",
+                "Fortnite",
+                "New Calculustan",
+                "Greece"
                 ]
                 Quiz()
             }
@@ -2840,26 +2847,26 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
             if (controller.A.isPressed()) {
                 quizSubject = 4
                 answerChoices = [
-                "Mein Kampfy Chair",
-                "Romeo and Juliet",
-                "What is a Woman?",
-                "The Twilight Series",
-                "John Wayne Gacy",
-                "JRR Tolkien",
-                "Shawn Guo",
-                "The blog writer for the babylon bee",
-                "A 6th century medival torture device",
-                "To pracitce writing",
-                "For information and arguments",
-                "No one writes essay anymore, other than AI of course",
-                "A peer reviewed research article",
-                "Wikipedia",
-                "The Daily Wire",
-                "Fox News",
-                "Blatant lies",
-                "images",
-                "statistics",
-                "a good speaker"
+                "f(x)=|x|^2",
+                "f(x)=-x",
+                "f(x)=1",
+                "f(x)=log(x)",
+                "2",
+                "4",
+                "5",
+                "10",
+                "FF0000",
+                "0000FF",
+                "008000",
+                "FFFF00",
+                "triangle",
+                "figuring out angles",
+                "idfk that stuff boring af",
+                "rectangle",
+                "figuring out gas",
+                "Find good child organs",
+                "architecture",
+                "Calculus"
                 ]
                 Quiz()
             }
@@ -2867,9 +2874,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
     } else if (otherSprite == Physics) {
         if (controller.A.isPressed()) {
             game.showLongText("H E L L O  S T U D E N T. . .", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText("I T  I S  T I M E  F O R  Y O U  T O  T A K E  Y O U R  P H Y S I C S  Q U I Z. . .", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText("E I T H E R  T H A T  O R  Y O U  M U S T  D R A W  O N  T H E  W H I T E  B O A R D. . .", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 quizSubject = 5
@@ -2890,10 +2895,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                 "Less than 4 seconds",
                 "exactly 4 seconds",
                 "More than 4 seconds",
-                "",
-                "",
-                "",
-                ""
+                "They won’t get hurt",
+                "Just a minor brain injury",
+                "internal bleeding",
+                "Pulverized on the spot"
                 ]
                 Quiz()
             }
@@ -2901,11 +2906,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
     } else if (otherSprite == World_History) {
         if (controller.A.isPressed()) {
             game.showLongText("HELLO STUDENT OF AMERICA...I SEE YOU ARE ONE OF A PURE WHITE, STRAIT, AND NOT MEXICAN KIND...", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText("IT HAS COME TO MY ATTENTION THAT YOU ARE IN NEED OF A KEY OF SOME SORT...", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText("TAKE MY QUIZ ABOUT OUR GREAT COUNTRIES HISTORY AND I MIGHT GIVE IT TO YOU...", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText("BUT HUUURY UP...BLEACH IS VERY IMPORTANT TO MY DIET AND I AM RATHER SHORT ON IT...", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 quizSubject = 6
@@ -2937,9 +2939,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
     } else if (otherSprite == Art) {
         if (controller.A.isPressed()) {
             game.showLongText("Heil Hi---I mean hello student! My name is Ye and nothing else. If you call me anything else I will send you to the \"showers\"...", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText("Here's the thing, i'm tryna wash america of greedy, money hungry Je----I mean \"Zionist\" influence.", DialogLayout.Bottom)
-            pauseUntil(() => controller.A.isPressed())
             game.showLongText("The only way I can prove that you aren't one of these is with a quiz. If you pass I'll give you your key...", DialogLayout.Bottom)
             if (controller.A.isPressed()) {
                 quizSubject = 7
@@ -3052,18 +3052,34 @@ function _questions () {
             game.showLongText("Waltuh", DialogLayout.Center)
         }
     } else if (quizSubject == 3) {
-    	
+        if (quiz_level == 2) {
+            game.showLongText("What is a derivative used for?", DialogLayout.Center)
+        } else if (quiz_level == 3) {
+            game.showLongText("How many hours a day does Trump fantasize about Biden?", DialogLayout.Center)
+        } else if (quiz_level == 4) {
+            game.showLongText("What is the rate of change of Ryder as he runs from the local cops?", DialogLayout.Center)
+        } else if (quiz_level == 5) {
+            game.showLongText("Where did Calculus originate?", DialogLayout.Center)
+        }
     } else if (quizSubject == 4) {
-    	
+        if (quiz_level == 2) {
+            game.showLongText("What is 1+1?", DialogLayout.Center)
+        } else if (quiz_level == 3) {
+            game.showLongText("What is your favorite color?", DialogLayout.Center)
+        } else if (quiz_level == 4) {
+            game.showLongText("What is the basis of trig?", DialogLayout.Center)
+        } else if (quiz_level == 5) {
+            game.showLongText("What is an example of using pre-calculus in real life?", DialogLayout.Center)
+        }
     } else if (quizSubject == 5) {
         if (quiz_level == 2) {
             game.showLongText(" If Stephen Hawking's airplane is flying to Epstein's Island, which is 1000 miles away and the plane is going at 125 miles per hour, how long until he arrives at the island?", DialogLayout.Center)
         } else if (quiz_level == 3) {
-            game.showLongText("If Ryder is driving his White 2023 Ford E-Transit-350 Cargo Van at 75 miles per hour away from a pre-school, how long until the police car which is 5 miles away and going at 80 miles per hour, how long until the pre-schoolers are saved? ", DialogLayout.Center)
+            game.showLongText("If Ryder is driving his White 2023 Ford E-Transit-350 Cargo Van at 75 miles per hour away from a pre-school, how long until the police car which is 5 miles away and going at 80 miles per hour will it take until the pre-schoolers are saved? ", DialogLayout.Center)
         } else if (quiz_level == 4) {
             game.showLongText(" If the voices in my head tell me to jump off a bridge, which is 100 meters above ground, how long until I hit the ground if I hit the ground at a velocity of 25 m/s?", DialogLayout.Center)
         } else if (quiz_level == 5) {
-            game.showLongText("", DialogLayout.Center)
+            game.showLongText(" If I am running 15 mph ready to punch a child, how hurt will the 4 year old get?", DialogLayout.Center)
         }
     } else if (quizSubject == 6) {
         if (quiz_level == 2) {
@@ -3200,11 +3216,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite11
         Floor += -1
     }
 })
-function spritedump () {
-    mySprite2 = sprites.create(assets.image`myImage3`, SpriteKind.Player)
-    tiles.setCurrentTilemap(tilemap`level52`)
-}
-let mySprite2: Sprite = null
 let key_sprite: Sprite = null
 let floorNum = 0
 let World_History: Sprite = null
