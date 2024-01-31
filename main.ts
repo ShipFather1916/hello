@@ -32,7 +32,7 @@ function EndingCutscene () {
     End = game.ask("Leave the building?")
     if (controller.A.isPressed()) {
         sprites.destroy(mySprite)
-        tiles.setCurrentTilemap(tilemap`level151`)
+        tiles.setCurrentTilemap(tilemap`level309`)
         scene.setBackgroundImage(img`
             ................................................................................................................................................................
             ................................................................................................................................................................
@@ -1772,7 +1772,7 @@ function Quiz () {
             ................................................................................................................................................................
             ................................................................................................................................................................
             `)
-        tiles.setCurrentTilemap(tilemap`level153`)
+        tiles.setCurrentTilemap(tilemap`level156`)
         mySprite = sprites.create(img`
             . . . . . f f f f . . . . . . . 
             . . . f f 6 6 6 6 f f . . . . . 
@@ -3466,7 +3466,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite10
             }
             if (Floor == 3) {
                 if (location10.column == 37 && location10.row == 40) {
-                    tiles.setCurrentTilemap(tilemap`level152`)
+                    tiles.setCurrentTilemap(tilemap`level156`)
                     tiles.placeOnTile(mySprite, tiles.getTileLocation(14, 13))
                     Precalc = sprites.create(assets.image`myImage3`, SpriteKind.Teacher)
                     tiles.placeOnTile(Precalc, tiles.getTileLocation(12, 3))
