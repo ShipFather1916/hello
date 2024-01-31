@@ -2581,6 +2581,13 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite8,
     tiles.setCurrentTilemap(tilemap`level44`)
     tiles.placeOnTile(mySprite, tiles.getTileLocation(5, 22))
 })
+function randsprites () {
+    mySprite2 = sprites.create(assets.image`myImage4`, SpriteKind.Player)
+    mySprite2 = sprites.create(assets.image`myImage5`, SpriteKind.Player)
+    mySprite2 = sprites.create(assets.image`myImage3`, SpriteKind.Player)
+    mySprite2 = sprites.create(assets.image`myImage6`, SpriteKind.Player)
+    tiles.setCurrentTilemap(tilemap`level149`)
+}
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, location) {
     if (controller.A.isPressed()) {
         if (chemKey == 0) {
@@ -3516,6 +3523,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite11
 })
 let key_sprite: Sprite = null
 let floorNum = 0
+let mySprite2: Sprite = null
 let Language: Sprite = null
 let World_History: Sprite = null
 let Art: Sprite = null
