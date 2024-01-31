@@ -32,7 +32,6 @@ function EndingCutscene () {
     End = game.ask("Leave the building?")
     if (controller.A.isPressed()) {
         sprites.destroy(mySprite)
-        tiles.setCurrentTilemap(tilemap`level151`)
         scene.setBackgroundImage(img`
             ................................................................................................................................................................
             ................................................................................................................................................................
@@ -193,33 +192,33 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
             `,img`
             . . . . . . . . . . . . . . . . 
             . . . . . . f f f f . . . . . . 
-            . . . . f f e e e e f f . . . . 
-            . . . f e e e f f e e e f . . . 
+            . . . . f f 6 6 6 6 f f . . . . 
+            . . . f 6 6 6 f f 6 6 6 f . . . 
             . . . f f f f 2 2 f f f f . . . 
-            . . f f e 2 e 2 2 e 2 e f f . . 
-            . . f e 2 f 2 f f f 2 f e f . . 
-            . . f f f 2 f e e 2 2 f f f . . 
-            . . f e 2 f f e e 2 f e e f . . 
-            . f f e f f e e e f e e e f f . 
-            . f f e e e e e e e e e e f f . 
-            . . . f e e e e e e e e f . . . 
-            . . . e f f f f f f f f 4 e . . 
-            . . . 4 f 2 2 2 2 2 e d d 4 . . 
-            . . . e f f f f f f e e 4 . . . 
+            . . f f 6 2 6 2 2 6 2 6 f f . . 
+            . . f 6 2 f 2 f f f 2 f 6 f . . 
+            . . f f f 2 f 6 6 2 2 f f f . . 
+            . . f 6 2 f f 6 6 2 f 6 6 f . . 
+            . f f 6 f f 6 6 6 f 6 6 6 f f . 
+            . f f 6 6 6 6 6 6 6 6 6 6 f f . 
+            . . . f 6 6 6 6 6 6 6 6 f . . . 
+            . . . 6 f f f f f f f f 4 6 . . 
+            . . . 4 f 2 2 2 2 2 6 d d 4 . . 
+            . . . 6 f f f f f f 6 6 4 . . . 
             . . . . f f f . . . . . . . . . 
             `,img`
             . . . . . . f f f f . . . . . . 
-            . . . . f f e e e e f f . . . . 
-            . . . f e e e f f e e e f . . . 
+            . . . . f f 6 6 6 6 f f . . . . 
+            . . . f 6 6 6 f f 6 6 6 f . . . 
             . . f f f f f 2 2 f f f f f . . 
-            . . f f e 2 e 2 2 e 2 e f f . . 
-            . . f e 2 f 2 f f 2 f 2 e f . . 
-            . . f f f 2 2 e e 2 2 f f f . . 
-            . f f e f 2 f e e f 2 f e f f . 
-            . f e e f f e e e e f e e e f . 
-            . . f e e e e e e e e e e f . . 
-            . . . f e e e e e e e e f . . . 
-            . . e 4 f f f f f f f f 4 e . . 
+            . . f f 6 2 6 2 2 6 2 6 f f . . 
+            . . f 6 2 f 2 f f 2 f 2 6 f . . 
+            . . f f f 2 2 6 6 2 2 f f f . . 
+            . f f 6 f 2 f 6 6 f 2 f 6 f f . 
+            . f 6 6 f f 6 6 6 6 f 6 6 6 f . 
+            . . f 6 6 6 6 6 6 6 6 6 6 f . . 
+            . . . f 6 6 6 6 6 6 6 6 f . . . 
+            . . 6 4 f f f f f f f f 4 6 . . 
             . . 4 d f 2 2 2 2 2 2 f d 4 . . 
             . . 4 4 f 4 4 4 4 4 4 f 4 4 . . 
             . . . . . f f f f f f . . . . . 
@@ -227,19 +226,19 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
             `,img`
             . . . . . . . . . . . . . . . . 
             . . . . . . f f f f . . . . . . 
-            . . . . f f e e e e f f . . . . 
-            . . . f e e e f f e e e f . . . 
+            . . . . f f 6 6 6 6 f f . . . . 
+            . . . f 6 6 6 f f 6 6 6 f . . . 
             . . . f f f f 2 2 f f f f . . . 
-            . . f f e 2 e 2 2 e 2 e f f . . 
-            . . f e f 2 f f f 2 f 2 e f . . 
-            . . f f f 2 2 e e f 2 f f f . . 
-            . . f e e f 2 e e f f 2 e f . . 
-            . f f e e e f e e e f f e f f . 
-            . f f e e e e e e e e e e f f . 
-            . . . f e e e e e e e e f . . . 
-            . . e 4 f f f f f f f f e . . . 
-            . . 4 d d e 2 2 2 2 2 f 4 . . . 
-            . . . 4 e e f f f f f f e . . . 
+            . . f f 6 2 6 2 2 6 2 6 f f . . 
+            . . f 6 f 2 f f f 2 f 2 6 f . . 
+            . . f f f 2 2 6 6 f 2 f f f . . 
+            . . f 6 6 f 2 6 6 f f 2 6 f . . 
+            . f f 6 6 6 f 6 6 6 f f 6 f f . 
+            . f f 6 6 6 6 6 6 6 6 6 6 f f . 
+            . . . f 6 6 6 6 6 6 6 6 f . . . 
+            . . 6 4 f f f f f f f f 6 . . . 
+            . . 4 d d 6 2 2 2 2 2 f 4 . . . 
+            . . . 4 6 6 f f f f f f 6 . . . 
             . . . . . . . . . f f f . . . . 
             `],
         200,
@@ -1030,6 +1029,7 @@ function Quiz () {
     }
     pauseUntil(() => quizlevel == 5)
     quizlevel = 0
+    movement = 0
     sprites.destroy(Cursor)
     sprites.destroyAllSpritesOfKind(SpriteKind.hitbot)
     if (quizSubject == 0) {
@@ -3191,8 +3191,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                     "1 hour a day",
                     "5 mph",
                     "100000 mph",
-                    "Ryder's an upstanding citizen",
-                    "He's stuck inside a preschool",
+                    "He's an upstanding citizen",
+                    "He's stuck in a preschool",
                     "The Middle East",
                     "Fortnite",
                     "New Calculustan",
@@ -3336,7 +3336,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                     "Justin Bieber - Bizarre",
                     "Hit 'Em Up - 2Pac",
                     "Erica - Herms Neil",
-                    "Red Sun in the Sky - Tu Honggang"
+                    "Red Sun in the Sky"
                     ]
                     Quiz()
                     ArtLock += 1
@@ -3367,7 +3367,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Teacher, function (sprite, other
                     "Alex Jones",
                     "Donald Trump",
                     "Jordan Peterson",
-                    "Literally any non-English speaker",
+                    "Any non-English speaker",
                     "Clingon",
                     "British",
                     "Swedish",
@@ -3916,7 +3916,7 @@ tiles.placeOnTile(mySprite, tiles.getTileLocation(4, 37))
 scene.cameraFollowSprite(mySprite)
 textCutscene = 0
 Floor = 1
-cutscene = 1
+cutscene = 0
 chemKey = 0
 keyNumber = 0
 calKey = 0
